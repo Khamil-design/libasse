@@ -1,144 +1,264 @@
 {
-  "produits": [
-    {
-      "id": "trench-premium",
+  "catalogue": {
+    "version": "2.0",
 
-      "categorie": "trench",
+    "produits": [
 
-      "nom": "Trench long Premium",
+      {
+        "id": "TR001",
+        "slug": "trench-premium",
 
-      "marque": "Libasse",
+        "categorie": "trench",
 
-      "reference": "TR-001",
+        "nom": "Trench long Premium",
 
-      "prix": 749,
+        "marque": "Libasse",
 
-      "ancienPrix": 899,
+        "reference": "TR-001",
 
-      "devise": "DH",
+        "description": {
 
-      "note": 4.9,
+          "courte": "Trench long élégant confectionné dans une gabardine premium italienne.",
 
-      "avis": 128,
+          "longue": "Le trench Premium Libasse est conçu dans une gabardine haut de gamme offrant un tombé élégant, une excellente tenue et un confort optimal. Sa coupe intemporelle s'adapte aussi bien aux tenues quotidiennes qu'aux occasions plus habillées."
 
-      "stock": 18,
-
-      "nouveau": true,
-
-      "promotion": false,
-
-      "descriptionCourte": "Trench long élégant confectionné dans une gabardine premium italienne.",
-
-      "descriptionLongue": "Le trench Premium Libasse est conçu dans une gabardine haut de gamme offrant un tombé élégant, une excellente tenue et un confort optimal. Sa coupe intemporelle s'adapte aussi bien aux tenues quotidiennes qu'aux occasions plus habillées.",
-
-      "caracteristiques": [
-        "Gabardine italienne premium",
-        "Double boutonnage",
-        "Ceinture assortie",
-        "Poches latérales",
-        "Poignets réglables",
-        "Coupe longue",
-        "Finitions haut de gamme"
-      ],
-
-      "tailles": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-
-      "guideTailles": {
-        "S": {
-          "poitrine": 92,
-          "taille": 74,
-          "longueur": 128
         },
-        "M": {
-          "poitrine": 98,
-          "taille": 80,
-          "longueur": 129
+
+        "prix": {
+
+          "actuel": 749,
+
+          "ancien": 899,
+
+          "devise": "DH"
+
         },
-        "L": {
-          "poitrine": 104,
-          "taille": 86,
-          "longueur": 130
+
+        "avis": {
+
+          "note": 4.9,
+
+          "nombre": 128
+
         },
-        "XL": {
-          "poitrine": 110,
-          "taille": 92,
-          "longueur": 131
-        }
-      },
 
-      "couleurs": [
+        "etat": {
 
-        {
-          "id": "beigeSable",
-          "nom": "Beige sable",
-          "code": "#D8C3A5",
+          "nouveau": true,
 
-          "images": {
-            "principale": "images/femme/TrenchLeger/beigeSable/principale.jpg",
-            "dos": "images/femme/TrenchLeger/beigeSable/dos.jpg",
-            "profil": "images/femme/TrenchLeger/beigeSable/profil.jpg",
-            "detail": "images/femme/TrenchLeger/beigeSable/detail.jpg"
+          "promotion": false
+
+        },
+
+        "tailles": [
+
+          "S",
+          "M",
+          "L",
+          "XL"
+
+        ],
+
+        "guideTailles": {
+
+          "S": {
+
+            "poitrine": 92,
+            "taille": 74,
+            "longueur": 128
+
+          },
+
+          "M": {
+
+            "poitrine": 98,
+            "taille": 80,
+            "longueur": 129
+
+          },
+
+          "L": {
+
+            "poitrine": 104,
+            "taille": 86,
+            "longueur": 130
+
+          },
+
+          "XL": {
+
+            "poitrine": 110,
+            "taille": 92,
+            "longueur": 131
+
           }
+
         },
 
-        {
-          "id": "kakiOlive",
-          "nom": "Kaki olive",
-          "code": "#70784B",
+        "caracteristiques": [
 
-          "images": {
-            "principale": "images/femme/TrenchLeger/kakiOlive/principale.jpg",
-            "dos": "images/femme/TrenchLeger/kakiOlive/dos.jpg",
-            "profil": "images/femme/TrenchLeger/kakiOlive/profil.jpg",
-            "detail": "images/femme/TrenchLeger/kakiOlive/detail.jpg"
+          "Gabardine italienne premium",
+          "Double boutonnage",
+          "Ceinture assortie",
+          "Poches latérales",
+          "Poignets réglables",
+          "Coupe longue",
+          "Finitions haut de gamme"
+
+        ],
+
+        "variantes": [
+
+          {
+
+            "id": "TR001-BS",
+
+            "slug": "beige-sable",
+
+            "nom": "Beige sable",
+
+            "codeCouleur": "#D8C3A5",
+
+            "stock": 18,
+
+            "images": {
+
+              "principale": "images/femme/TrenchLeger/beigeSable/principale.jpg",
+
+              "dos": "images/femme/TrenchLeger/beigeSable/dos.jpg",
+
+              "profil": "images/femme/TrenchLeger/beigeSable/profil.jpg",
+
+              "detail": "images/femme/TrenchLeger/beigeSable/detail.jpg"
+
+            }
+
+          },
+
+          {
+
+            "id": "TR001-KO",
+
+            "slug": "kaki-olive",
+
+            "nom": "Kaki olive",
+
+            "codeCouleur": "#70784B",
+
+            "stock": 12,
+
+            "images": {
+
+              "principale": "images/femme/TrenchLeger/kakiOlive/principale.jpg",
+
+              "dos": "images/femme/TrenchLeger/kakiOlive/dos.jpg",
+
+              "profil": "images/femme/TrenchLeger/kakiOlive/profil.jpg",
+
+              "detail": "images/femme/TrenchLeger/kakiOlive/detail.jpg"
+
+            }
+
+          },
+
+          {
+
+            "id": "TR001-BP",
+
+            "slug": "bordeaux-profond",
+
+            "nom": "Bordeaux profond",
+
+            "codeCouleur": "#6F2332",
+
+            "stock": 10,
+
+            "images": {
+
+              "principale": "images/femme/TrenchLeger/bordeauxProfond/principale.jpg",
+
+              "dos": "images/femme/TrenchLeger/bordeauxProfond/dos.jpg",
+
+              "profil": "images/femme/TrenchLeger/bordeauxProfond/profil.jpg",
+
+              "detail": "images/femme/TrenchLeger/bordeauxProfond/detail.jpg"
+
+            }
+
+          },
+
+          {
+
+            "id": "TR001-GP",
+
+            "slug": "gris-perle",
+
+            "nom": "Gris perle",
+
+            "codeCouleur": "#D9D9D4",
+
+            "stock": 8,
+
+            "images": {
+
+              "principale": "images/femme/TrenchLeger/grisPerle/principale.jpg",
+
+              "dos": "images/femme/TrenchLeger/grisPerle/dos.jpg",
+
+              "profil": "images/femme/TrenchLeger/grisPerle/profil.jpg",
+
+              "detail": "images/femme/TrenchLeger/grisPerle/detail.jpg"
+
+            }
+
+          },
+
+          {
+
+            "id": "TR001-BM",
+
+            "slug": "bleu-marine",
+
+            "nom": "Bleu marine",
+
+            "codeCouleur": "#1F355E",
+
+            "stock": 7,
+
+            "images": {
+
+              "principale": "images/femme/TrenchLeger/bleuMarine/principale.jpg",
+
+              "dos": "images/femme/TrenchLeger/bleuMarine/dos.jpg",
+
+              "profil": "images/femme/TrenchLeger/bleuMarine/profil.jpg",
+
+              "detail": "images/femme/TrenchLeger/bleuMarine/detail.jpg"
+
+            }
+
           }
-        },
 
-        {
-          "id": "bordeauxProfond",
-          "nom": "Bordeaux profond",
-          "code": "#6F2332",
+        ],
 
-          "images": {
-            "principale": "images/femme/TrenchLeger/bordeauxProfond/principale.jpg",
-            "dos": "images/femme/TrenchLeger/bordeauxProfond/dos.jpg",
-            "profil": "images/femme/TrenchLeger/bordeauxProfond/profil.jpg",
-            "detail": "images/femme/TrenchLeger/bordeauxProfond/detail.jpg"
-          }
-        },
+        "completeLook": [
 
-        {
-          "id": "grisPerle",
-          "nom": "Gris perle",
-          "code": "#D9D9D4",
+          "chemise-gris-perle",
+          "pantalon-beige-sable"
 
-          "images": {
-            "principale": "images/femme/TrenchLeger/grisPerle/principale.jpg",
-            "dos": "images/femme/TrenchLeger/grisPerle/dos.jpg",
-            "profil": "images/femme/TrenchLeger/grisPerle/profil.jpg",
-            "detail": "images/femme/TrenchLeger/grisPerle/detail.jpg"
-          }
-        },
+        ],
 
-        {
-          "id": "bleuMarine",
-          "nom": "Bleu marine",
-          "code": "#1F355E",
+        "produitsSimilaires": [
 
-          "images": {
-            "principale": "images/femme/TrenchLeger/bleuMarine/principale.jpg",
-            "dos": "images/femme/TrenchLeger/bleuMarine/dos.jpg",
-            "profil": "images/femme/TrenchLeger/bleuMarine/profil.jpg",
-            "detail": "images/femme/TrenchLeger/bleuMarine/detail.jpg"
-          }
-        }
+          "trench-classique",
+          "trench-camel"
 
-      ]
-    }
-  ]
+        ]
+
+      }
+
+    ]
+
+  }
+
 }
