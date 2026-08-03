@@ -3612,3 +3612,20 @@ a{
     }
 
 }
+.product-link{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.product-link:hover{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
