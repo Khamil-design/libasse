@@ -1,1 +1,144 @@
+{
+  "produits": [
+    {
+      "id": "trench-premium",
 
+      "categorie": "trench",
+
+      "nom": "Trench long Premium",
+
+      "marque": "Libasse",
+
+      "reference": "TR-001",
+
+      "prix": 749,
+
+      "ancienPrix": 899,
+
+      "devise": "DH",
+
+      "note": 4.9,
+
+      "avis": 128,
+
+      "stock": 18,
+
+      "nouveau": true,
+
+      "promotion": false,
+
+      "descriptionCourte": "Trench long élégant confectionné dans une gabardine premium italienne.",
+
+      "descriptionLongue": "Le trench Premium Libasse est conçu dans une gabardine haut de gamme offrant un tombé élégant, une excellente tenue et un confort optimal. Sa coupe intemporelle s'adapte aussi bien aux tenues quotidiennes qu'aux occasions plus habillées.",
+
+      "caracteristiques": [
+        "Gabardine italienne premium",
+        "Double boutonnage",
+        "Ceinture assortie",
+        "Poches latérales",
+        "Poignets réglables",
+        "Coupe longue",
+        "Finitions haut de gamme"
+      ],
+
+      "tailles": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+
+      "guideTailles": {
+        "S": {
+          "poitrine": 92,
+          "taille": 74,
+          "longueur": 128
+        },
+        "M": {
+          "poitrine": 98,
+          "taille": 80,
+          "longueur": 129
+        },
+        "L": {
+          "poitrine": 104,
+          "taille": 86,
+          "longueur": 130
+        },
+        "XL": {
+          "poitrine": 110,
+          "taille": 92,
+          "longueur": 131
+        }
+      },
+
+      "couleurs": [
+
+        {
+          "id": "beige",
+          "nom": "Beige sable",
+          "code": "#D8C3A5",
+
+          "images": {
+            "principale": "images/trench/beige/principal.jpg",
+            "dos": "images/trench/beige/dos.jpg",
+            "profil": "images/trench/beige/profil.jpg",
+            "detail": "images/trench/beige/detail.jpg"
+          }
+        },
+
+        {
+          "id": "kaki",
+          "nom": "Kaki olive",
+          "code": "#70784B",
+
+          "images": {
+            "principale": "images/trench/kaki/principal.jpg",
+            "dos": "images/trench/kaki/dos.jpg",
+            "profil": "images/trench/kaki/profil.jpg",
+            "detail": "images/trench/kaki/detail.jpg"
+          }
+        },
+
+        {
+          "id": "bordeaux",
+          "nom": "Bordeaux profond",
+          "code": "#6F2332",
+
+          "images": {
+            "principale": "images/trench/bordeaux/principal.jpg",
+            "dos": "images/trench/bordeaux/dos.jpg",
+            "profil": "images/trench/bordeaux/profil.jpg",
+            "detail": "images/trench/bordeaux/detail.jpg"
+          }
+        },
+
+        {
+          "id": "gris",
+          "nom": "Gris perle",
+          "code": "#D9D9D4",
+
+          "images": {
+            "principale": "images/trench/gris/principal.jpg",
+            "dos": "images/trench/gris/dos.jpg",
+            "profil": "images/trench/gris/profil.jpg",
+            "detail": "images/trench/gris/detail.jpg"
+          }
+        },
+
+        {
+          "id": "marine",
+          "nom": "Bleu marine",
+          "code": "#1F355E",
+
+          "images": {
+            "principale": "images/trench/marine/principal.jpg",
+            "dos": "images/trench/marine/dos.jpg",
+            "profil": "images/trench/marine/profil.jpg",
+            "detail": "images/trench/marine/detail.jpg"
+          }
+        }
+
+      ]
+    }
+  ]
+}
