@@ -261,5 +261,4 @@ document.addEventListener("DOMContentLoaded", () => {
     const product = new Product(productId);
 
     product.load();
-
 });
