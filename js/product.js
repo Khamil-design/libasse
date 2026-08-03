@@ -25,9 +25,9 @@ class Product {
 
             const catalogue = await response.json();
 
-            this.data = catalogue.produits.find(
-                p => p.id === this.productId
-            );
+            this.data = catalogue.catalogue.produits.find(
+             p => p.slug === this.productId
+      );
 
             if (!this.data) {
 
@@ -35,7 +35,7 @@ class Product {
 
             }
 
-            this.currentColor = this.data.couleurs[0];
+            this.currentColor = this.data.variantes[0];
 
             this.render();
 
@@ -62,11 +62,12 @@ class Product {
         document.getElementById("productTitle").textContent =
             this.data.nom;
 
-        document.getElementById("productPrice").textContent =
-            this.data.prix + " DH";
+      document.getElementById("productPrice").textContent =
+          this.data.prix.actuel + " " +
+          this.data.prix.devise;
 
-        document.getElementById("productDescription").textContent =
-            this.data.descriptionLongue;
+       document.getElementById("productDescription").textContent =
+          this.data.description.longue;
 
         this.renderSizes();
 
@@ -112,21 +113,21 @@ class Product {
 
         container.innerHTML = "";
 
-        this.data.couleurs.forEach(color => {
+        this.data.variantes.forEach(color => {
 
             const swatch =
                 document.createElement("div");
 
             swatch.className = "swatch";
 
-            swatch.dataset.color = color.id;
+            swatch.dataset.variant = color.slug;
 
             swatch.title = color.nom;
 
-            swatch.style.background =
-                color.code;
+           swatch.style.background =
+             color.codeCouleur;
 
-            if (color.id === this.currentColor.id) {
+            if (color.slug === this.currentColor.slug){
 
                 swatch.classList.add("active");
 
@@ -179,15 +180,15 @@ class Product {
             if (!e.target.classList.contains("swatch"))
                 return;
 
-            const colorId =
-                e.target.dataset.color;
+            const variantSlug =
+             e.target.dataset.variant;
 
             this.currentColor =
-                this.data.couleurs.find(
+             this.data.variantes.find(
 
-                    c => c.id === colorId
+              v => v.slug === variantSlug
 
-                );
+          );
 
             document
                 .querySelectorAll(".swatch")
