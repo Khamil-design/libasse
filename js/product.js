@@ -24,6 +24,7 @@ class Product {
             const response = await fetch("data/catalogue.json");
 
             const catalogue = await response.json();
+           console.log(catalogue);
 
             this.data = catalogue.catalogue.produits.find(
              p => p.slug === this.productId
