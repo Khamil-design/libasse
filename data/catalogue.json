@@ -261,4 +261,155 @@
 
   }
 
+},
+{
+  "id": "CH001",
+
+  "slug": "chemise-gris-perle",
+
+  "categorie": "chemise",
+
+  "nom": "Chemise Premium",
+
+  "marque": "Libasse",
+
+  "reference": "CH-001",
+
+  "description": {
+
+    "courte": "Chemise premium confectionnée en popeline italienne, élégante et confortable.",
+
+    "longue": "Cette chemise Libasse est réalisée dans une popeline italienne haut de gamme. Sa coupe moderne, son col structuré et ses finitions soignées en font une pièce idéale aussi bien pour une tenue habillée que casual chic."
+
+  },
+
+  "prix": {
+
+    "actuel": 349,
+
+    "ancien": 429,
+
+    "devise": "DH"
+
+  },
+
+  "avis": {
+
+    "note": 4.8,
+
+    "nombre": 96
+
+  },
+
+  "etat": {
+
+    "nouveau": true,
+
+    "promotion": false
+
+  },
+
+  "tailles": [
+
+    "S",
+    "M",
+    "L",
+    "XL"
+
+  ],
+
+  "guideTailles": {
+
+    "S": {
+
+      "poitrine": 92,
+
+      "tourCou": 38
+
+    },
+
+    "M": {
+
+      "poitrine": 98,
+
+      "tourCou": 40
+
+    },
+
+    "L": {
+
+      "poitrine": 104,
+
+      "tourCou": 42
+
+    },
+
+    "XL": {
+
+      "poitrine": 110,
+
+      "tourCou": 44
+
+    }
+
+  },
+
+  "caracteristiques": [
+
+    "Popeline italienne premium",
+
+    "Col classique",
+
+    "Poignets boutonnés",
+
+    "Coupe moderne",
+
+    "Tissu respirant",
+
+    "Finitions haut de gamme"
+
+  ],
+
+  "variantes": [
+
+    {
+
+      "id": "CH001-GP",
+
+      "slug": "gris-perle",
+
+      "nom": "Gris Perle",
+
+      "codeCouleur": "#D9D9D4",
+
+      "stock": 25,
+
+      "images": {
+
+        "principale": "images/chemise/grisPerle/principale.jpg",
+
+        "dos": "images/chemise/grisPerle/dos.jpg",
+
+        "profil": "images/chemise/grisPerle/profil.jpg",
+
+        "detail": "images/chemise/grisPerle/detail.jpg"
+
+      }
+
+    }
+
+  ],
+
+  "completeLook": [
+
+    "trench-premium"
+
+  ],
+
+  "produitsSimilaires": [
+
+    "trench-premium"
+
+  ]
+
 }
