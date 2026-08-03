@@ -248,17 +248,15 @@ class Product {
    Démarrage
 ========================================================== */
 
-document.addEventListener(
+document.addEventListener("DOMContentLoaded", () => {
 
-    "DOMContentLoaded",
+    const params = new URLSearchParams(window.location.search);
 
-    () => {
+    const productId =
+        params.get("id") || "trench-premium";
 
-        const product =
-            new Product("trench-premium");
+    const product = new Product(productId);
 
-        product.load();
+    product.load();
 
-    }
-
-);
+});
