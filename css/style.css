@@ -1,1 +1,3614 @@
+/* ==========================================================
+   LIBASSE
+   PREMIUM E-COMMERCE THEME
+   ========================================================== */
 
+
+/* ==========================================================
+   01 - VARIABLES
+   ========================================================== */
+
+:root {
+
+    /* ---------- Couleurs ---------- */
+
+    --color-primary: #2F3E46;
+    --color-secondary: #6D7B74;
+    --color-accent: #C8A97E;
+
+    --color-success: #2E7D32;
+    --color-danger: #C62828;
+    --color-warning: #F9A825;
+
+    --color-white: #FFFFFF;
+
+    --color-background: #FAFAF8;
+    --color-surface: #FFFFFF;
+
+    --color-border: #E5E5E5;
+
+    --color-text: #2D2D2D;
+    --color-text-light: #777777;
+    --color-text-muted: #9A9A9A;
+
+    /* ---------- Typographie ---------- */
+
+    --font-family:
+        "Poppins",
+        sans-serif;
+
+    --font-size-xs: .75rem;
+    --font-size-sm: .875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.35rem;
+    --font-size-2xl: 1.75rem;
+    --font-size-3xl: 2.25rem;
+    --font-size-4xl: 3rem;
+
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    --line-height: 1.7;
+
+    /* ---------- Largeurs ---------- */
+
+    --container-width: 1400px;
+    --content-width: 1200px;
+
+    /* ---------- Espacements ---------- */
+
+    --space-1: .25rem;
+    --space-2: .5rem;
+    --space-3: .75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4rem;
+    --space-9: 5rem;
+
+    /* ---------- Bordures ---------- */
+
+    --radius-sm: .35rem;
+    --radius-md: .6rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-pill: 999px;
+
+    /* ---------- Ombres ---------- */
+
+    --shadow-sm:
+        0 2px 8px rgba(0,0,0,.05);
+
+    --shadow-md:
+        0 8px 20px rgba(0,0,0,.08);
+
+    --shadow-lg:
+        0 18px 40px rgba(0,0,0,.12);
+
+    /* ---------- Animations ---------- */
+
+    --transition-fast: .2s ease;
+
+    --transition:
+        .3s ease;
+
+    --transition-slow:
+        .45s ease;
+
+}
+
+
+/* ==========================================================
+   02 - RESET
+   ========================================================== */
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    font-size:16px;
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:var(--font-family);
+
+    font-size:var(--font-size-base);
+
+    font-weight:var(--font-regular);
+
+    line-height:var(--line-height);
+
+    color:var(--color-text);
+
+    background:var(--color-background);
+
+    min-height:100vh;
+
+    -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+    user-select:none;
+
+}
+
+picture{
+
+    display:block;
+
+}
+
+svg{
+
+    display:block;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+button{
+
+    border:none;
+
+    background:none;
+
+    font:inherit;
+
+    cursor:pointer;
+
+}
+
+input,
+textarea,
+select{
+
+    font:inherit;
+
+    outline:none;
+
+}
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+hr{
+
+    border:none;
+
+    border-top:1px solid var(--color-border);
+
+}
+
+::selection{
+
+    background:var(--color-accent);
+
+    color:white;
+
+}
+
+
+/* ==========================================================
+   03 - UTILITAIRES GLOBAUX
+   ========================================================== */
+
+.container{
+
+    width:min(
+        100% - 2rem,
+        var(--container-width)
+    );
+
+    margin-inline:auto;
+
+}
+
+.section{
+
+    padding-block:5rem;
+
+}
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.mt-1{margin-top:var(--space-1);}
+.mt-2{margin-top:var(--space-2);}
+.mt-3{margin-top:var(--space-3);}
+.mt-4{margin-top:var(--space-4);}
+.mt-5{margin-top:var(--space-5);}
+.mt-6{margin-top:var(--space-6);}
+
+.mb-1{margin-bottom:var(--space-1);}
+.mb-2{margin-bottom:var(--space-2);}
+.mb-3{margin-bottom:var(--space-3);}
+.mb-4{margin-bottom:var(--space-4);}
+.mb-5{margin-bottom:var(--space-5);}
+.mb-6{margin-bottom:var(--space-6);}
+/* ==========================================================
+   04 - LAYOUT GÉNÉRAL
+========================================================== */
+
+main{
+
+    padding-top:2rem;
+    padding-bottom:5rem;
+
+}
+
+.product-page{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.2fr)
+        minmax(360px,.8fr);
+
+    gap:4rem;
+
+    align-items:start;
+
+    margin-top:2rem;
+
+}
+
+.product-gallery{
+
+    position:sticky;
+
+    top:2rem;
+
+}
+
+
+/* ==========================================================
+   05 - HEADER
+========================================================== */
+
+.site-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:var(--color-white);
+
+    border-bottom:1px solid var(--color-border);
+
+    backdrop-filter:blur(10px);
+
+}
+
+.site-header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:80px;
+
+    gap:2rem;
+
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo{
+
+    font-size:1.75rem;
+
+    font-weight:700;
+
+    letter-spacing:.35rem;
+
+    color:var(--color-primary);
+
+    white-space:nowrap;
+
+    transition:var(--transition);
+
+}
+
+.logo:hover{
+
+    color:var(--color-accent);
+
+}
+
+
+/* ==========================================================
+   ACTIONS DU HEADER
+========================================================== */
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+
+/* ==========================================================
+   ICÔNES
+========================================================== */
+
+.icon-button{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:transparent;
+
+    transition:var(--transition);
+
+}
+
+.icon-button:hover{
+
+    background:#f4f4f4;
+
+}
+
+.icon-button i{
+
+    font-size:1.25rem;
+
+    color:var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   BADGE PANIER
+========================================================== */
+
+.cart-count{
+
+    position:absolute;
+
+    top:-4px;
+
+    right:-4px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:var(--color-accent);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:.70rem;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   EFFET AU SCROLL
+========================================================== */
+
+.site-header.scrolled{
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+/* ==========================================================
+   BARRE D'ANNONCE
+========================================================== */
+
+.top-banner{
+
+    background:var(--color-primary);
+
+    color:white;
+
+    text-align:center;
+
+    padding:.6rem 1rem;
+
+    font-size:.85rem;
+
+    font-weight:500;
+
+    letter-spacing:.05rem;
+
+}
+
+
+/* ==========================================================
+   RECHERCHE
+========================================================== */
+
+.search-box{
+
+    flex:1;
+
+    max-width:500px;
+
+    position:relative;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    height:46px;
+
+    padding:0 1rem 0 3rem;
+
+    border:1px solid var(--color-border);
+
+    border-radius:999px;
+
+    background:white;
+
+    transition:var(--transition);
+
+}
+
+.search-box input:focus{
+
+    border-color:var(--color-accent);
+
+    box-shadow:0 0 0 3px rgba(200,169,126,.15);
+
+}
+
+.search-box i{
+
+    position:absolute;
+
+    left:1rem;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#888;
+
+}
+
+
+/* ==========================================================
+   MINI ANIMATION
+========================================================== */
+
+.logo,
+.icon-button{
+
+    transition:
+        transform .25s ease,
+        color .25s ease,
+        background .25s ease;
+
+}
+
+.icon-button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.logo:hover{
+
+    transform:scale(1.02);
+
+}
+/* ==========================================================
+   06 - NAVIGATION
+========================================================== */
+
+.main-nav{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.main-nav ul{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:2rem;
+
+}
+
+.main-nav li{
+
+    position:relative;
+
+}
+
+.main-nav a{
+
+    display:block;
+
+    padding:.75rem 0;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    color:var(--color-text);
+
+    transition:var(--transition);
+
+}
+
+.main-nav a:hover{
+
+    color:var(--color-accent);
+
+}
+
+
+/* ==========================================================
+   SOULIGNEMENT ANIMÉ
+========================================================== */
+
+.main-nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--color-accent);
+
+    transition:width .30s ease;
+
+}
+
+.main-nav a:hover::after{
+
+    width:100%;
+
+}
+
+
+/* ==========================================================
+   LIEN ACTIF
+========================================================== */
+
+.main-nav a.active{
+
+    color:var(--color-accent);
+
+    font-weight:600;
+
+}
+
+.main-nav a.active::after{
+
+    width:100%;
+
+}
+
+
+/* ==========================================================
+   BREADCRUMB
+========================================================== */
+
+.breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:.6rem;
+
+    margin:2rem 0 3rem;
+
+    font-size:.9rem;
+
+    color:var(--color-text-light);
+
+}
+
+.breadcrumb a{
+
+    color:var(--color-text-light);
+
+    transition:var(--transition);
+
+}
+
+.breadcrumb a:hover{
+
+    color:var(--color-accent);
+
+}
+
+.breadcrumb span{
+
+    color:var(--color-text-muted);
+
+}
+
+#breadcrumbProduct{
+
+    color:var(--color-primary);
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   PETIT EFFET D'APPARITION
+========================================================== */
+
+.breadcrumb{
+
+    animation:fadeBreadcrumb .5s ease;
+
+}
+
+@keyframes fadeBreadcrumb{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   ESPACEMENT ENTRE HEADER ET CONTENU
+========================================================== */
+
+.site-header + main{
+
+    margin-top:0;
+
+}
+/* ==========================================================
+   08 - PRODUCT LAYOUT
+========================================================== */
+
+/* ==========================================================
+   COLONNE INFORMATIONS
+========================================================== */
+
+.product-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.5rem;
+
+}
+
+
+/* ==========================================================
+   MARQUE
+========================================================== */
+
+.product-brand{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    align-self:flex-start;
+
+    padding:.35rem .90rem;
+
+    background:#F6F3EE;
+
+    color:var(--color-accent);
+
+    border-radius:999px;
+
+    font-size:.80rem;
+
+    font-weight:600;
+
+    letter-spacing:.08rem;
+
+    text-transform:uppercase;
+
+}
+
+
+/* ==========================================================
+   TITRE
+========================================================== */
+
+.product-title{
+
+    font-size:2.5rem;
+
+    line-height:1.15;
+
+    font-weight:700;
+
+    color:var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   REFERENCE
+========================================================== */
+
+.product-reference{
+
+    color:var(--color-text-light);
+
+    font-size:.90rem;
+
+}
+
+
+/* ==========================================================
+   AVIS
+========================================================== */
+
+.product-rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+}
+
+.stars{
+
+    display:flex;
+
+    gap:.15rem;
+
+}
+
+.stars i{
+
+    color:#F4B400;
+
+    font-size:1rem;
+
+}
+
+#ratingValue{
+
+    font-weight:600;
+
+}
+
+#reviewCount{
+
+    color:var(--color-text-light);
+
+}
+
+
+/* ==========================================================
+   PRIX
+========================================================== */
+
+.price-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+    flex-wrap:wrap;
+
+}
+
+.old-price{
+
+    color:#999;
+
+    text-decoration:line-through;
+
+    font-size:1.20rem;
+
+}
+
+.current-price{
+
+    color:var(--color-primary);
+
+    font-size:2.25rem;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================================
+   DESCRIPTION COURTE
+========================================================== */
+
+.short-description{
+
+    color:var(--color-text-light);
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================================
+   BLOCS
+========================================================== */
+
+.product-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1rem;
+
+}
+
+
+/* ==========================================================
+   EN-TÊTE DES BLOCS
+========================================================== */
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.section-header h3{
+
+    font-size:1rem;
+
+    font-weight:600;
+
+}
+
+.section-header a{
+
+    font-size:.90rem;
+
+    color:var(--color-accent);
+
+}
+
+.section-header a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================================================
+   COULEURS
+========================================================== */
+
+.color-swatches{
+
+    display:flex;
+
+    gap:1rem;
+
+    flex-wrap:wrap;
+
+}
+
+.swatch{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    border:2px solid white;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    box-shadow:0 0 0 1px #DDD;
+
+}
+
+.swatch:hover{
+
+    transform:scale(1.12);
+
+}
+
+.swatch.active{
+
+    transform:scale(1.15);
+
+    box-shadow:
+        0 0 0 3px var(--color-accent);
+
+}
+
+
+/* ==========================================================
+   TAILLES
+========================================================== */
+
+.size-selector{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:.75rem;
+
+}
+
+.size-selector button{
+
+    min-width:58px;
+
+    height:48px;
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-md);
+
+    background:white;
+
+    transition:var(--transition);
+
+}
+
+.size-selector button:hover{
+
+    border-color:var(--color-accent);
+
+}
+
+.size-selector button.active{
+
+    background:var(--color-primary);
+
+    color:white;
+
+    border-color:var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   QUANTITÉ
+========================================================== */
+
+.quantity-selector{
+
+    display:flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-md);
+
+    overflow:hidden;
+
+}
+
+.quantity-selector button{
+
+    width:48px;
+
+    height:48px;
+
+    background:#F7F7F7;
+
+    font-size:1.25rem;
+
+    transition:var(--transition);
+
+}
+
+.quantity-selector button:hover{
+
+    background:#ECECEC;
+
+}
+
+.quantity-selector input{
+
+    width:70px;
+
+    height:48px;
+
+    border:none;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   STOCK
+========================================================== */
+
+.stock-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    color:var(--color-success);
+
+    font-weight:600;
+
+}
+
+.stock-status i{
+
+    font-size:1.1rem;
+
+}
+
+
+/* ==========================================================
+   BADGES
+========================================================== */
+
+.product-badges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:.75rem;
+
+}
+
+.product-badge{
+
+    padding:.50rem 1rem;
+
+    background:#F8F8F8;
+
+    border-radius:999px;
+
+    font-size:.85rem;
+
+    color:var(--color-text-light);
+
+}
+/* ==========================================================
+   09 - PRODUCT GALLERY
+========================================================== */
+
+.product-gallery{
+
+    display:grid;
+
+    grid-template-columns:100px 1fr;
+
+    gap:1.5rem;
+
+    align-items:start;
+
+}
+
+
+/* ==========================================================
+   MINIATURES
+========================================================== */
+
+.thumbnails{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1rem;
+
+    position:sticky;
+
+    top:120px;
+
+}
+
+.thumb{
+
+    width:100%;
+
+    aspect-ratio:3/4;
+
+    object-fit:cover;
+
+    border-radius:var(--radius-md);
+
+    border:2px solid transparent;
+
+    background:white;
+
+    cursor:pointer;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.thumb:hover{
+
+    transform:translateY(-3px);
+
+    border-color:var(--color-accent);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.thumb.active{
+
+    border-color:var(--color-accent);
+
+    box-shadow:0 0 0 3px rgba(200,169,126,.20);
+
+}
+
+
+/* ==========================================================
+   IMAGE PRINCIPALE
+========================================================== */
+
+.main-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:var(--radius-lg);
+
+    background:white;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.main-image img{
+
+    width:100%;
+
+    aspect-ratio:3/4;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+        transform .40s ease,
+        opacity .30s ease;
+
+}
+
+
+/* ==========================================================
+   ZOOM AU SURVOL
+========================================================== */
+
+.main-image:hover img{
+
+    transform:scale(1.06);
+
+}
+
+
+/* ==========================================================
+   BADGE PRODUIT
+========================================================== */
+
+.product-label{
+
+    position:absolute;
+
+    top:1rem;
+
+    left:1rem;
+
+    background:var(--color-accent);
+
+    color:white;
+
+    padding:.50rem .90rem;
+
+    border-radius:999px;
+
+    font-size:.80rem;
+
+    font-weight:600;
+
+    z-index:10;
+
+}
+
+
+/* ==========================================================
+   BOUTON FAVORIS
+========================================================== */
+
+.favorite-button{
+
+    position:absolute;
+
+    top:1rem;
+
+    right:1rem;
+
+    width:46px;
+
+    height:46px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+    z-index:10;
+
+}
+
+.favorite-button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.favorite-button i{
+
+    font-size:1.15rem;
+
+}
+
+
+/* ==========================================================
+   TRANSITION IMAGE
+========================================================== */
+
+.fade-image{
+
+    animation:fadeImage .25s ease;
+
+}
+
+@keyframes fadeImage{
+
+    from{
+
+        opacity:.2;
+
+        transform:scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* ==========================================================
+   CURSEUR ZOOM
+========================================================== */
+
+.main-image{
+
+    cursor:zoom-in;
+
+}
+
+
+/* ==========================================================
+   IMAGE DE CHARGEMENT
+========================================================== */
+
+.image-loading{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:700px;
+
+    background:#fafafa;
+
+}
+
+.image-loading::after{
+
+    content:"";
+
+    width:40px;
+
+    height:40px;
+
+    border:4px solid #DDD;
+
+    border-top-color:var(--color-accent);
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+/* ==========================================================
+   10 - PRODUCT INFORMATION
+========================================================== */
+
+/* ==========================================================
+   CONTENEUR
+========================================================== */
+
+.product-info{
+
+    display:flex;
+    flex-direction:column;
+    gap:1.75rem;
+
+}
+
+
+/* ==========================================================
+   MARQUE
+========================================================== */
+
+.product-brand{
+
+    display:inline-flex;
+    align-items:center;
+    width:max-content;
+
+    padding:.45rem 1rem;
+
+    border-radius:999px;
+
+    background:#F6F3EE;
+
+    color:var(--color-accent);
+
+    font-size:.80rem;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08rem;
+
+}
+
+
+/* ==========================================================
+   TITRE
+========================================================== */
+
+.product-title{
+
+    font-size:2.6rem;
+
+    line-height:1.15;
+
+    font-weight:700;
+
+    color:var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   REFERENCE
+========================================================== */
+
+.product-reference{
+
+    font-size:.9rem;
+
+    color:var(--color-text-muted);
+
+}
+
+
+/* ==========================================================
+   AVIS
+========================================================== */
+
+.product-rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+}
+
+.stars{
+
+    display:flex;
+
+    gap:.2rem;
+
+}
+
+.stars i{
+
+    color:#F5B301;
+
+    font-size:1rem;
+
+}
+
+#ratingValue{
+
+    font-weight:600;
+
+}
+
+#reviewCount{
+
+    color:var(--color-text-light);
+
+}
+
+
+/* ==========================================================
+   PRIX
+========================================================== */
+
+.price-box{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:1rem;
+
+    flex-wrap:wrap;
+
+}
+
+.old-price{
+
+    font-size:1.25rem;
+
+    text-decoration:line-through;
+
+    color:#A0A0A0;
+
+}
+
+.current-price{
+
+    font-size:2.6rem;
+
+    font-weight:700;
+
+    color:var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   DESCRIPTION COURTE
+========================================================== */
+
+.short-description{
+
+    font-size:1rem;
+
+    color:var(--color-text-light);
+
+    line-height:1.9;
+
+}
+
+
+/* ==========================================================
+   BLOCS
+========================================================== */
+
+.product-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1rem;
+
+}
+
+
+/* ==========================================================
+   TITRES DE SECTION
+========================================================== */
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.section-header h3{
+
+    font-size:1rem;
+
+    font-weight:600;
+
+}
+
+.section-header a{
+
+    color:var(--color-accent);
+
+    font-size:.90rem;
+
+}
+
+.section-header a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================================================
+   COULEURS
+========================================================== */
+
+.color-swatches{
+
+    display:flex;
+
+    gap:1rem;
+
+    flex-wrap:wrap;
+
+}
+
+.swatch{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    border:2px solid white;
+
+    box-shadow:0 0 0 1px #DDD;
+
+    transition:all .25s ease;
+
+}
+
+.swatch:hover{
+
+    transform:scale(1.12);
+
+}
+
+.swatch.active{
+
+    transform:scale(1.15);
+
+    box-shadow:
+        0 0 0 3px rgba(200,169,126,.25);
+
+}
+
+
+/* ==========================================================
+   TAILLES
+========================================================== */
+
+.size-selector{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:.75rem;
+
+}
+
+.size-selector button{
+
+    min-width:60px;
+
+    height:48px;
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-md);
+
+    background:white;
+
+    transition:all .25s ease;
+
+}
+
+.size-selector button:hover{
+
+    border-color:var(--color-accent);
+
+}
+
+.size-selector button.active{
+
+    background:var(--color-primary);
+
+    color:white;
+
+    border-color:var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   QUANTITE
+========================================================== */
+
+.quantity-selector{
+
+    display:flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    overflow:hidden;
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-md);
+
+}
+
+.quantity-selector button{
+
+    width:48px;
+
+    height:48px;
+
+    background:#F8F8F8;
+
+    font-size:1.3rem;
+
+    transition:.2s;
+
+}
+
+.quantity-selector button:hover{
+
+    background:#ECECEC;
+
+}
+
+.quantity-selector input{
+
+    width:70px;
+
+    height:48px;
+
+    border:none;
+
+    text-align:center;
+
+    font-weight:600;
+
+    background:white;
+
+}
+
+
+/* ==========================================================
+   DISPONIBILITE
+========================================================== */
+
+.stock-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    color:var(--color-success);
+
+    font-weight:600;
+
+}
+
+.stock-status i{
+
+    font-size:1.15rem;
+
+}
+
+
+/* ==========================================================
+   BADGES
+========================================================== */
+
+.product-badges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:.75rem;
+
+}
+
+.product-badge{
+
+    padding:.55rem 1rem;
+
+    border-radius:999px;
+
+    background:#F5F5F5;
+
+    color:var(--color-text-light);
+
+    font-size:.85rem;
+
+    transition:.25s;
+
+}
+
+.product-badge:hover{
+
+    background:var(--color-primary);
+
+    color:white;
+
+}
+
+
+/* ==========================================================
+   PETITES INFORMATIONS
+========================================================== */
+
+.product-meta{
+
+    display:grid;
+
+    gap:.75rem;
+
+    padding-top:1rem;
+
+    border-top:1px solid var(--color-border);
+
+}
+
+.product-meta div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:.95rem;
+
+}
+
+.product-meta span:first-child{
+
+    color:var(--color-text-light);
+
+}
+
+.product-meta span:last-child{
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+.product-info>*{
+
+    animation:fadeUp .45s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   11 - PURCHASE CARD
+========================================================== */
+
+.purchase-card{
+
+    position:sticky;
+
+    top:2rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.5rem;
+
+    padding:2rem;
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+/* ==========================================================
+   PRIX
+========================================================== */
+
+.purchase-price{
+
+    display:flex;
+
+    align-items:baseline;
+
+    gap:.75rem;
+
+}
+
+.purchase-price span{
+
+    font-size:2.25rem;
+
+    font-weight:700;
+
+    color:var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   STOCK
+========================================================== */
+
+.stock{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    color:var(--color-success);
+
+    font-weight:600;
+
+}
+
+.stock i{
+
+    font-size:1.1rem;
+
+}
+
+
+/* ==========================================================
+   LIVRAISON
+========================================================== */
+
+.shipping{
+
+    padding:1rem;
+
+    background:#F8F8F8;
+
+    border-radius:var(--radius-md);
+
+    color:var(--color-text-light);
+
+    line-height:1.7;
+
+}
+
+.shipping strong{
+
+    display:block;
+
+    margin-bottom:.35rem;
+
+    color:var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   BOUTONS
+========================================================== */
+
+.purchase-card .btn{
+
+    width:100%;
+
+    height:54px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    border-radius:var(--radius-md);
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:all .25s ease;
+
+}
+
+
+/* ==========================================================
+   BOUTON PRINCIPAL
+========================================================== */
+
+.btn-primary{
+
+    background:var(--color-primary);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:#223037;
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+/* ==========================================================
+   BOUTON SECONDAIRE
+========================================================== */
+
+.btn-dark{
+
+    background:var(--color-accent);
+
+    color:white;
+
+}
+
+.btn-dark:hover{
+
+    background:#B18F66;
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+/* ==========================================================
+   BOUTON OUTLINE
+========================================================== */
+
+.btn-outline{
+
+    background:white;
+
+    color:var(--color-primary);
+
+    border:1px solid var(--color-border);
+
+}
+
+.btn-outline:hover{
+
+    border-color:var(--color-accent);
+
+    color:var(--color-accent);
+
+}
+
+
+/* ==========================================================
+   INFORMATIONS
+========================================================== */
+
+.purchase-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.85rem;
+
+}
+
+.purchase-info li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    color:var(--color-text-light);
+
+    font-size:.95rem;
+
+}
+
+.purchase-info li::before{
+
+    content:"✓";
+
+    color:var(--color-success);
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================================
+   GARANTIES
+========================================================== */
+
+.guarantees{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:1rem;
+
+}
+
+.guarantee{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.5rem;
+
+    padding:1rem;
+
+    text-align:center;
+
+    background:#FAFAFA;
+
+    border-radius:var(--radius-md);
+
+    transition:all .25s ease;
+
+}
+
+.guarantee:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.guarantee i{
+
+    font-size:1.5rem;
+
+    color:var(--color-accent);
+
+}
+
+.guarantee span{
+
+    font-size:.85rem;
+
+    color:var(--color-text);
+
+    font-weight:500;
+
+}
+
+
+/* ==========================================================
+   SÉPARATEUR
+========================================================== */
+
+.purchase-card hr{
+
+    border:0;
+
+    border-top:1px solid var(--color-border);
+
+}
+
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+.purchase-card{
+
+    animation:purchaseCardAppear .5s ease;
+
+}
+
+@keyframes purchaseCardAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+/* ==========================================================
+   12 - DESCRIPTION
+========================================================== */
+
+.product-description,
+.product-features,
+.size-guide,
+.why-love{
+
+    margin-top:5rem;
+
+}
+
+.product-description h2,
+.product-features h2,
+.size-guide h2,
+.why-love h2{
+
+    margin-bottom:2rem;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:var(--color-primary);
+
+}
+
+.product-description p{
+
+    max-width:900px;
+
+    line-height:2;
+
+    color:var(--color-text-light);
+
+    font-size:1rem;
+
+}
+
+
+/* ==========================================================
+   CARACTÉRISTIQUES
+========================================================== */
+
+.product-features ul{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(250px,1fr));
+
+    gap:1rem 3rem;
+
+}
+
+.product-features li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    padding:1rem;
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-md);
+
+    transition:var(--transition);
+
+}
+
+.product-features li:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.product-features li::before{
+
+    content:"✓";
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:50%;
+
+    background:var(--color-success);
+
+    color:white;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+
+/* ==========================================================
+   GUIDE DES TAILLES
+========================================================== */
+
+.size-guide{
+
+    overflow-x:auto;
+
+}
+
+.size-guide table{
+
+    width:100%;
+
+    min-width:650px;
+
+    background:var(--color-surface);
+
+    border-radius:var(--radius-lg);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.size-guide thead{
+
+    background:var(--color-primary);
+
+}
+
+.size-guide th{
+
+    color:white;
+
+    padding:1rem;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+.size-guide td{
+
+    padding:1rem;
+
+    text-align:center;
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+.size-guide tbody tr:nth-child(even){
+
+    background:#FAFAFA;
+
+}
+
+.size-guide tbody tr:hover{
+
+    background:#F3F5F6;
+
+}
+
+.size-tip{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:1rem;
+
+    margin-top:1.5rem;
+
+    padding:1.25rem;
+
+    border-left:4px solid var(--color-accent);
+
+    background:#FDF9F3;
+
+    border-radius:0 var(--radius-md) var(--radius-md) 0;
+
+    color:var(--color-text-light);
+
+}
+
+.size-tip i{
+
+    color:var(--color-accent);
+
+    font-size:1.2rem;
+
+    margin-top:.1rem;
+
+}
+
+
+/* ==========================================================
+   POURQUOI VOUS ALLEZ L'AIMER
+========================================================== */
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:2rem;
+
+}
+
+.why-card{
+
+    padding:2rem;
+
+    text-align:center;
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-lg);
+
+    transition:all .3s ease;
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.why-card i{
+
+    font-size:2.5rem;
+
+    color:var(--color-accent);
+
+    margin-bottom:1rem;
+
+}
+
+.why-card h3{
+
+    margin-bottom:.75rem;
+
+    font-size:1.15rem;
+
+    color:var(--color-primary);
+
+}
+
+.why-card p{
+
+    color:var(--color-text-light);
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+.product-description,
+.product-features,
+.size-guide,
+.why-love{
+
+    animation:fadeSection .6s ease;
+
+}
+
+@keyframes fadeSection{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   13 - COMPLÉTEZ VOTRE TENUE
+========================================================== */
+
+.complete-look{
+
+    margin-top:6rem;
+
+}
+
+.complete-look h2{
+
+    margin-bottom:2rem;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:var(--color-primary);
+
+}
+
+.look-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:2rem;
+
+}
+
+.look-item{
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-lg);
+
+    overflow:hidden;
+
+    transition:all .30s ease;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.look-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.look-item img{
+
+    width:100%;
+
+    aspect-ratio:3/4;
+
+    object-fit:cover;
+
+}
+
+.look-item h3{
+
+    margin:1.25rem 1.25rem .5rem;
+
+    font-size:1.15rem;
+
+    color:var(--color-primary);
+
+}
+
+.look-item p{
+
+    margin:0 1.25rem 1.25rem;
+
+    font-size:1.25rem;
+
+    font-weight:700;
+
+    color:var(--color-accent);
+
+}
+
+.look-item .btn{
+
+    width:calc(100% - 2.5rem);
+
+    margin:0 1.25rem 1.5rem;
+
+}
+
+
+/* ==========================================================
+   14 - PRODUITS SIMILAIRES
+========================================================== */
+
+.related-products{
+
+    margin-top:6rem;
+
+}
+
+.related-products h2{
+
+    margin-bottom:2rem;
+
+    font-size:2rem;
+
+    color:var(--color-primary);
+
+}
+
+.related-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:2rem;
+
+}
+
+.product-card{
+
+    background:white;
+
+    border-radius:var(--radius-lg);
+
+    overflow:hidden;
+
+    border:1px solid var(--color-border);
+
+    transition:all .30s ease;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.product-card img{
+
+    width:100%;
+
+    aspect-ratio:3/4;
+
+    object-fit:cover;
+
+    transition:transform .4s ease;
+
+}
+
+.product-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.product-card h3{
+
+    margin:1.25rem 1.25rem .5rem;
+
+    font-size:1.15rem;
+
+    color:var(--color-primary);
+
+}
+
+.product-card p{
+
+    margin:0 1.25rem 1.5rem;
+
+    color:var(--color-accent);
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================================
+   15 - NEWSLETTER
+========================================================== */
+
+.newsletter{
+
+    margin-top:7rem;
+
+    padding:5rem 2rem;
+
+    background:linear-gradient(
+        135deg,
+        var(--color-primary),
+        #465861
+    );
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.newsletter h2{
+
+    font-size:2.3rem;
+
+    margin-bottom:1rem;
+
+}
+
+.newsletter p{
+
+    max-width:650px;
+
+    margin:0 auto 2rem;
+
+    opacity:.9;
+
+    line-height:1.8;
+
+}
+
+.newsletter-form{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:1rem;
+
+    flex-wrap:wrap;
+
+}
+
+.newsletter-form input{
+
+    width:min(420px,100%);
+
+    height:56px;
+
+    padding:0 1.25rem;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:white;
+
+}
+
+.newsletter-form button{
+
+    height:56px;
+
+    padding:0 2rem;
+
+    border-radius:999px;
+
+    background:var(--color-accent);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+.newsletter-form button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+/* ==========================================================
+   16 - FOOTER
+========================================================== */
+
+.site-footer{
+
+    background:#222;
+
+    color:#DDD;
+
+    padding:5rem 0 2rem;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:3rem;
+
+}
+
+.site-footer h3{
+
+    color:white;
+
+    margin-bottom:1rem;
+
+    letter-spacing:.15rem;
+
+}
+
+.site-footer h4{
+
+    color:white;
+
+    margin-bottom:1rem;
+
+}
+
+.site-footer p{
+
+    line-height:1.9;
+
+}
+
+.site-footer ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.75rem;
+
+}
+
+.site-footer a{
+
+    color:#DDD;
+
+    transition:.25s;
+
+}
+
+.site-footer a:hover{
+
+    color:white;
+
+    padding-left:.35rem;
+
+}
+
+.social-links{
+
+    display:flex;
+
+    gap:1rem;
+
+}
+
+.social-links a{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:#333;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.2rem;
+
+    transition:.30s;
+
+}
+
+.social-links a:hover{
+
+    background:var(--color-accent);
+
+    transform:translateY(-4px);
+
+}
+
+.copyright{
+
+    margin-top:4rem;
+
+    padding-top:2rem;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    color:#AAA;
+
+    font-size:.9rem;
+
+}
+
+
+/* ==========================================================
+   APPARITION DES CARTES
+========================================================== */
+
+.look-item,
+.product-card{
+
+    animation:cardAppear .6s ease;
+
+}
+
+@keyframes cardAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   17 - ANIMATIONS GLOBALES
+========================================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+        transform:translateX(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+        transform:translateX(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+        transform:scale(.92);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.fade-in{
+
+    animation:fadeIn .6s ease;
+
+}
+
+.fade-up{
+
+    animation:fadeUp .6s ease;
+
+}
+
+.fade-left{
+
+    animation:fadeLeft .6s ease;
+
+}
+
+.fade-right{
+
+    animation:fadeRight .6s ease;
+
+}
+
+.zoom-in{
+
+    animation:zoomIn .5s ease;
+
+}
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+
+/* ==========================================================
+   HOVER PREMIUM
+========================================================== */
+
+img{
+
+    transition:transform .35s ease;
+
+}
+
+button,
+a{
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+/* ==========================================================
+   18 - RESPONSIVE
+========================================================== */
+
+
+/* ==========================================================
+   <= 1200 px
+========================================================== */
+
+@media (max-width:1200px){
+
+    .product-page{
+
+        grid-template-columns:1fr;
+
+        gap:3rem;
+
+    }
+
+    .product-gallery{
+
+        position:static;
+
+    }
+
+    .purchase-card{
+
+        position:static;
+
+    }
+
+}
+
+
+/* ==========================================================
+   <= 992 px
+========================================================== */
+
+@media (max-width:992px){
+
+    .site-header .container{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:1rem;
+
+        padding:1rem 0;
+
+    }
+
+    .main-nav{
+
+        order:3;
+
+        width:100%;
+
+    }
+
+    .main-nav ul{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:1.5rem;
+
+    }
+
+    .product-title{
+
+        font-size:2rem;
+
+    }
+
+    .why-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .product-features ul{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* ==========================================================
+   <= 768 px
+========================================================== */
+
+@media (max-width:768px){
+
+    .product-gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .thumbnails{
+
+        order:2;
+
+        position:static;
+
+        flex-direction:row;
+
+        justify-content:center;
+
+        overflow-x:auto;
+
+        padding-bottom:.5rem;
+
+    }
+
+    .thumb{
+
+        width:85px;
+
+        flex-shrink:0;
+
+    }
+
+    .product-title{
+
+        font-size:1.75rem;
+
+    }
+
+    .price-box{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .purchase-card{
+
+        padding:1.5rem;
+
+    }
+
+    .newsletter{
+
+        padding:4rem 1.5rem;
+
+    }
+
+    .newsletter-form{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .newsletter-form input{
+
+        width:100%;
+
+    }
+
+    .newsletter-form button{
+
+        width:100%;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+
+/* ==========================================================
+   <= 576 px
+========================================================== */
+
+@media (max-width:576px){
+
+    html{
+
+        font-size:15px;
+
+    }
+
+    .logo{
+
+        font-size:1.5rem;
+
+        letter-spacing:.2rem;
+
+    }
+
+    .main-nav ul{
+
+        gap:1rem;
+
+    }
+
+    .icon-button{
+
+        width:42px;
+        height:42px;
+
+    }
+
+    .product-title{
+
+        font-size:1.5rem;
+
+    }
+
+    .current-price{
+
+        font-size:2rem;
+
+    }
+
+    .purchase-card{
+
+        border-radius:var(--radius-md);
+
+    }
+
+    .guarantees{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .why-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .related-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .look-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .social-links{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/* ==========================================================
+   <= 420 px
+========================================================== */
+
+@media (max-width:420px){
+
+    .container{
+
+        width:min(100% - 1rem,var(--container-width));
+
+    }
+
+    .product-brand{
+
+        font-size:.75rem;
+
+    }
+
+    .product-badges{
+
+        gap:.5rem;
+
+    }
+
+    .product-badge{
+
+        font-size:.75rem;
+
+        padding:.45rem .75rem;
+
+    }
+
+    .quantity-selector{
+
+        width:100%;
+
+    }
+
+    .quantity-selector input{
+
+        flex:1;
+
+    }
+
+}
