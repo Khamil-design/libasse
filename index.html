@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hana Boutique</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<main class="container-fluid py-4">
+
+<div class="row g-5">
+
+    <!-- ===================================================== -->
+    <!-- GALERIE -->
+    <!-- ===================================================== -->
+
+    <div class="col-lg-5">
+
+        <div class="product-gallery">
+
+            <div class="row">
+
+                <div class="col-2">
+
+                    <div class="thumbnails">
+
+                        <img src="images/trench/principale.jpg"
+                             class="thumb active">
+
+                        <img src="images/trench/dos.jpg"
+                             class="thumb">
+
+                        <img src="images/trench/profil.jpg"
+                             class="thumb">
+
+                        <img src="images/trench/detail.jpg"
+                             class="thumb">
+
+                    </div>
+
+                </div>
+
+                <div class="col-10">
+
+                    <div class="main-image">
+
+                        <img
+                        id="mainProductImage"
+                        src="images/trench/principale.jpg"
+                        class="img-fluid">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ===================================================== -->
+    <!-- INFORMATIONS -->
+    <!-- ===================================================== -->
+
+    <div class="col-lg-4">
+
+        <div class="product-info">
+
+            <h1 class="product-title">
+                Trench long Premium
+            </h1>
+
+            <div class="product-rating">
+
+                ★★★★★
+                <span>(128 avis)</span>
+
+            </div>
+
+            <div class="product-price">
+
+                749 DH
+
+            </div>
+
+            <p class="product-short-description">
+
+                Trench long élégant confectionné dans une
+                gabardine premium.
+                Coupe intemporelle, double boutonnage,
+                ceinture assortie et finition haut de gamme.
+
+            </p>
+
+
+            <!-- Couleurs -->
+
+            <section class="product-section">
+
+                <h5>Couleur</h5>
+
+                <div class="color-swatches">
+
+                    <button class="swatch beige active"></button>
+
+                    <button class="swatch kaki"></button>
+
+                    <button class="swatch bordeaux"></button>
+
+                    <button class="swatch gris"></button>
+
+                    <button class="swatch marine"></button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Taille -->
+
+            <section class="product-section">
+
+                <h5>Taille</h5>
+
+                <div class="size-selector">
+
+                    <button>XS</button>
+                    <button>S</button>
+                    <button class="active">M</button>
+                    <button>L</button>
+                    <button>XL</button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Quantité -->
+
+            <section class="product-section">
+
+                <h5>Quantité</h5>
+
+                <div class="quantity-selector">
+
+                    <button>-</button>
+
+                    <input
+                    type="number"
+                    value="1">
+
+                    <button>+</button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ===================================================== -->
+    <!-- CARTE D'ACHAT -->
+    <!-- ===================================================== -->
+
+    <div class="col-lg-3">
+
+        <aside class="purchase-card">
+
+            <div class="purchase-price">
+
+                749 DH
+
+            </div>
+
+            <div class="stock">
+
+                ✔ En stock
+
+            </div>
+
+            <div class="shipping">
+
+                Livraison estimée :
+                48 à 72 h
+
+            </div>
+
+            <button
+            class="btn btn-success w-100 mb-3">
+
+                Ajouter au panier
+
+            </button>
+
+            <button
+            class="btn btn-dark w-100">
+
+                Commander
+
+            </button>
+
+            <hr>
+
+            <ul class="purchase-info">
+
+                <li>Paiement sécurisé</li>
+
+                <li>Retour sous 14 jours</li>
+
+                <li>Livraison partout au Maroc</li>
+
+            </ul>
+
+        </aside>
+
+    </div>
+
+</div>
+
+
+
+<!-- ===================================================== -->
+<!-- DESCRIPTION -->
+<!-- ===================================================== -->
+
+<section class="product-description mt-5">
+
+<h2>Description</h2>
+
+<p>
+
+Le trench Premium Hana Boutique est réalisé
+dans une gabardine haut de gamme offrant un
+excellent tombé.
+Sa coupe longue et sa ceinture soulignent
+élégamment la silhouette tout en garantissant
+un confort optimal.
+
+</p>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- CARACTÉRISTIQUES -->
+<!-- ===================================================== -->
+
+<section class="product-features mt-5">
+
+<h2>Caractéristiques</h2>
+
+<div class="row">
+
+<div class="col-md-6">
+
+<ul>
+
+<li>Gabardine premium</li>
+<li>Double boutonnage</li>
+<li>Ceinture assortie</li>
+<li>Poches latérales</li>
+
+</ul>
+
+</div>
+
+<div class="col-md-6">
+
+<ul>
+
+<li>Col tailleur</li>
+<li>Poignets réglables</li>
+<li>Coupe longue</li>
+<li>Finition haut de gamme</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- GUIDE DES TAILLES -->
+<!-- ===================================================== -->
+
+<section class="size-guide mt-5">
+
+<h2>Guide des tailles</h2>
+
+<table class="table table-bordered">
+
+<thead>
+
+<tr>
+
+<th>Taille</th>
+
+<th>Poitrine</th>
+
+<th>Taille</th>
+
+<th>Longueur</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>S</td>
+<td>92 cm</td>
+<td>74 cm</td>
+<td>128 cm</td>
+
+</tr>
+
+<tr>
+
+<td>M</td>
+<td>98 cm</td>
+<td>80 cm</td>
+<td>129 cm</td>
+
+</tr>
+
+<tr>
+
+<td>L</td>
+<td>104 cm</td>
+<td>86 cm</td>
+<td>130 cm</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- PRODUITS SIMILAIRES -->
+<!-- ===================================================== -->
+
+<section class="related-products mt-5">
+
+<h2>Vous aimerez aussi</h2>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+
+<div class="card">
+
+<img src="images/trench1.jpg">
+
+<div class="card-body">
+
+<h6>Trench Camel</h6>
+
+<p>749 DH</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- 3 autres cartes -->
+
+</div>
+
+</section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
