@@ -25,7 +25,8 @@ class Product {
 
             const catalogue = await response.json();
            console.log(catalogue);
-
+         console.log("ProductId recherché :", this.productId);
+         console.log("Slugs disponibles :", catalogue.catalogue.produits.map(p => p.slug));
             this.data = catalogue.catalogue.produits.find(
              p => p.slug === this.productId
       );
