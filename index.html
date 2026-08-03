@@ -1,401 +1,1026 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hana Boutique</title>
+    <title>Libasse | Élégance intemporelle</title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Libasse - Boutique de prêt-à-porter féminin haut de gamme.">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<main class="container-fluid py-4">
+<!-- ==========================================================
+     HEADER
+=========================================================== -->
 
-<div class="row g-5">
+<header class="site-header">
 
-    <!-- ===================================================== -->
-    <!-- GALERIE -->
-    <!-- ===================================================== -->
+    <div class="container">
 
-    <div class="col-lg-5">
+        <a href="#" class="logo">
 
-        <div class="product-gallery">
+            LIBASSE
 
-            <div class="row">
+        </a>
 
-                <div class="col-2">
+        <nav class="main-nav">
 
-                    <div class="thumbnails">
+            <ul>
 
-                        <img src="images/trench/principale.jpg"
-                             class="thumb active">
+                <li><a href="#">Accueil</a></li>
 
-                        <img src="images/trench/dos.jpg"
-                             class="thumb">
+                <li><a href="#">Nouveautés</a></li>
 
-                        <img src="images/trench/profil.jpg"
-                             class="thumb">
+                <li><a href="#">Robes</a></li>
 
-                        <img src="images/trench/detail.jpg"
-                             class="thumb">
+                <li><a href="#">Chemises</a></li>
 
-                    </div>
+                <li><a href="#">Jupes</a></li>
 
-                </div>
-
-                <div class="col-10">
-
-                    <div class="main-image">
-
-                        <img
-                        id="mainProductImage"
-                        src="images/trench/principale.jpg"
-                        class="img-fluid">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- ===================================================== -->
-    <!-- INFORMATIONS -->
-    <!-- ===================================================== -->
-
-    <div class="col-lg-4">
-
-        <div class="product-info">
-
-            <h1 class="product-title">
-                Trench long Premium
-            </h1>
-
-            <div class="product-rating">
-
-                ★★★★★
-                <span>(128 avis)</span>
-
-            </div>
-
-            <div class="product-price">
-
-                749 DH
-
-            </div>
-
-            <p class="product-short-description">
-
-                Trench long élégant confectionné dans une
-                gabardine premium.
-                Coupe intemporelle, double boutonnage,
-                ceinture assortie et finition haut de gamme.
-
-            </p>
-
-
-            <!-- Couleurs -->
-
-            <section class="product-section">
-
-                <h5>Couleur</h5>
-
-                <div class="color-swatches">
-
-                    <button class="swatch beige active"></button>
-
-                    <button class="swatch kaki"></button>
-
-                    <button class="swatch bordeaux"></button>
-
-                    <button class="swatch gris"></button>
-
-                    <button class="swatch marine"></button>
-
-                </div>
-
-            </section>
-
-
-            <!-- Taille -->
-
-            <section class="product-section">
-
-                <h5>Taille</h5>
-
-                <div class="size-selector">
-
-                    <button>XS</button>
-                    <button>S</button>
-                    <button class="active">M</button>
-                    <button>L</button>
-                    <button>XL</button>
-
-                </div>
-
-            </section>
-
-
-            <!-- Quantité -->
-
-            <section class="product-section">
-
-                <h5>Quantité</h5>
-
-                <div class="quantity-selector">
-
-                    <button>-</button>
-
-                    <input
-                    type="number"
-                    value="1">
-
-                    <button>+</button>
-
-                </div>
-
-            </section>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- ===================================================== -->
-    <!-- CARTE D'ACHAT -->
-    <!-- ===================================================== -->
-
-    <div class="col-lg-3">
-
-        <aside class="purchase-card">
-
-            <div class="purchase-price">
-
-                749 DH
-
-            </div>
-
-            <div class="stock">
-
-                ✔ En stock
-
-            </div>
-
-            <div class="shipping">
-
-                Livraison estimée :
-                48 à 72 h
-
-            </div>
-
-            <button
-            class="btn btn-success w-100 mb-3">
-
-                Ajouter au panier
-
-            </button>
-
-            <button
-            class="btn btn-dark w-100">
-
-                Commander
-
-            </button>
-
-            <hr>
-
-            <ul class="purchase-info">
-
-                <li>Paiement sécurisé</li>
-
-                <li>Retour sous 14 jours</li>
-
-                <li>Livraison partout au Maroc</li>
+                <li><a href="#">Manteaux</a></li>
 
             </ul>
 
-        </aside>
+        </nav>
+
+        <div class="header-actions">
+
+            <button class="icon-button">
+
+                <i class="bi bi-search"></i>
+
+            </button>
+
+            <button class="icon-button">
+
+                <i class="bi bi-heart"></i>
+
+            </button>
+
+            <button class="icon-button">
+
+                <i class="bi bi-cart3"></i>
+
+                <span class="cart-count">0</span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ==========================================================
+     MAIN
+=========================================================== -->
+
+<main>
+
+<div class="container">
+
+<!-- ==========================================================
+     BREADCRUMB
+=========================================================== -->
+
+<nav class="breadcrumb">
+
+    <a href="#">Accueil</a>
+
+    <span>/</span>
+
+    <a href="#">Manteaux</a>
+
+    <span>/</span>
+
+    <span id="breadcrumbProduct">
+
+        Trench Premium
+
+    </span>
+
+</nav>
+
+<!-- ==========================================================
+     FICHE PRODUIT
+=========================================================== -->
+
+<section class="product-page">
+
+<!-- ==========================================================
+     GALERIE
+=========================================================== -->
+
+<div class="product-gallery">
+
+    <!-- ======================================================
+         COLONNE MINIATURES
+    ======================================================= -->
+
+    <div class="thumbnails">
+
+        <img
+            class="thumb active"
+            src=""
+            alt="Vue principale">
+
+        <img
+            class="thumb"
+            src=""
+            alt="Vue arrière">
+
+        <img
+            class="thumb"
+            src=""
+            alt="Vue profil">
+
+        <img
+            class="thumb"
+            src=""
+            alt="Détail">
+
+    </div>
+
+    <!-- ======================================================
+         IMAGE PRINCIPALE
+    ======================================================= -->
+
+    <div class="main-image">
+
+        <img
+
+            id="mainProductImage"
+
+            src=""
+
+            alt="Produit Libasse">
 
     </div>
 
 </div>
 
+<!-- ==========================================================
+     FIN DE LA PARTIE 1
+     (la partie 2 commencera ici)
+=========================================================== -->
+<!-- ==========================================================
+     INFORMATIONS PRODUIT
+=========================================================== -->
 
+<div class="product-info">
 
-<!-- ===================================================== -->
-<!-- DESCRIPTION -->
-<!-- ===================================================== -->
+    <!-- Marque -->
 
-<section class="product-description mt-5">
+    <span class="product-brand">
 
-<h2>Description</h2>
+        Libasse Collection
 
-<p>
+    </span>
 
-Le trench Premium Hana Boutique est réalisé
-dans une gabardine haut de gamme offrant un
-excellent tombé.
-Sa coupe longue et sa ceinture soulignent
-élégamment la silhouette tout en garantissant
-un confort optimal.
+    <!-- Titre -->
 
-</p>
+    <h1 id="productTitle" class="product-title">
+
+        Chargement...
+
+    </h1>
+
+    <!-- Référence -->
+
+    <div class="product-reference">
+
+        Référence :
+        <span id="productReference">
+            --
+        </span>
+
+    </div>
+
+    <!-- Avis -->
+
+    <div class="product-rating">
+
+        <div class="stars">
+
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+
+        </div>
+
+        <span id="ratingValue">
+
+            4.9
+
+        </span>
+
+        <span id="reviewCount">
+
+            (128 avis)
+
+        </span>
+
+    </div>
+
+    <!-- Prix -->
+
+    <div class="price-box">
+
+        <span
+            id="oldPrice"
+            class="old-price">
+
+            899 DH
+
+        </span>
+
+        <span
+            id="productPrice"
+            class="current-price">
+
+            749 DH
+
+        </span>
+
+    </div>
+
+    <!-- Description courte -->
+
+    <p
+        id="productShortDescription"
+        class="short-description">
+
+        Chargement...
+
+    </p>
+
+    <!-- ======================================================
+         COULEURS
+    ======================================================= -->
+
+    <section class="product-section">
+
+        <div class="section-header">
+
+            <h3>
+
+                Couleur
+
+            </h3>
+
+            <span
+                id="selectedColor">
+
+                Beige sable
+
+            </span>
+
+        </div>
+
+        <div
+            id="colors"
+            class="color-swatches">
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         TAILLES
+    ======================================================= -->
+
+    <section class="product-section">
+
+        <div class="section-header">
+
+            <h3>
+
+                Taille
+
+            </h3>
+
+            <a href="#guide-tailles">
+
+                Guide des tailles
+
+            </a>
+
+        </div>
+
+        <div
+            id="sizes"
+            class="size-selector">
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         QUANTITE
+    ======================================================= -->
+
+    <section class="product-section">
+
+        <h3>
+
+            Quantité
+
+        </h3>
+
+        <div class="quantity-selector">
+
+            <button
+                id="qtyMinus"
+                type="button">
+
+                −
+
+            </button>
+
+            <input
+
+                id="quantity"
+
+                type="number"
+
+                value="1"
+
+                min="1">
+
+            <button
+
+                id="qtyPlus"
+
+                type="button">
+
+                +
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         DISPONIBILITE
+    ======================================================= -->
+
+    <div class="stock-status">
+
+        <i class="bi bi-check-circle-fill"></i>
+
+        <span id="stockText">
+
+            En stock
+
+        </span>
+
+    </div>
+
+    <!-- ======================================================
+         BADGES
+    ======================================================= -->
+
+    <div class="product-badges">
+
+        <span class="product-badge">
+
+            Livraison rapide
+
+        </span>
+
+        <span class="product-badge">
+
+            Retour 14 jours
+
+        </span>
+
+        <span class="product-badge">
+
+            Paiement sécurisé
+
+        </span>
+
+        <span class="product-badge">
+
+            Qualité Premium
+
+        </span>
+
+    </div>
+
+</div>
+
+<!-- ==========================================================
+     FIN DE LA PARTIE 2
+     La Partie 3 commencera avec :
+     <aside class="purchase-card">
+=========================================================== -->
+<!-- ==========================================================
+     CARTE D'ACHAT
+=========================================================== -->
+
+<aside class="purchase-card">
+
+    <div class="purchase-price">
+
+        <span id="purchasePrice">
+
+            749 DH
+
+        </span>
+
+    </div>
+
+    <div class="stock">
+
+        <i class="bi bi-check-circle-fill"></i>
+
+        <span id="purchaseStock">
+
+            En stock
+
+        </span>
+
+    </div>
+
+    <div class="shipping">
+
+        <strong>Livraison</strong>
+
+        Expédition sous 24 à 48 heures partout au Maroc.
+
+    </div>
+
+    <button
+        id="addToCart"
+        class="btn btn-primary">
+
+        <i class="bi bi-cart-plus"></i>
+
+        Ajouter au panier
+
+    </button>
+
+    <button
+        id="buyNow"
+        class="btn btn-dark">
+
+        Acheter maintenant
+
+    </button>
+
+    <hr>
+
+    <ul class="purchase-info">
+
+        <li>Livraison rapide partout au Maroc</li>
+
+        <li>Retour sous 14 jours</li>
+
+        <li>Paiement sécurisé</li>
+
+        <li>Service client disponible 7j/7</li>
+
+    </ul>
+
+    <div class="guarantees">
+
+        <div class="guarantee">
+
+            <i class="bi bi-shield-check"></i>
+
+            <span>Paiement sécurisé</span>
+
+        </div>
+
+        <div class="guarantee">
+
+            <i class="bi bi-truck"></i>
+
+            <span>Livraison rapide</span>
+
+        </div>
+
+        <div class="guarantee">
+
+            <i class="bi bi-arrow-repeat"></i>
+
+            <span>Retour facile</span>
+
+        </div>
+
+        <div class="guarantee">
+
+            <i class="bi bi-award"></i>
+
+            <span>Qualité Premium</span>
+
+        </div>
+
+    </div>
+
+</aside>
 
 </section>
 
+<!-- ==========================================================
+     DESCRIPTION
+=========================================================== -->
 
+<section class="product-description">
 
-<!-- ===================================================== -->
-<!-- CARACTÉRISTIQUES -->
-<!-- ===================================================== -->
+    <h2>
 
-<section class="product-features mt-5">
+        Description
 
-<h2>Caractéristiques</h2>
+    </h2>
 
-<div class="row">
+    <p id="productDescription">
 
-<div class="col-md-6">
+        Chargement...
 
-<ul>
-
-<li>Gabardine premium</li>
-<li>Double boutonnage</li>
-<li>Ceinture assortie</li>
-<li>Poches latérales</li>
-
-</ul>
-
-</div>
-
-<div class="col-md-6">
-
-<ul>
-
-<li>Col tailleur</li>
-<li>Poignets réglables</li>
-<li>Coupe longue</li>
-<li>Finition haut de gamme</li>
-
-</ul>
-
-</div>
-
-</div>
+    </p>
 
 </section>
 
+<!-- ==========================================================
+     CARACTÉRISTIQUES
+=========================================================== -->
 
+<section class="product-features">
 
-<!-- ===================================================== -->
-<!-- GUIDE DES TAILLES -->
-<!-- ===================================================== -->
+    <h2>
 
-<section class="size-guide mt-5">
+        Caractéristiques
 
-<h2>Guide des tailles</h2>
+    </h2>
 
-<table class="table table-bordered">
+    <ul id="productFeatures">
 
-<thead>
+        <li>Chargement...</li>
 
-<tr>
-
-<th>Taille</th>
-
-<th>Poitrine</th>
-
-<th>Taille</th>
-
-<th>Longueur</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>S</td>
-<td>92 cm</td>
-<td>74 cm</td>
-<td>128 cm</td>
-
-</tr>
-
-<tr>
-
-<td>M</td>
-<td>98 cm</td>
-<td>80 cm</td>
-<td>129 cm</td>
-
-</tr>
-
-<tr>
-
-<td>L</td>
-<td>104 cm</td>
-<td>86 cm</td>
-<td>130 cm</td>
-
-</tr>
-
-</tbody>
-
-</table>
+    </ul>
 
 </section>
 
+<!-- ==========================================================
+     GUIDE DES TAILLES
+=========================================================== -->
 
+<section
+    id="guide-tailles"
+    class="size-guide">
 
-<!-- ===================================================== -->
-<!-- PRODUITS SIMILAIRES -->
-<!-- ===================================================== -->
+    <h2>
 
-<section class="related-products mt-5">
+        Guide des tailles
 
-<h2>Vous aimerez aussi</h2>
+    </h2>
 
-<div class="row g-4">
+    <table>
 
-<div class="col-md-3">
+        <thead>
 
-<div class="card">
+            <tr>
 
-<img src="images/trench1.jpg">
+                <th>Taille</th>
 
-<div class="card-body">
+                <th>Poitrine</th>
 
-<h6>Trench Camel</h6>
+                <th>Taille</th>
 
-<p>749 DH</p>
+                <th>Longueur</th>
 
-</div>
+            </tr>
 
-</div>
+        </thead>
 
-</div>
+        <tbody id="sizeGuideBody">
 
-<!-- 3 autres cartes -->
+            <tr>
 
-</div>
+                <td colspan="4">
+
+                    Chargement...
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="size-tip">
+
+        <i class="bi bi-info-circle"></i>
+
+        Si vous hésitez entre deux tailles,
+        nous vous conseillons de choisir
+        la plus grande pour un confort optimal.
+
+    </div>
 
 </section>
+
+<!-- ==========================================================
+     POURQUOI VOUS ALLEZ L'AIMER
+=========================================================== -->
+
+<section class="why-love">
+
+    <h2>
+
+        Pourquoi vous allez l'aimer
+
+    </h2>
+
+    <div class="why-grid">
+
+        <article class="why-card">
+
+            <i class="bi bi-gem"></i>
+
+            <h3>
+
+                Matière Premium
+
+            </h3>
+
+            <p>
+
+                Tissu haut de gamme sélectionné
+                pour son élégance et sa durabilité.
+
+            </p>
+
+        </article>
+
+        <article class="why-card">
+
+            <i class="bi bi-scissors"></i>
+
+            <h3>
+
+                Coupe Élégante
+
+            </h3>
+
+            <p>
+
+                Une silhouette pensée pour mettre
+                en valeur toutes les morphologies.
+
+            </p>
+
+        </article>
+
+        <article class="why-card">
+
+            <i class="bi bi-flower1"></i>
+
+            <h3>
+
+                Confort Quotidien
+
+            </h3>
+
+            <p>
+
+                Léger, respirant et agréable
+                à porter toute la journée.
+
+            </p>
+
+        </article>
+
+        <article class="why-card">
+
+            <i class="bi bi-patch-check"></i>
+
+            <h3>
+
+                Finitions Soignées
+
+            </h3>
+
+            <p>
+
+                Chaque détail est réalisé
+                avec le plus grand soin.
+
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     FIN DE LA PARTIE 3
+     La Partie 4 commencera avec :
+     <section class="related-products">
+=========================================================== -->
+<!-- ==========================================================
+     COMPLÉTEZ VOTRE TENUE
+========================================================== -->
+
+<section class="complete-look">
+
+    <h2>Complétez votre tenue</h2>
+
+    <div class="look-grid">
+
+        <article class="look-item">
+
+            <img
+                src="images/chemise/gris_perle/principal.jpg"
+                alt="Chemise Gris Perle">
+
+            <h3>Chemise Gris Perle</h3>
+
+            <p>279 DH</p>
+
+            <button class="btn btn-outline">
+                Voir le produit
+            </button>
+
+        </article>
+
+        <article class="look-item">
+
+            <img
+                src="images/pantalon/beige_sable/principal.jpg"
+                alt="Pantalon Beige">
+
+            <h3>Pantalon Beige Sable</h3>
+
+            <p>349 DH</p>
+
+            <button class="btn btn-outline">
+                Voir le produit
+            </button>
+
+        </article>
+
+        <article class="look-item">
+
+            <img
+                src="images/foulard/ecru/principal.jpg"
+                alt="Foulard">
+
+            <h3>Foulard Écru</h3>
+
+            <p>129 DH</p>
+
+            <button class="btn btn-outline">
+                Voir le produit
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     PRODUITS SIMILAIRES
+========================================================== -->
+
+<section class="related-products">
+
+    <h2>Vous aimerez aussi</h2>
+
+    <div class="related-grid">
+
+        <article class="product-card">
+
+            <img
+                src="images/trench/kaki/principal.jpg"
+                alt="Trench Kaki">
+
+            <h3>Trench Kaki Olive</h3>
+
+            <p>749 DH</p>
+
+        </article>
+
+        <article class="product-card">
+
+            <img
+                src="images/trench/gris/principal.jpg"
+                alt="Trench Gris">
+
+            <h3>Trench Gris Perle</h3>
+
+            <p>749 DH</p>
+
+        </article>
+
+        <article class="product-card">
+
+            <img
+                src="images/trench/bordeaux/principal.jpg"
+                alt="Trench Bordeaux">
+
+            <h3>Trench Bordeaux</h3>
+
+            <p>749 DH</p>
+
+        </article>
+
+        <article class="product-card">
+
+            <img
+                src="images/trench/marine/principal.jpg"
+                alt="Trench Marine">
+
+            <h3>Trench Bleu Marine</h3>
+
+            <p>749 DH</p>
+
+        </article>
+
+    </div>
+
+</section>
+
+</div>
 
 </main>
-<script src="script.js"></script>
+
+<!-- ==========================================================
+     NEWSLETTER
+========================================================== -->
+
+<section class="newsletter">
+
+    <div class="container">
+
+        <h2>
+
+            Rejoignez l'univers Libasse
+
+        </h2>
+
+        <p>
+
+            Recevez nos nouveautés et nos offres en avant-première.
+
+        </p>
+
+        <form class="newsletter-form">
+
+            <input
+
+                type="email"
+
+                placeholder="Votre adresse e-mail">
+
+            <button type="submit">
+
+                S'inscrire
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <h3>LIBASSE</h3>
+
+            <p>
+
+                Des vêtements élégants conçus
+                pour accompagner chaque femme
+                au quotidien.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>Boutique</h4>
+
+            <ul>
+
+                <li><a href="#">Nouveautés</a></li>
+
+                <li><a href="#">Manteaux</a></li>
+
+                <li><a href="#">Chemises</a></li>
+
+                <li><a href="#">Robes</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Informations</h4>
+
+            <ul>
+
+                <li><a href="#">Livraison</a></li>
+
+                <li><a href="#">Retours</a></li>
+
+                <li><a href="#">CGV</a></li>
+
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Suivez-nous</h4>
+
+            <div class="social-links">
+
+                <a href="#">
+
+                    <i class="bi bi-facebook"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="bi bi-instagram"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="bi bi-pinterest"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 Libasse — Tous droits réservés.
+
+    </div>
+
+</footer>
+
+<!-- ==========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="js/product.js"></script>
+
+<script src="js/script.js"></script>
+
 </body>
+
 </html>
