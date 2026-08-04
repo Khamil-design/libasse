@@ -107,139 +107,54 @@
 
         ],
 
-        "variantes": [
-
-          {
-
-            "id": "TR001-BS",
-
-            "slug": "beige-sable",
-
-            "nom": "Beige sable",
-
-            "codeCouleur": "#D8C3A5",
-
-            "stock": 18,
-
-            "images": {
-
-              "principale": "images/femme/TrenchLeger/beigeSable/principale.jpg",
-
-              "dos": "images/femme/TrenchLeger/beigeSable/dos.jpg",
-
-              "profil": "images/femme/TrenchLeger/beigeSable/profil.jpg",
-
-              "detail": "images/femme/TrenchLeger/beigeSable/detail.jpg"
-
-            }
-
-          },
-
-          {
-
-            "id": "TR001-KO",
-
-            "slug": "kaki-olive",
-
-            "nom": "Kaki olive",
-
-            "codeCouleur": "#70784B",
-
-            "stock": 12,
-
-            "images": {
-
-              "principale": "images/femme/TrenchLeger/kakiOlive/principale.jpg",
-
-              "dos": "images/femme/TrenchLeger/kakiOlive/dos.jpg",
-
-              "profil": "images/femme/TrenchLeger/kakiOlive/profil.jpg",
-
-              "detail": "images/femme/TrenchLeger/kakiOlive/detail.jpg"
-
-            }
-
-          },
-
-          {
-
-            "id": "TR001-BP",
-
-            "slug": "bordeaux-profond",
-
-            "nom": "Bordeaux profond",
-
-            "codeCouleur": "#6F2332",
-
-            "stock": 10,
-
-            "images": {
-
-              "principale": "images/femme/TrenchLeger/bordeauxProfond/principale.jpg",
-
-              "dos": "images/femme/TrenchLeger/bordeauxProfond/dos.jpg",
-
-              "profil": "images/femme/TrenchLeger/bordeauxProfond/profil.jpg",
-
-              "detail": "images/femme/TrenchLeger/bordeauxProfond/detail.jpg"
-
-            }
-
-          },
-
-          {
-
-            "id": "TR001-GP",
-
-            "slug": "gris-perle",
-
-            "nom": "Gris perle",
-
-            "codeCouleur": "#D9D9D4",
-
-            "stock": 8,
-
-            "images": {
-
-              "principale": "images/femme/TrenchLeger/grisPerle/principale.jpg",
-
-              "dos": "images/femme/TrenchLeger/grisPerle/dos.jpg",
-
-              "profil": "images/femme/TrenchLeger/grisPerle/profil.jpg",
-
-              "detail": "images/femme/TrenchLeger/grisPerle/detail.jpg"
-
-            }
-
-          },
-
-          {
-
-            "id": "TR001-BM",
-
-            "slug": "bleu-marine",
-
-            "nom": "Bleu marine",
-
-            "codeCouleur": "#1F355E",
-
-            "stock": 7,
-
-            "images": {
-
-              "principale": "images/femme/TrenchLeger/bleuMarine/principale.jpg",
-
-              "dos": "images/femme/TrenchLeger/bleuMarine/dos.jpg",
-
-              "profil": "images/femme/TrenchLeger/bleuMarine/profil.jpg",
-
-              "detail": "images/femme/TrenchLeger/bleuMarine/detail.jpg"
-
-            }
-
-          }
-
-        ],
+       "variantes": [
+
+  {
+    "id": "CH001-GP",
+    "slug": "gris-perle",
+    "nom": "Gris Perle",
+    "codeCouleur": "#D9D9D4",
+    "stock": 25,
+    "dossier": "grisPerle"
+  },
+
+  {
+    "id": "CH001-BL",
+    "slug": "blanche",
+    "nom": "Blanche",
+    "codeCouleur": "#F8F8F8",
+    "stock": 20,
+    "dossier": "blanche"
+  },
+
+  {
+    "id": "CH001-BS",
+    "slug": "beige-sable",
+    "nom": "Beige sable",
+    "codeCouleur": "#D8C3A5",
+    "stock": 20,
+    "dossier": "beigeSable"
+  },
+
+  {
+    "id": "CH001-BM",
+    "slug": "bleu-marine",
+    "nom": "Bleu marine",
+    "codeCouleur": "#243B6B",
+    "stock": 20,
+    "dossier": "bleuMarine"
+  },
+
+  {
+    "id": "CH001-KO",
+    "slug": "kaki-olive",
+    "nom": "Kaki Olive",
+    "codeCouleur": "#6E7148",
+    "stock": 20,
+    "dossier": "kakiOlive"
+  }
+
+],
 
         "completeLook": [
 
