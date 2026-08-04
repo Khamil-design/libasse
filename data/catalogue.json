@@ -312,9 +312,13 @@
     }
 {
   "id": "CH002",
+
   "slug": "chemise-demi-manche",
+
   "categorie": "chemise",
+
   "nom": "Chemise demi-manche Premium",
+
   "imageBase": "images/chemise/demiManche",
 
   "marque": "Libasse",
@@ -322,52 +326,187 @@
   "reference": "CH-002",
 
   "description": {
-    "courte": "...",
-    "longue": "..."
+
+    "courte": "Chemise demi-manche premium confectionnée dans une popeline italienne légère, idéale pour la saison estivale.",
+
+    "longue": "La chemise demi-manche Premium Libasse est confectionnée dans une popeline italienne haut de gamme offrant douceur, respirabilité et élégance. Sa coupe moderne et son col structuré en font une pièce idéale pour un style chic décontracté durant les journées chaudes."
+
   },
 
   "prix": {
+
     "actuel": 329,
+
     "ancien": 399,
+
     "devise": "DH"
+
   },
 
   "avis": {
+
     "note": 4.8,
-    "nombre": 72
+
+    "nombre": 74
+
   },
 
   "etat": {
+
     "nouveau": true,
+
     "promotion": false
+
   },
 
   "tailles": [
+
     "S",
     "M",
     "L",
     "XL"
+
   ],
 
   "guideTailles": {
-    ...
+
+    "S": {
+
+      "poitrine": 92,
+      "tourCou": 38
+
+    },
+
+    "M": {
+
+      "poitrine": 98,
+      "tourCou": 40
+
+    },
+
+    "L": {
+
+      "poitrine": 104,
+      "tourCou": 42
+
+    },
+
+    "XL": {
+
+      "poitrine": 110,
+      "tourCou": 44
+
+    }
+
   },
 
   "caracteristiques": [
-    ...
+
+    "Popeline italienne premium",
+    "Coupe moderne",
+    "Col structuré",
+    "Manches courtes",
+    "Tissu respirant",
+    "Finitions haut de gamme"
+
   ],
 
   "variantes": [
+
+    {
+
+      "id": "CH002-BS",
+
+      "slug": "beige-sable",
+
+      "nom": "Beige sable",
+
+      "codeCouleur": "#D8C3A5",
+
+      "stock": 20,
+
+      "dossier": "beigeSable"
+
+    },
+
+    {
+
+      "id": "CH002-BP",
+
+      "slug": "bleu-petrole",
+
+      "nom": "Bleu pétrole",
+
+      "codeCouleur": "#2F5D62",
+
+      "stock": 20,
+
+      "dossier": "bleuPetrole"
+
+    },
+
+    {
+
+      "id": "CH002-BD",
+
+      "slug": "bordeaux",
+
+      "nom": "Bordeaux",
+
+      "codeCouleur": "#5C2331",
+
+      "stock": 20,
+
+      "dossier": "bordeaux"
+
+    },
+
+    {
+
+      "id": "CH002-GP",
+
+      "slug": "gris-perle",
+
+      "nom": "Gris Perle",
+
+      "codeCouleur": "#D9D9D4",
+
+      "stock": 20,
+
+      "dossier": "grisPerle"
+
+    },
+
+    {
+
+      "id": "CH002-KO",
+
+      "slug": "kaki-olive",
+
+      "nom": "Kaki Olive",
+
+      "codeCouleur": "#6E7148",
+
+      "stock": 20,
+
+      "dossier": "kakiOlive"
+
+    }
 
   ],
 
   "completeLook": [
 
+    "trench-premium"
+
   ],
 
   "produitsSimilaires": [
 
+    "chemise-premium"
+
   ]
+
 }
   ],
 
