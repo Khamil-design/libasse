@@ -119,36 +119,51 @@ class Product {
     ====================================================== */
 
     loadImages() {
-        if (!this.currentColor || !this.currentColor.images) {
-            console.warn("Aucune image disponible pour cette variante.");
-            return;
-        }
-
-        const images = [
-            this.currentColor.images.principale,
-            this.currentColor.images.dos,
-            this.currentColor.images.profil,
-            this.currentColor.images.detail
-        ].filter(src => src);
-
-        const thumbs = document.querySelectorAll(".thumb");
-        thumbs.forEach((thumb, index) => {
-            if (images[index]) {
-                thumb.src = images[index];
-            }
-        });
-
-        const mainImg = document.getElementById("mainProductImage");
-        if (mainImg && images[0]) {
-            mainImg.src = images[0];
-        }
-
-        // Réinitialiser l'active sur la première miniature
-        if (thumbs.length) {
-            thumbs.forEach(t => t.classList.remove("active"));
-            thumbs[0].classList.add("active");
-        }
+    if (!this.currentColor || !this.currentColor.images) {
+        console.warn("Aucune image disponible pour cette variante.");
+        return;
     }
+
+    const images = [
+        this.currentColor.images.principale,
+        this.currentColor.images.dos,
+        this.currentColor.images.profil,
+        this.currentColor.images.detail
+    ].filter(src => src);
+
+    const thumbs = document.querySelectorAll(".thumb");
+    thumbs.forEach((thumb, index) => {
+        if (images[index]) {
+            thumb.src = images[index];
+        }
+    });
+
+    const mainImg = document.getElementById("mainProductImage");
+    if (!mainImg || !images[0]) return;
+
+    // Si la nouvelle image est différente, on fait un fondu
+    if (mainImg.src !== images[0]) {
+        // 1. On cache l'image avec un fondu sortant
+        mainImg.classList.add('fade-out');
+
+        // 2. On attend la fin de la transition (400ms)
+        setTimeout(() => {
+            // 3. On change la source
+            mainImg.src = images[0];
+            // 4. On retire la classe pour réafficher avec fondu entrant
+            mainImg.classList.remove('fade-out');
+        }, 400);
+    } else {
+        // Même image : on ne fait que la définir (pas de changement visuel)
+        mainImg.src = images[0];
+    }
+
+    // Réactiver la première miniature
+    if (thumbs.length) {
+        thumbs.forEach(t => t.classList.remove("active"));
+        thumbs[0].classList.add("active");
+    }
+}
 
     /* ======================================================
        Changement couleur
