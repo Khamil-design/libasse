@@ -260,7 +260,7 @@
       {
   "id": "CH001",
 
-  "slug": "chemise-gris-perle",
+  "slug": "chemise-premium"
 
   "categorie": "chemise",
 
@@ -379,6 +379,7 @@
       "codeCouleur": "#D9D9D4",
 
       "stock": 25,
+      "dossier": "grisPerle",
 
       "images": {
 
