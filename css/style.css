@@ -1214,7 +1214,6 @@ main{
     gap:1.5rem;
 
     align-items:start;
-
 }
 
 
@@ -1225,16 +1224,16 @@ main{
 .thumbnails{
 
     display: flex;
-    flex-direction: row;  /* ou column, selon votre préférence */
-    gap: 10px;
-    flex-wrap: wrap;      /* pour passer à la ligne si besoin */
+    flex-direction: column;   /* ← alignement vertical */
+    gap: 1rem;
+    position: sticky;
+    top: 120px;
 }
+
 
 .thumb{
 
-	width: 80px;
-    height: 80px;
-    object-fit: cover;
+
     flex-shrink: 0;   /* empêche le rétrécissement */
 
 	border-radius:var(--radius-md);
@@ -1242,8 +1241,6 @@ main{
     border:2px solid transparent;
 
     background:white;
-
-    cursor:pointer;
 
     transition:
         transform .25s ease,
