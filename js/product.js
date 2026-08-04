@@ -16,7 +16,7 @@ class Product {
     /* ======================================================
        Chargement du catalogue
     ====================================================== */
-
+try {
     async load() {
 
         try {
@@ -52,7 +52,14 @@ class Product {
             console.error(error);
 
         }
+        this.render();
+        this.installColorEvents();
+        this.installThumbnailEvents();
+        this.installZoom(); // <--- AJOUTE CETTE LIGNE
 
+    } catch (error) {
+        console.error(error);
+    }
     }
 
     /* ======================================================
@@ -254,7 +261,51 @@ mainImage.src = images[0];
     }
 
 }
+/* ======================================================
+   ZOOM DYNAMIQUE (suivi du curseur)
+====================================================== */
 
+installZoom() {
+    const container = document.querySelector('.main-image');
+    const img = document.getElementById('mainProductImage');
+
+    if (!container || !img) return;
+
+    // On retire les anciens écouteurs pour éviter les doublons
+    if (this._zoomHandlers) {
+        container.removeEventListener('mousemove', this._zoomHandlers.move);
+        container.removeEventListener('mouseleave', this._zoomHandlers.leave);
+    }
+
+    const handleMouseMove = (e) => {
+        const rect = container.getBoundingClientRect();
+
+        // Calcul du pourcentage de la position de la souris dans l'image
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+        // On place l'origine du zoom à l'endroit du curseur
+        img.style.transformOrigin = `${x}% ${y}%`;
+        img.style.transform = 'scale(2.4)'; // Ajuste la puissance du zoom ici (2.4 = 240%)
+        img.style.transition = 'transform 0.25s ease-out';
+    };
+
+    const handleMouseLeave = () => {
+        // Retour au calme en douceur
+        img.style.transform = 'scale(1)';
+        img.style.transformOrigin = 'center center';
+        img.style.transition = 'transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+    };
+
+    container.addEventListener('mousemove', handleMouseMove);
+    container.addEventListener('mouseleave', handleMouseLeave);
+
+    // On garde une référence pour pouvoir nettoyer plus tard
+    this._zoomHandlers = {
+        move: handleMouseMove,
+        leave: handleMouseLeave
+    };
+}
 /* ==========================================================
    Démarrage
 ========================================================== */
