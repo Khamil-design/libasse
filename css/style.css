@@ -290,17 +290,11 @@ main{
 
 .product-page{
 
-    display:grid;
-
-    grid-template-columns:
-        minmax(0,1.2fr)
-        minmax(360px,.8fr);
-
-    gap:4rem;
-
-    align-items:start;
-
-    margin-top:2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes de taille égale */
+    gap: 4rem;
+    align-items: start;
+    margin-top: 2rem;
 
 }
 
