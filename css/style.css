@@ -1204,6 +1204,7 @@ main{
     grid-template-columns: 100px 1fr;   /* colonne miniatures = 100px, image principale = reste */
     gap: 1.5rem;
     align-items: start;
+	min-height: 600px; /* Hauteur minimale pour éviter le débordement */
 }
 
 
@@ -1215,14 +1216,16 @@ main{
     display: flex;
     flex-direction: column;   /* vertical */
     gap: 1rem;
-    position: sticky;
-    top: 120px;
+   /* position: sticky;
+    top: 120px;*/
+	width: 100px; /* Largeur fixe pour les miniatures */
 }
 
 .thumb {
     width: 100%;             /* s'adapte à la colonne de 100px */
     aspect-ratio: 3/4;
     object-fit: cover;
+	height: auto;
     border-radius: var(--radius-md);
     border: 2px solid transparent;
     background: white;
