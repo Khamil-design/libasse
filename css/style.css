@@ -1205,15 +1205,11 @@ main{
    09 - PRODUCT GALLERY
 ========================================================== */
 
-.product-gallery{
-
-    display:grid;
-
-    grid-template-columns:100px 1fr;
-
-    gap:1.5rem;
-
-    align-items:start;
+.product-gallery {
+    display: grid;
+    grid-template-columns: 100px 1fr;   /* colonne miniatures = 100px, image principale = reste */
+    gap: 1.5rem;
+    align-items: start;
 }
 
 
@@ -1221,91 +1217,60 @@ main{
    MINIATURES
 ========================================================== */
 
-.thumbnails{
-
+.thumbnails {
     display: flex;
-    flex-direction: column;   /* ← alignement vertical */
+    flex-direction: column;   /* vertical */
     gap: 1rem;
     position: sticky;
     top: 120px;
 }
 
-
-.thumb{
-
-
-    flex-shrink: 0;   /* empêche le rétrécissement */
-
-	border-radius:var(--radius-md);
-
-    border:2px solid transparent;
-
-    background:white;
-
-    transition:
-        transform .25s ease,
-        border-color .25s ease,
-        box-shadow .25s ease;
-
-    box-shadow:var(--shadow-sm);
-
+.thumb {
+    width: 100%;             /* s'adapte à la colonne de 100px */
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    background: white;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: var(--shadow-sm);
 }
 
-.thumb:hover{
-
-    transform:translateY(-3px);
-
-    border-color:var(--color-accent);
-
-    box-shadow:var(--shadow-md);
-
+.thumb:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md);
 }
 
-.thumb.active{
-
-    border-color:var(--color-accent);
-
-    box-shadow:0 0 0 3px rgba(200,169,126,.20);
-
+.thumb.active {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(200,169,126,.20);
 }
-
 
 /* ==========================================================
    IMAGE PRINCIPALE
 ========================================================== */
 
-.main-image{
-
-    position:relative;
-
-    background:white;
-
-    box-shadow:var(--shadow-md);
-	overflow: hidden;
-	border-radius: 16px;
-	cursor:zoom-in;
-
+.main-image {
+    position: relative;
+    background: white;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: zoom-in;
 }
 
-.main-image img{
-    width:100%;
+#mainProductImage {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    transition: opacity 0.4s ease;   /* pour le fondu */
+}
 
-    aspect-ratio:3/4;
-
-    object-fit:cover;
-
-    display:block;
-
-    transform-origin:center center;
-
-    transition:
-        transform .18s linear,
-        opacity .30s ease;
-
-    will-change:transform;
-
-    user-select:none;
-
+#mainProductImage.fade-out {
+    opacity: 0;
 }
 
 
@@ -3667,17 +3632,4 @@ a{
 }
 
 }
-.thumb {
-    width: 80px;          /* ou toute autre valeur */
-    height: 80px;
-    object-fit: cover;    /* pour rogner proprement */
-    cursor: pointer;
-}
-.thumbnails {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-.thumb.active {
-    border: 2px solid #000;
-}
+
