@@ -310,7 +310,65 @@
       }
 
     }
+{
+  "id": "CH002",
+  "slug": "chemise-demi-manche",
+  "categorie": "chemise",
+  "nom": "Chemise demi-manche Premium",
+  "imageBase": "images/chemise/demiManche",
 
+  "marque": "Libasse",
+
+  "reference": "CH-002",
+
+  "description": {
+    "courte": "...",
+    "longue": "..."
+  },
+
+  "prix": {
+    "actuel": 329,
+    "ancien": 399,
+    "devise": "DH"
+  },
+
+  "avis": {
+    "note": 4.8,
+    "nombre": 72
+  },
+
+  "etat": {
+    "nouveau": true,
+    "promotion": false
+  },
+
+  "tailles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+
+  "guideTailles": {
+    ...
+  },
+
+  "caracteristiques": [
+    ...
+  ],
+
+  "variantes": [
+
+  ],
+
+  "completeLook": [
+
+  ],
+
+  "produitsSimilaires": [
+
+  ]
+}
   ],
 
   "completeLook": [
