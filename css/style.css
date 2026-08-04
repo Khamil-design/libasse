@@ -3657,6 +3657,14 @@ a{
         transform-origin .20s ease-out;
 
     will-change:transform;
+	/* Transition fluide pour l'image principale */
+    transition: opacity 0.4s ease;
+}
+
+/* Classe pour cacher l'image pendant le changement */
+#mainProductImage.fade-out {
+    opacity: 0;
+}
 
 }
 .thumb {
