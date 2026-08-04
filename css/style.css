@@ -3669,3 +3669,17 @@ a{
     will-change:transform;
 
 }
+.thumb {
+    width: 80px;          /* ou toute autre valeur */
+    height: 80px;
+    object-fit: cover;    /* pour rogner proprement */
+    cursor: pointer;
+}
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.thumb.active {
+    border: 2px solid #000;
+}
