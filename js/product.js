@@ -119,7 +119,8 @@ class Product {
     ====================================================== */
 
 loadImages() {
-
+console.log("Produit :", this.data);
+console.log("Variante :", this.currentColor);
     let images = [];
 
     /* ===============================================
