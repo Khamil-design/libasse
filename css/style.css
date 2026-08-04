@@ -148,17 +148,6 @@ body{
 
 }
 
-img{
-
-    display:block;
-
-    max-width:100%;
-
-    height:auto;
-
-    user-select:none;
-
-}
 
 picture{
 
@@ -1235,27 +1224,20 @@ main{
 
 .thumbnails{
 
-    display:flex;
-
-    flex-direction:column;
-
-    gap:1rem;
-
-    position:sticky;
-
-    top:120px;
-
+    display: flex;
+    flex-direction: row;  /* ou column, selon votre préférence */
+    gap: 10px;
+    flex-wrap: wrap;      /* pour passer à la ligne si besoin */
 }
 
 .thumb{
 
-    width:100%;
+	width: 80px;
+    height: 80px;
+    object-fit: cover;
+    flex-shrink: 0;   /* empêche le rétrécissement */
 
-    aspect-ratio:3/4;
-
-    object-fit:cover;
-
-    border-radius:var(--radius-md);
+	border-radius:var(--radius-md);
 
     border:2px solid transparent;
 
