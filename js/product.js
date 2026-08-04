@@ -292,7 +292,7 @@ renderCompleteLook() {
     }
 
 }
-    /*loadImages() {
+    loadImages() {
     if (!this.currentColor || !this.currentColor.images) {
         console.warn("Aucune image disponible pour cette variante.");
         return;
@@ -337,8 +337,74 @@ renderCompleteLook() {
         thumbs.forEach(t => t.classList.remove("active"));
         thumbs[0].classList.add("active");
     }
-}*/
+}
+/* ======================================================
+   Complétez votre tenue
+====================================================== */
 
+renderCompleteLook() {
+
+    const container = document.getElementById("completeLookGrid");
+
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    if (!this.data.completeLook || this.data.completeLook.length === 0)
+        return;
+
+    this.data.completeLook.forEach(slug => {
+
+        const produit = this.catalogue.catalogue.produits.find(
+            p => p.slug === slug
+        );
+
+        if (!produit) return;
+
+        let image = "";
+
+        if (produit.variantes && produit.variantes.length > 0) {
+
+            const variante = produit.variantes[0];
+
+            if (variante.images) {
+
+                image = variante.images.principale;
+
+            } else if (produit.imageBase && variante.dossier) {
+
+                image =
+                    `${produit.imageBase}/${variante.dossier}/principale.jpg`;
+
+            }
+
+        }
+
+        const card = document.createElement("article");
+
+        card.className = "look-item";
+
+        card.innerHTML = `
+
+            <a href="index.html?id=${produit.slug}">
+
+                <img
+                    src="${image}"
+                    alt="${produit.nom}">
+
+                <h3>${produit.nom}</h3>
+
+                <p>${produit.prix.actuel} ${produit.prix.devise}</p>
+
+            </a>
+
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
     /* ======================================================
        Changement couleur
     ====================================================== */
