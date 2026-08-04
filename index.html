@@ -85,7 +85,7 @@
 
                 <i class="bi bi-cart3"></i>
 
-                <span class="cart-count">0</span>
+                <span id="cartCount" class="cart-count">0</span>
 
             </button>
 
@@ -608,13 +608,13 @@
 
         <thead>
 
-            <tr>
+            <tr id="sizeGuideHead">
 
                 <th>Taille</th>
 
                 <th>Poitrine</th>
 
-                <th>Taille</th>
+                <th>Tour de taille</th>
 
                 <th>Longueur</th>
 
@@ -763,65 +763,6 @@
     </div>
 
 </section>
-<!--<section class="complete-look">
-
-    <h2>Complétez votre tenue</h2>
-
-    <div class="look-grid">
-<a href="index.html?id=chemise-premium"
-   class="product-link">
-        <article class="look-item">
-
-            <img
-                src="images/chemise/grisPerle/principale.jpg"
-                alt="Chemise Gris Perle">
-
-            <h3>Chemise Gris Perle</h3>
-
-            <p>279 DH</p>
-
-            <button class="btn btn-outline">
-                Voir le produit
-            </button>
-
-        </article>
-</a>
-        <article class="look-item">
-
-            <img
-                src="images/pantalon/beigeSable/principale.jpg"
-                alt="Pantalon Beige">
-
-            <h3>Pantalon Beige Sable</h3>
-
-            <p>349 DH</p>
-
-            <button class="btn btn-outline">
-                Voir le produit
-            </button>
-
-        </article>
-
-        <article class="look-item">
-
-            <img
-                src="images/pantalon/bleuPetrole/principale.jpg"
-                alt="Pantalon">
-
-            <h3>Pantalon beige sable</h3>
-
-            <p>229 DH</p>
-
-            <button class="btn btn-outline">
-                Voir le produit
-            </button>
-
-        </article>
-
-    </div>
-
-</section> -->
-
 <!-- ==========================================================
      PRODUITS SIMILAIRES
 ========================================================== -->
@@ -830,55 +771,9 @@
 
     <h2>Vous aimerez aussi</h2>
 
-    <div class="related-grid">
-
-        <article class="product-card">
-
-            <img
-                src="images/femme/TrenchLeger/kakiOlive/principale.jpg"
-                alt="Trench Kaki">
-
-            <h3>Trench Kaki Olive</h3>
-
-            <p>749 DH</p>
-
-        </article>
-
-        <article class="product-card">
-
-            <img
-                src="images/femme/TrenchLeger/grisPerle/principale.jpg"
-                alt="Trench Gris">
-
-            <h3>Trench Gris Perle</h3>
-
-            <p>749 DH</p>
-
-        </article>
-
-        <article class="product-card">
-
-            <img
-                src="images/femme/TrenchLeger/bordeauxProfond/principale.jpg"
-                alt="Trench Bordeaux">
-
-            <h3>Trench Bordeaux</h3>
-
-            <p>749 DH</p>
-
-        </article>
-
-        <article class="product-card">
-
-            <img
-                src="images/femme/TrenchLeger/bleuMarine/principale.jpg"
-                alt="Trench Marine">
-
-            <h3>Trench Bleu Marine</h3>
-
-            <p>749 DH</p>
-
-        </article>
+    <div
+        id="relatedGrid"
+        class="related-grid">
 
     </div>
 
