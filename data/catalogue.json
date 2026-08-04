@@ -11,6 +11,7 @@
         "categorie": "trench",
 
         "nom": "Trench long Premium",
+        "imageBase": "images/femme/TrenchLeger",
 
         "marque": "Libasse",
 
@@ -107,50 +108,50 @@
 
         ],
 
-       "variantes": [
+  "variantes": [
 
   {
-    "id": "CH001-GP",
+    "id": "TR001-GP",
     "slug": "gris-perle",
     "nom": "Gris Perle",
     "codeCouleur": "#D9D9D4",
-    "stock": 25,
+    "stock": 18,
     "dossier": "grisPerle"
   },
 
   {
-    "id": "CH001-BL",
-    "slug": "blanche",
-    "nom": "Blanche",
-    "codeCouleur": "#F8F8F8",
-    "stock": 20,
-    "dossier": "blanche"
-  },
-
-  {
-    "id": "CH001-BS",
+    "id": "TR001-BS",
     "slug": "beige-sable",
     "nom": "Beige sable",
     "codeCouleur": "#D8C3A5",
-    "stock": 20,
+    "stock": 18,
     "dossier": "beigeSable"
   },
 
   {
-    "id": "CH001-BM",
+    "id": "TR001-BM",
     "slug": "bleu-marine",
     "nom": "Bleu marine",
     "codeCouleur": "#243B6B",
-    "stock": 20,
+    "stock": 18,
     "dossier": "bleuMarine"
   },
 
   {
-    "id": "CH001-KO",
+    "id": "TR001-BP",
+    "slug": "bordeaux-profond",
+    "nom": "Bordeaux profond",
+    "codeCouleur": "#5C2331",
+    "stock": 18,
+    "dossier": "bordeauxProfond"
+  },
+
+  {
+    "id": "TR001-KO",
     "slug": "kaki-olive",
     "nom": "Kaki Olive",
     "codeCouleur": "#6E7148",
-    "stock": 20,
+    "stock": 18,
     "dossier": "kakiOlive"
   }
 
