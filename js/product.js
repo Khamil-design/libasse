@@ -214,7 +214,7 @@ renderCompleteLook() {
        Ancien format (images dans le JSON)
     =============================================== */
 
-    else if (this.currentColor.images) {
+    /*else if (this.currentColor.images) {
 
         images = [
 
@@ -227,7 +227,7 @@ renderCompleteLook() {
 
     }
 
-    images = images.filter(src => src);
+    images = images.filter(src => src);*/
 
     if (!images.length) {
 
