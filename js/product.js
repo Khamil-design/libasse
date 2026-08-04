@@ -118,7 +118,113 @@ class Product {
        Images
     ====================================================== */
 
-    loadImages() {
+loadImages() {
+
+    let images = [];
+
+    /* ===============================================
+       Nouveau format (imageBase + dossier)
+    =============================================== */
+
+    if (this.data.imageBase && this.currentColor.dossier) {
+
+        const base =
+            `${this.data.imageBase}/${this.currentColor.dossier}`;
+
+        images = [
+
+            `${base}/principale.jpg`,
+            `${base}/dos.jpg`,
+            `${base}/profil.jpg`,
+            `${base}/detail.jpg`
+
+        ];
+
+    }
+
+    /* ===============================================
+       Ancien format (images dans le JSON)
+    =============================================== */
+
+    else if (this.currentColor.images) {
+
+        images = [
+
+            this.currentColor.images.principale,
+            this.currentColor.images.dos,
+            this.currentColor.images.profil,
+            this.currentColor.images.detail
+
+        ];
+
+    }
+
+    images = images.filter(src => src);
+
+    if (!images.length) {
+
+        console.warn("Aucune image disponible pour cette variante.");
+
+        return;
+
+    }
+
+    const thumbs =
+        document.querySelectorAll(".thumb");
+
+    thumbs.forEach((thumb, index) => {
+
+        if (images[index]) {
+
+            thumb.src = images[index];
+
+        }
+
+    });
+
+    const mainImg =
+        document.getElementById("mainProductImage");
+
+    if (!mainImg) return;
+
+    if (window.productZoom) {
+
+        window.productZoom.reset();
+
+    }
+
+    if (mainImg.src !== images[0]) {
+
+        mainImg.classList.add("fade-out");
+
+        setTimeout(() => {
+
+            mainImg.src = images[0];
+
+            mainImg.classList.remove("fade-out");
+
+        }, 400);
+
+    }
+
+    else {
+
+        mainImg.src = images[0];
+
+    }
+
+    thumbs.forEach(t =>
+        t.classList.remove("active")
+    );
+
+    if (thumbs.length) {
+
+        thumbs[0].classList.add("active");
+
+    }
+
+}
+    /*loadImages() {
     if (!this.currentColor || !this.currentColor.images) {
         console.warn("Aucune image disponible pour cette variante.");
         return;
@@ -163,7 +269,7 @@ class Product {
         thumbs.forEach(t => t.classList.remove("active"));
         thumbs[0].classList.add("active");
     }
-}
+}*/
 
     /* ======================================================
        Changement couleur
