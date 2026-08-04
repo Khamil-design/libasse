@@ -165,9 +165,13 @@ class Product {
 
         });
 
-        document.getElementById(
-            "mainProductImage"
-        ).src = images[0];
+        const mainImage = document.getElementById("mainProductImage");
+
+	if (window.productZoom) {
+    	window.productZoom.reset();
+}
+
+mainImage.src = images[0];
 
     }
 
@@ -237,7 +241,11 @@ class Product {
 
                     thumb.classList.add("active");
 
-                    main.src = thumb.src;
+                    if (window.productZoom) {
+    			window.productZoom.reset();
+		}
+
+			main.src = thumb.src;
 
                 };
 
