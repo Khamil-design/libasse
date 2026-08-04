@@ -23,13 +23,13 @@ class Product {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            const catalogue = await response.json();
+            this.catalogue = await response.json();
 
             console.log(catalogue);
             console.log("ProductId recherché :", this.productId);
             console.log("Slugs disponibles :", catalogue.catalogue?.produits?.map(p => p.slug) || []);
 
-            this.data = catalogue.catalogue.produits.find(
+            this.data = this.catalogue.catalogue.produits.find(
                 p => p.slug === this.productId
             );
 
@@ -69,6 +69,7 @@ class Product {
         this.renderSizes();
         this.renderColors();
         this.loadImages();
+       this.renderCompleteLook();
     }
 
     /* ======================================================
@@ -142,7 +143,73 @@ console.log("Variante :", this.currentColor);
         ];
 
     }
+/* ======================================================
+   Complétez votre tenue
+====================================================== */
 
+renderCompleteLook() {
+
+    const container = document.getElementById("completeLookGrid");
+
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    if (!this.data.completeLook || this.data.completeLook.length === 0)
+        return;
+
+    this.data.completeLook.forEach(slug => {
+
+        const produit = this.catalogue.catalogue.produits.find(
+            p => p.slug === slug
+        );
+
+        if (!produit) return;
+
+        let image = "";
+
+        if (produit.variantes && produit.variantes.length > 0) {
+
+            const variante = produit.variantes[0];
+
+            if (variante.images) {
+
+                image = variante.images.principale;
+
+            } else if (produit.imageBase && variante.dossier) {
+
+                image =
+                    `${produit.imageBase}/${variante.dossier}/principale.jpg`;
+
+            }
+
+        }
+
+        const card = document.createElement("article");
+
+        card.className = "look-item";
+
+        card.innerHTML = `
+
+            <a href="index.html?id=${produit.slug}">
+
+                <img
+                    src="${image}"
+                    alt="${produit.nom}">
+
+                <h3>${produit.nom}</h3>
+
+                <p>${produit.prix.actuel} ${produit.prix.devise}</p>
+
+            </a>
+
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
     /* ===============================================
        Ancien format (images dans le JSON)
     =============================================== */
