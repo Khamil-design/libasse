@@ -13,54 +13,40 @@ class Product {
 
     }
 
-    /* ======================================================
-       Chargement du catalogue
-    ====================================================== */
+/* ======================================================
+   Chargement du catalogue
+====================================================== */
 
-    async load() {
+async load() {
+    try {
+        const response = await fetch("data/catalogue.json");
+        const catalogue = await response.json();
 
-        try {
+        console.log(catalogue);
+        console.log("ProductId recherché :", this.productId);
+        console.log("Slugs disponibles :", catalogue.catalogue.produits.map(p => p.slug));
 
-            const response = await fetch("data/catalogue.json");
+        this.data = catalogue.catalogue.produits.find(
+            p => p.slug === this.productId
+        );
 
-            const catalogue = await response.json();
-           console.log(catalogue);
-         console.log("ProductId recherché :", this.productId);
-         console.log("Slugs disponibles :", catalogue.catalogue.produits.map(p => p.slug));
-            this.data = catalogue.catalogue.produits.find(
-             p => p.slug === this.productId
-      );
-
-            if (!this.data) {
-
-                throw new Error("Produit introuvable.");
-
-            }
-
-            this.currentColor = this.data.variantes[0];
-
-            this.render();
-
-            this.installColorEvents();
-
-            this.installThumbnailEvents();
-
+        if (!this.data) {
+            throw new Error("Produit introuvable.");
         }
 
-        catch (error) {
+        this.currentColor = this.data.variantes[0];
 
-            console.error(error);
-
-        }
+        // Rendu et événements
         this.render();
         this.installColorEvents();
         this.installThumbnailEvents();
-        this.installZoom(); // <--- AJOUTE CETTE LIGNE
+        this.installZoom();  // ← Zoom premium ajouté ici
 
     } catch (error) {
-        console.error(error);
+        console.error("Erreur lors du chargement :", error);
+        // Tu peux afficher un message à l'utilisateur ici
     }
-    
+}
 /* ======================================================
        Affichage
     ====================================================== */
