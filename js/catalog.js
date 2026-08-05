@@ -100,7 +100,7 @@ function productsInCategory(produits, slug) {
 function buildProductCard(produit) {
 
     const link = document.createElement("a");
-    link.href = `accueil.html?id=${encodeURIComponent(produit.slug)}`;
+    link.href = `index.html?id=${encodeURIComponent(produit.slug)}`;
     link.className = "product-card-link";
 
     const article = document.createElement("article");
