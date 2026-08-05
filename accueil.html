@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Libasse | Élégance intemporelle</title>
+
+    <meta name="description"
+        content="Libasse - Boutique de prêt-à-porter féminin haut de gamme.">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================================
+     HEADER
+============================================================= -->
+
+<header class="site-header">
+
+    <div class="container">
+
+        <a href="accueil.html" class="logo">
+
+            LIBASSE
+
+        </a>
+
+        <nav class="main-nav">
+
+            <ul>
+
+                <li><a href="accueil.html">Accueil</a></li>
+
+                <li><a href="categorie.html?cat=nouveautes">Nouveautés</a></li>
+
+                <li><a href="categorie.html?cat=robe">Robes</a></li>
+
+                <li><a href="categorie.html?cat=chemise">Chemises</a></li>
+
+                <li><a href="categorie.html?cat=jupe">Jupes</a></li>
+
+                <li><a href="categorie.html?cat=manteau">Manteaux</a></li>
+
+            </ul>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button class="icon-button">
+
+                <i class="bi bi-search"></i>
+
+            </button>
+
+            <button class="icon-button">
+
+                <i class="bi bi-heart"></i>
+
+            </button>
+
+            <button class="icon-button">
+
+                <i class="bi bi-cart3"></i>
+
+                <span id="cartCount" class="cart-count">0</span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ==========================================================
+     MAIN
+=========================================================== -->
+
+<main>
+
+<div class="container">
+
+<!-- ==========================================================
+     BREADCRUMB
+=========================================================== -->
+
+<nav class="breadcrumb">
+
+    <a href="accueil.html">Accueil</a>
+
+    <span>/</span>
+
+    <a href="#" id="breadcrumbCategory">Catégorie</a>
+
+    <span>/</span>
+
+    <span id="breadcrumbProduct">
+
+        Trench Premium
+
+    </span>
+
+</nav>
+
+<!-- ==========================================================
+     FICHE PRODUIT
+=========================================================== -->
+
+<section class="product-page">
+
+<!-- ==========================================================
+     GALERIE
+=========================================================== -->
+
+<div class="product-gallery">
+
+    <!-- ======================================================
+         COLONNE MINIATURES
+    ======================================================= -->
+
+    <div class="thumbnails">
+
+        <img
+            class="thumb active"
+            src=""
+            alt="Vue principale">
+
+        <img
+            class="thumb"
+            src=""
+            alt="Vue arrière">
+
+        <img
+            class="thumb"
+            src=""
+            alt="Vue profil">
+
+        <img
+            class="thumb"
+            src=""
+            alt="Détail">
+
+    </div>
+
+    <!-- ======================================================
+         IMAGE PRINCIPALE
+    ======================================================= -->
+
+    <div class="main-image">
+
+        <img
+
+            id="mainProductImage"
+
+            src=""
+
+            alt="Produit Libasse">
+
+    </div>
+
+</div>
+
+<!-- ==========================================================
+     FIN DE LA PARTIE 1
+     (la partie 2 commencera ici)
+=========================================================== -->
+<!-- ==========================================================
+     INFORMATIONS PRODUIT
+=========================================================== -->
+
+<div class="product-info">
+
+    <!-- Marque -->
+
+    <span class="product-brand">
+
+        Libasse Collection
+
+    </span>
+
+    <!-- Titre -->
+
+    <h1 id="productTitle" class="product-title">
+
+        Chargement...
+
+    </h1>
+
+    <!-- Référence -->
+
+    <div class="product-reference">
+
+        Référence :
+        <span id="productReference">
+            --
+        </span>
+
+    </div>
+
+    <!-- Avis -->
+
+    <div class="product-rating">
+
+        <div class="stars">
+
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+
+        </div>
+
+        <span id="ratingValue">
+
+            4.9
+
+        </span>
+
+        <span id="reviewCount">
+
+            (128 avis)
+
+        </span>
+
+    </div>
+
+    <!-- Prix -->
+
+    <div class="price-box">
+
+        <span
+            id="oldPrice"
+            class="old-price">
+
+            899 DH
+
+        </span>
+
+        <span
+            id="productPrice"
+            class="current-price">
+
+            749 DH
+
+        </span>
+
+    </div>
+
+    <!-- Description courte -->
+
+    <p
+        id="productShortDescription"
+        class="short-description">
+
+        Chargement...
+
+    </p>
+
+    <!-- ======================================================
+         COULEURS
+    ======================================================= -->
+
+    <section class="product-section">
+
+        <div class="section-header">
+
+            <h3>
+
+                Couleur
+
+            </h3>
+
+            <span
+                id="selectedColor">
+
+                Beige sable
+
+            </span>
+
+        </div>
+
+        <div
+            id="colors"
+            class="color-swatches">
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         TAILLES
+    ======================================================= -->
+
+    <section class="product-section">
+
+        <div class="section-header">
+
+            <h3>
+
+                Taille
+
+            </h3>
+
+            <a href="#guide-tailles">
+
+                Guide des tailles
+
+            </a>
+
+        </div>
+
+        <div
+            id="sizes"
+            class="size-selector">
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         QUANTITE
+    ======================================================= -->
+
+    <section class="product-section">
+
+        <h3>
+
+            Quantité
+
+        </h3>
+
+        <div class="quantity-selector">
+
+            <button
+                id="qtyMinus"
+                type="button">
+
+                −
+
+            </button>
+
+            <input
+
+                id="quantity"
+
+                type="number"
+
+                value="1"
+
+                min="1">
+
+            <button
+
+                id="qtyPlus"
+
+                type="button">
+
+                +
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         DISPONIBILITE
+    ======================================================= -->
+
+    <div class="stock-status">
+
+        <i class="bi bi-check-circle-fill"></i>
+
+        <span id="stockText">
+
+            En stock
+
+        </span>
+
+    </div>
+
+    <!-- ======================================================
+         BADGES
+    ======================================================= -->
+
+    <div class="product-badges">
+
+        <span class="product-badge">
+
+            Livraison rapide
+
+        </span>
+
+        <span class="product-badge">
+
+            Retour 14 jours
+
+        </span>
+
+        <span class="product-badge">
+
+            Paiement sécurisé
+
+        </span>
+
+        <span class="product-badge">
+
+            Qualité Premium
+
+        </span>
+
+    </div>
+
+</div>
+
+<!-- ==========================================================
+     FIN DE LA PARTIE 2
+     La Partie 3 commencera avec :
+     <aside class="purchase-card">
+=========================================================== -->
+<!-- ==========================================================
+     CARTE D'ACHAT
+=========================================================== -->
+
+<aside class="purchase-card">
+
+    <div class="purchase-price">
+
+        <span id="purchasePrice">
+
+            749 DH
+
+        </span>
+
+    </div>
+
+    <div class="stock">
+
+        <i class="bi bi-check-circle-fill"></i>
+
+        <span id="purchaseStock">
+
+            En stock
+
+        </span>
+
+    </div>
+
+    <div class="shipping">
+
+        <strong>Livraison</strong>
+
+        Expédition sous 24 à 48 heures partout au Maroc.
+
+    </div>
+
+    <button
+        id="addToCart"
+        class="btn btn-primary">
+
+        <i class="bi bi-cart-plus"></i>
+
+        Ajouter au panier
+
+    </button>
+
+    <button
+        id="buyNow"
+        class="btn btn-dark">
+
+        Acheter maintenant
+
+    </button>
+
+    <hr>
+
+    <ul class="purchase-info">
+
+        <li>Livraison rapide partout au Maroc</li>
+
+        <li>Retour sous 14 jours</li>
+
+        <li>Paiement sécurisé</li>
+
+        <li>Service client disponible 7j/7</li>
+
+    </ul>
+
+    <div class="guarantees">
+
+        <div class="guarantee">
+
+            <i class="bi bi-shield-check"></i>
+
+            <span>Paiement sécurisé</span>
+
+        </div>
+
+        <div class="guarantee">
+
+            <i class="bi bi-truck"></i>
+
+            <span>Livraison rapide</span>
+
+        </div>
+
+        <div class="guarantee">
+
+            <i class="bi bi-arrow-repeat"></i>
+
+            <span>Retour facile</span>
+
+        </div>
+
+        <div class="guarantee">
+
+            <i class="bi bi-award"></i>
+
+            <span>Qualité Premium</span>
+
+        </div>
+
+    </div>
+
+</aside>
+
+</section>
+
+<!-- ==========================================================
+     DESCRIPTION
+=========================================================== -->
+
+<section class="product-description">
+
+    <h2>
+
+        Description
+
+    </h2>
+
+    <p id="productDescription">
+
+        Chargement...
+
+    </p>
+
+</section>
+
+<!-- ==========================================================
+     CARACTÉRISTIQUES
+=========================================================== -->
+
+<section class="product-features">
+
+    <h2>
+
+        Caractéristiques
+
+    </h2>
+
+    <ul id="productFeatures">
+
+        <li>Chargement...</li>
+
+    </ul>
+
+</section>
+
+<!-- ==========================================================
+     GUIDE DES TAILLES
+=========================================================== -->
+
+<section
+    id="guide-tailles"
+    class="size-guide">
+
+    <h2>
+
+        Guide des tailles
+
+    </h2>
+
+    <table>
+
+        <thead>
+
+            <tr id="sizeGuideHead">
+
+                <th>Taille</th>
+
+                <th>Poitrine</th>
+
+                <th>Tour de taille</th>
+
+                <th>Longueur</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="sizeGuideBody">
+
+            <tr>
+
+                <td colspan="4">
+
+                    Chargement...
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="size-tip">
+
+        <i class="bi bi-info-circle"></i>
+
+        Si vous hésitez entre deux tailles,
+        nous vous conseillons de choisir
+        la plus grande pour un confort optimal.
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     POURQUOI VOUS ALLEZ L'AIMER
+=========================================================== -->
+
+<section class="why-love">
+
+    <h2>
+
+        Pourquoi vous allez l'aimer
+
+    </h2>
+
+    <div class="why-grid">
+
+        <article class="why-card">
+
+            <i class="bi bi-gem"></i>
+
+            <h3>
+
+                Matière Premium
+
+            </h3>
+
+            <p>
+
+                Tissu haut de gamme sélectionné
+                pour son élégance et sa durabilité.
+
+            </p>
+
+        </article>
+
+        <article class="why-card">
+
+            <i class="bi bi-scissors"></i>
+
+            <h3>
+
+                Coupe Élégante
+
+            </h3>
+
+            <p>
+
+                Une silhouette pensée pour mettre
+                en valeur toutes les morphologies.
+
+            </p>
+
+        </article>
+
+        <article class="why-card">
+
+            <i class="bi bi-flower1"></i>
+
+            <h3>
+
+                Confort Quotidien
+
+            </h3>
+
+            <p>
+
+                Léger, respirant et agréable
+                à porter toute la journée.
+
+            </p>
+
+        </article>
+
+        <article class="why-card">
+
+            <i class="bi bi-patch-check"></i>
+
+            <h3>
+
+                Finitions Soignées
+
+            </h3>
+
+            <p>
+
+                Chaque détail est réalisé
+                avec le plus grand soin.
+
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     FIN DE LA PARTIE 3
+     La Partie 4 commencera avec :
+     <section class="related-products">
+=========================================================== -->
+<!-- ==========================================================
+     COMPLÉTEZ VOTRE TENUE
+========================================================== -->
+<section class="complete-look">
+
+    <h2>Complétez votre tenue</h2>
+
+    <div
+        id="completeLookGrid"
+        class="look-grid">
+
+    </div>
+
+</section>
+<!-- ==========================================================
+     PRODUITS SIMILAIRES
+========================================================== -->
+
+<section class="related-products">
+
+    <h2>Vous aimerez aussi</h2>
+
+    <div
+        id="relatedGrid"
+        class="related-grid">
+
+    </div>
+
+</section>
+
+</div>
+
+</main>
+
+<!-- ==========================================================
+     NEWSLETTER
+========================================================== -->
+
+<section class="newsletter">
+
+    <div class="container">
+
+        <h2>
+
+            Rejoignez l'univers Libasse
+
+        </h2>
+
+        <p>
+
+            Recevez nos nouveautés et nos offres en avant-première.
+
+        </p>
+
+        <form class="newsletter-form">
+
+            <input
+
+                type="email"
+
+                placeholder="Votre adresse e-mail">
+
+            <button type="submit">
+
+                S'inscrire
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <h3>LIBASSE</h3>
+
+            <p>
+
+                Des vêtements élégants conçus
+                pour accompagner chaque femme
+                au quotidien.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>Boutique</h4>
+
+            <ul>
+
+                <li><a href="categorie.html?cat=nouveautes">Nouveautés</a></li>
+
+                <li><a href="categorie.html?cat=manteau">Manteaux</a></li>
+
+                <li><a href="categorie.html?cat=chemise">Chemises</a></li>
+
+                <li><a href="categorie.html?cat=robe">Robes</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Informations</h4>
+
+            <ul>
+
+                <li><a href="#">Livraison</a></li>
+
+                <li><a href="#">Retours</a></li>
+
+                <li><a href="#">CGV</a></li>
+
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Suivez-nous</h4>
+
+            <div class="social-links">
+
+                <a href="#">
+
+                    <i class="bi bi-facebook"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="bi bi-instagram"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="bi bi-pinterest"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 Libasse — Tous droits réservés.
+
+    </div>
+
+</footer>
+
+<!-- ==========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="js/catalog.js"></script>
+
+<script src="js/product.js"></script>
+
+
+
+</body>
+
+</html>

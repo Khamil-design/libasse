@@ -6,7 +6,7 @@
 
 /* ==========================================================
    01 - VARIABLES
-   ========================================================== */
+   =========================================================== */
 
 :root {
 
@@ -2103,6 +2103,37 @@ main{
 
 
 /* ==========================================================
+   BASE BOUTON (padding / hauteur / forme communs)
+========================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.6rem;
+
+    padding:.85rem 1.5rem;
+
+    min-height:48px;
+
+    border-radius:var(--radius-md);
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:all .25s ease;
+
+}
+
+
+/* ==========================================================
    BOUTON PRINCIPAL
 ========================================================== */
 
@@ -3630,3 +3661,623 @@ a{
 
 }
 
+
+/* ==========================================================
+   18 - HERO (page d'accueil)
+========================================================== */
+
+.hero{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    min-height:640px;
+
+    margin-top:2rem;
+
+    border-radius:var(--radius-xl);
+
+    overflow:hidden;
+
+    background:var(--color-primary);
+
+}
+
+.hero-image{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.55;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(90deg, rgba(47,62,70,.92) 0%, rgba(47,62,70,.55) 55%, rgba(47,62,70,.15) 100%);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    max-width:560px;
+
+    padding:3rem 3.5rem;
+
+    color:var(--color-white);
+
+}
+
+.hero-eyebrow{
+
+    display:inline-block;
+
+    margin-bottom:1.25rem;
+
+    padding:.4rem 1rem;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    border-radius:var(--radius-pill);
+
+    font-size:var(--font-size-xs);
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    color:var(--color-white);
+
+}
+
+.hero-content h1{
+
+    margin-bottom:1.25rem;
+
+    font-size:var(--font-size-4xl);
+
+    font-weight:var(--font-light);
+
+    line-height:1.15;
+
+}
+
+.hero-content h1 em{
+
+    font-style:normal;
+
+    color:var(--color-accent);
+
+}
+
+.hero-content p{
+
+    margin-bottom:2rem;
+
+    font-size:var(--font-size-lg);
+
+    color:rgba(255,255,255,.85);
+
+}
+
+.hero-content .btn-primary{
+
+    padding:1rem 2rem;
+
+}
+
+.hero-content .btn-outline{
+
+    background:transparent;
+
+    color:var(--color-white);
+
+    border-color:rgba(255,255,255,.5);
+
+}
+
+.hero-content .btn-outline:hover{
+
+    border-color:var(--color-white);
+
+    color:var(--color-accent);
+
+}
+
+.hero-actions{
+
+    display:flex;
+
+    gap:1rem;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* ==========================================================
+   19 - SECTION GÉNÉRIQUE (titres de section réutilisables)
+========================================================== */
+
+.section{
+
+    margin-top:6rem;
+
+}
+
+.section-heading{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:space-between;
+
+    gap:1.5rem;
+
+    margin-bottom:2.5rem;
+
+}
+
+.section-heading h2{
+
+    font-size:2rem;
+
+    font-weight:var(--font-light);
+
+    color:var(--color-primary);
+
+}
+
+.section-heading p{
+
+    margin-top:.5rem;
+
+    color:var(--color-text-light);
+
+}
+
+.section-heading .link-more{
+
+    flex-shrink:0;
+
+    color:var(--color-primary);
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    border-bottom:1px solid var(--color-accent);
+
+    padding-bottom:.15rem;
+
+    white-space:nowrap;
+
+}
+
+.section-heading .link-more:hover{
+
+    color:var(--color-accent);
+
+}
+
+
+/* ==========================================================
+   20 - TUILES DE CATÉGORIES
+========================================================== */
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:1.5rem;
+
+}
+
+.category-tile{
+
+    position:relative;
+
+    display:block;
+
+    aspect-ratio:3/4;
+
+    border-radius:var(--radius-lg);
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:all .3s ease;
+
+}
+
+.category-tile:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.category-tile img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .4s ease;
+
+}
+
+.category-tile:hover img{
+
+    transform:scale(1.06);
+
+}
+
+.category-tile::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(180deg, rgba(47,62,70,0) 40%, rgba(47,62,70,.75) 100%);
+
+}
+
+.category-tile span{
+
+    position:absolute;
+
+    left:1.25rem;
+
+    bottom:1.25rem;
+
+    z-index:1;
+
+    color:var(--color-white);
+
+    font-size:1.2rem;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   21 - GRILLE PRODUITS GÉNÉRIQUE (accueil + catégorie)
+========================================================== */
+
+.products-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:2rem;
+
+}
+
+.product-card{
+
+    position:relative;
+
+}
+
+.product-card-link{
+
+    text-decoration:none;
+
+    display:block;
+
+}
+
+.product-badge-new{
+
+    position:absolute;
+
+    top:1rem;
+
+    left:1rem;
+
+    z-index:1;
+
+    padding:.3rem .75rem;
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+    font-size:var(--font-size-xs);
+
+    font-weight:600;
+
+    letter-spacing:.05em;
+
+    text-transform:uppercase;
+
+    border-radius:var(--radius-pill);
+
+}
+
+
+/* ==========================================================
+   22 - EN-TÊTE DE PAGE (catégorie)
+========================================================== */
+
+.page-header{
+
+    margin-top:2rem;
+
+    margin-bottom:3rem;
+
+}
+
+.page-header h1{
+
+    font-size:2.5rem;
+
+    font-weight:var(--font-light);
+
+    color:var(--color-primary);
+
+}
+
+.page-header .result-count{
+
+    margin-top:.5rem;
+
+    color:var(--color-text-light);
+
+}
+
+
+/* ==========================================================
+   23 - BARRE DE TRI
+========================================================== */
+
+.toolbar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:.75rem;
+
+    margin-bottom:2rem;
+
+    color:var(--color-text-light);
+
+    font-size:var(--font-size-sm);
+
+}
+
+.toolbar select{
+
+    padding:.6rem 1rem;
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-md);
+
+    background:var(--color-white);
+
+    color:var(--color-text);
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================================================
+   24 - ÉTAT VIDE
+========================================================== */
+
+.empty-state{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:1rem;
+
+    padding:5rem 2rem;
+
+    background:var(--color-surface);
+
+    border:1px dashed var(--color-border);
+
+    border-radius:var(--radius-lg);
+
+    color:var(--color-text-light);
+
+}
+
+.empty-state i{
+
+    font-size:2.5rem;
+
+    color:var(--color-accent);
+
+}
+
+.empty-state h3{
+
+    color:var(--color-primary);
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   25 - BANDEAU DE CONFIANCE
+========================================================== */
+
+.trust-bar{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:1.5rem;
+
+    padding:2.5rem;
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-lg);
+
+}
+
+.trust-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+.trust-item i{
+
+    font-size:1.5rem;
+
+    color:var(--color-accent);
+
+}
+
+.trust-item strong{
+
+    display:block;
+
+    color:var(--color-primary);
+
+    font-size:.95rem;
+
+}
+
+.trust-item span{
+
+    color:var(--color-text-light);
+
+    font-size:var(--font-size-sm);
+
+}
+
+
+/* ==========================================================
+   26 - RESPONSIVE (accueil / catégorie)
+========================================================== */
+
+@media (max-width:768px){
+
+    .hero{
+
+        min-height:520px;
+
+    }
+
+    .hero-content{
+
+        max-width:100%;
+
+        padding:2rem;
+
+    }
+
+    .hero-content h1{
+
+        font-size:var(--font-size-3xl);
+
+    }
+
+    .section{
+
+        margin-top:4rem;
+
+    }
+
+    .section-heading{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .toolbar{
+
+        justify-content:flex-start;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .hero{
+
+        min-height:460px;
+
+    }
+
+    .hero-actions{
+
+        flex-direction:column;
+
+    }
+
+    .hero-actions .btn{
+
+        width:100%;
+
+    }
+
+    .page-header h1{
+
+        font-size:1.85rem;
+
+    }
+
+}

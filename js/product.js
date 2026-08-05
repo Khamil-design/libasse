@@ -107,6 +107,13 @@ class Product {
         setText("productShortDescription", this.data.description.courte);
         setText("productDescription", this.data.description.longue);
 
+        const breadcrumbCategory = document.getElementById("breadcrumbCategory");
+        if (breadcrumbCategory && typeof categorySlugFor === "function") {
+            breadcrumbCategory.href = `categorie.html?cat=${categorySlugFor(this.data.categorie)}`;
+            breadcrumbCategory.textContent = categoryLabelFor(this.data.categorie);
+        }
+
+
         const price = `${this.data.prix.actuel} ${this.data.prix.devise}`;
         setText("productPrice", price);
         setText("purchasePrice", price);
