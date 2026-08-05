@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Libasse | Élégance intemporelle</title>
+
+<meta name="description"
+content="Libasse - Boutique de prêt-à-porter féminin haut de gamme. Robes, chemises, jupes et manteaux confectionnés dans des matières premium.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================================
+     HEADER
+=========================================================== -->
+
+<header class="site-header">
+
+    <div class="container">
+
+        <a href="accueil.html" class="logo">
+            LIBASSE
+        </a>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="accueil.html" class="active">Accueil</a></li>
+                <li><a href="categorie.html?cat=nouveautes">Nouveautés</a></li>
+                <li><a href="categorie.html?cat=robe">Robes</a></li>
+                <li><a href="categorie.html?cat=chemise">Chemises</a></li>
+                <li><a href="categorie.html?cat=jupe">Jupes</a></li>
+                <li><a href="categorie.html?cat=manteau">Manteaux</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="icon-button">
+                <i class="bi bi-search"></i>
+            </button>
+            <button class="icon-button">
+                <i class="bi bi-heart"></i>
+            </button>
+            <button class="icon-button">
+                <i class="bi bi-cart3"></i>
+                <span id="cartCount" class="cart-count">0</span>
+            </button>
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ==========================================================
+     MAIN
+=========================================================== -->
+
+<main>
+<div class="container">
+
+    <!-- ======================================================
+         HERO
+    ======================================================= -->
+
+    <section class="hero">
+
+        <img
+            class="hero-image"
+            src="images/femme/TrenchLeger/beigeSable/principale.jpg"
+            alt="">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-eyebrow">Nouvelle collection</span>
+
+            <h1>L'élégance qui <em>traverse</em> les saisons</h1>
+
+            <p>
+                Des pièces confectionnées dans des matières premium,
+                pensées pour accompagner chaque femme au quotidien
+                comme dans ses moments les plus habillés.
+            </p>
+
+            <div class="hero-actions">
+                <a href="categorie.html?cat=nouveautes" class="btn btn-primary">
+                    Découvrir la collection
+                </a>
+                <a href="categorie.html?cat=manteau" class="btn btn-outline">
+                    Voir les manteaux
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         CATÉGORIES
+    ======================================================= -->
+
+    <section class="section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Shoppez par catégorie</h2>
+                <p>Trouvez la pièce qu'il vous faut en un coup d'œil.</p>
+            </div>
+        </div>
+
+        <div class="category-grid">
+
+            <a href="categorie.html?cat=robe" class="category-tile">
+                <img src="images/femme/robe/creme/principale.jpg" alt="Robes">
+                <span>Robes</span>
+            </a>
+
+            <a href="categorie.html?cat=chemise" class="category-tile">
+                <img src="images/chemise/grisPerle/principale.jpg" alt="Chemises">
+                <span>Chemises</span>
+            </a>
+
+            <a href="categorie.html?cat=jupe" class="category-tile">
+                <img src="images/femme/jupe/prune/principale.jpg" alt="Jupes">
+                <span>Jupes</span>
+            </a>
+
+            <a href="categorie.html?cat=manteau" class="category-tile">
+                <img src="images/femme/manteau/camel/principale.jpg" alt="Manteaux">
+                <span>Manteaux</span>
+            </a>
+
+            <a href="categorie.html?cat=pantalon" class="category-tile">
+                <img src="images/pantalon/beigeSable/principale.jpg" alt="Pantalons">
+                <span>Pantalons</span>
+            </a>
+
+            <a href="categorie.html?cat=teeshirt" class="category-tile">
+                <img src="images/teeshirt/bleuMarine/principale.jpg" alt="Tee-shirts">
+                <span>Tee-shirts</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         NOUVEAUTÉS
+    ======================================================= -->
+
+    <section class="section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Nos nouveautés</h2>
+                <p>Les dernières pièces arrivées dans nos collections.</p>
+            </div>
+            <a href="categorie.html?cat=nouveautes" class="link-more">Tout voir</a>
+        </div>
+
+        <div id="newArrivalsGrid" class="products-grid">
+            <!-- rempli dynamiquement -->
+        </div>
+
+    </section>
+
+    <!-- ======================================================
+         BANDEAU DE CONFIANCE
+    ======================================================= -->
+
+    <section class="section">
+
+        <div class="trust-bar">
+
+            <div class="trust-item">
+                <i class="bi bi-shield-check"></i>
+                <div>
+                    <strong>Paiement sécurisé</strong>
+                    <span>Vos transactions sont protégées</span>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <i class="bi bi-truck"></i>
+                <div>
+                    <strong>Livraison rapide</strong>
+                    <span>Expédition sous 24 à 48h partout au Maroc</span>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <i class="bi bi-arrow-repeat"></i>
+                <div>
+                    <strong>Retour facile</strong>
+                    <span>14 jours pour changer d'avis</span>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <i class="bi bi-award"></i>
+                <div>
+                    <strong>Qualité Premium</strong>
+                    <span>Des matières sélectionnées avec soin</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+</main>
+
+<!-- ==========================================================
+     NEWSLETTER
+========================================================== -->
+
+<section class="newsletter">
+    <div class="container">
+        <h2>Rejoignez l'univers Libasse</h2>
+        <p>Recevez nos nouveautés et nos offres en avant-première.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Votre adresse e-mail">
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+</section>
+
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div>
+            <h3>LIBASSE</h3>
+            <p>
+                Des vêtements élégants conçus
+                pour accompagner chaque femme
+                au quotidien.
+            </p>
+        </div>
+
+        <div>
+            <h4>Boutique</h4>
+            <ul>
+                <li><a href="categorie.html?cat=nouveautes">Nouveautés</a></li>
+                <li><a href="categorie.html?cat=manteau">Manteaux</a></li>
+                <li><a href="categorie.html?cat=chemise">Chemises</a></li>
+                <li><a href="categorie.html?cat=robe">Robes</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Informations</h4>
+            <ul>
+                <li><a href="#">Livraison</a></li>
+                <li><a href="#">Retours</a></li>
+                <li><a href="#">CGV</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Suivez-nous</h4>
+            <div class="social-links">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-pinterest"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Libasse — Tous droits réservés.
+    </div>
+
+</footer>
+
+<!-- ==========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="js/catalog.js"></script>
+<script src="js/home.js"></script>
+
+</body>
+
+</html>
