@@ -188,7 +188,8 @@ class Product {
             poitrine: "Poitrine",
             taille: "Tour de taille",
             longueur: "Longueur",
-            tourCou: "Tour de cou"
+            tourCou: "Tour de cou",
+            hanches: "Tour de hanches"
         };
 
         // Les mesures disponibles diffèrent d'un produit à l'autre
@@ -533,7 +534,7 @@ class Product {
             : "";
 
         const link = document.createElement("a");
-        link.href = `index.html?id=${encodeURIComponent(produit.slug)}`;
+        link.href = `produit.html?id=${encodeURIComponent(produit.slug)}`;
         link.className = "product-link";
 
         const article = document.createElement("article");

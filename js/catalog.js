@@ -1,0 +1,123 @@
+/* ==========================================================
+   LIBASSE
+   CATALOGUE — fonctions partagées entre les pages
+========================================================== */
+
+/* Libellé affiché pour chaque catégorie */
+const CATEGORY_LABELS = {
+    robe: "Robes",
+    chemise: "Chemises",
+    jupe: "Jupes",
+    manteau: "Manteaux",
+    pantalon: "Pantalons",
+    teeshirt: "Tee-shirts"
+};
+
+/*
+   Regroupement des valeurs `categorie` du catalogue sous chaque
+   entrée de menu. Les trenchs (categorie: "trench") sont
+   présentés sous "Manteaux" dans la navigation, sans toucher à
+   la donnée d'origine.
+*/
+const CATEGORY_GROUPS = {
+    robe: ["robe"],
+    chemise: ["chemise"],
+    jupe: ["jupe"],
+    manteau: ["manteau", "trench"],
+    pantalon: ["pantalon"],
+    teeshirt: ["teeshirt"]
+};
+
+/* ======================================================
+   Chargement du catalogue
+====================================================== */
+
+async function loadCatalogue() {
+
+    const response = await fetch("data/catalogue.json");
+
+    if (!response.ok) {
+        throw new Error(`Erreur HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.catalogue.produits;
+
+}
+
+/* ======================================================
+   Image principale d'un produit (1ère variante)
+====================================================== */
+
+function productImage(produit) {
+
+    const variante = produit.variantes && produit.variantes[0];
+
+    if (!variante || !produit.imageBase || !variante.dossier) {
+        return "";
+    }
+
+    return `${produit.imageBase}/${variante.dossier}/principale.jpg`;
+
+}
+
+/* ======================================================
+   Slug de catégorie (nav) <-> valeur `categorie` du catalogue
+====================================================== */
+
+function categorySlugFor(categorie) {
+
+    for (const [slug, values] of Object.entries(CATEGORY_GROUPS)) {
+        if (values.includes(categorie)) return slug;
+    }
+
+    return categorie;
+
+}
+
+function categoryLabelFor(categorie) {
+
+    const slug = categorySlugFor(categorie);
+    return CATEGORY_LABELS[slug] || categorie;
+
+}
+
+function productsInCategory(produits, slug) {
+
+    if (slug === "nouveautes") {
+        return produits.filter(p => p.etat && p.etat.nouveau);
+    }
+
+    const values = CATEGORY_GROUPS[slug] || [slug];
+    return produits.filter(p => values.includes(p.categorie));
+
+}
+
+/* ======================================================
+   Carte produit réutilisable (accueil + page catégorie)
+====================================================== */
+
+function buildProductCard(produit) {
+
+    const link = document.createElement("a");
+    link.href = `produit.html?id=${encodeURIComponent(produit.slug)}`;
+    link.className = "product-card-link";
+
+    const article = document.createElement("article");
+    article.className = "product-card";
+
+    const badge = (produit.etat && produit.etat.nouveau)
+        ? '<span class="product-badge-new">Nouveau</span>'
+        : "";
+
+    article.innerHTML = `
+        ${badge}
+        <img src="${productImage(produit)}" alt="${produit.nom}">
+        <h3>${produit.nom}</h3>
+        <p>${produit.prix.actuel} ${produit.prix.devise}</p>
+    `;
+
+    link.appendChild(article);
+    return link;
+
+}
