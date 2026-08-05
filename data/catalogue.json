@@ -1,1 +1,853 @@
-
+{
+  "catalogue": {
+    "version": "2.0",
+    "produits": [
+      {
+        "id": "TR001",
+        "slug": "trench-premium",
+        "categorie": "trench",
+        "nom": "Trench long Premium",
+        "imageBase": "images/femme/TrenchLeger",
+        "marque": "Libasse",
+        "reference": "TR-001",
+        "description": {
+          "courte": "Trench long élégant confectionné dans une gabardine premium italienne.",
+          "longue": "Le trench Premium Libasse est conçu dans une gabardine haut de gamme offrant un tombé élégant, une excellente tenue et un confort optimal. Sa coupe intemporelle s'adapte aussi bien aux tenues quotidiennes qu'aux occasions plus habillées."
+        },
+        "prix": {
+          "actuel": 749,
+          "ancien": 899,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.9,
+          "nombre": 128
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "guideTailles": {
+          "S": {
+            "poitrine": 92,
+            "taille": 74,
+            "longueur": 128
+          },
+          "M": {
+            "poitrine": 98,
+            "taille": 80,
+            "longueur": 129
+          },
+          "L": {
+            "poitrine": 104,
+            "taille": 86,
+            "longueur": 130
+          },
+          "XL": {
+            "poitrine": 110,
+            "taille": 92,
+            "longueur": 131
+          }
+        },
+        "caracteristiques": [
+          "Gabardine italienne premium",
+          "Double boutonnage",
+          "Ceinture assortie",
+          "Poches latérales",
+          "Poignets réglables",
+          "Coupe longue",
+          "Finitions haut de gamme"
+        ],
+        "variantes": [
+          {
+            "id": "TR001-GP",
+            "slug": "gris-perle",
+            "nom": "Gris Perle",
+            "codeCouleur": "#D9D9D4",
+            "stock": 18,
+            "dossier": "grisPerle"
+          },
+          {
+            "id": "TR001-BS",
+            "slug": "beige-sable",
+            "nom": "Beige sable",
+            "codeCouleur": "#D8C3A5",
+            "stock": 18,
+            "dossier": "beigeSable"
+          },
+          {
+            "id": "TR001-BM",
+            "slug": "bleu-marine",
+            "nom": "Bleu marine",
+            "codeCouleur": "#243B6B",
+            "stock": 18,
+            "dossier": "bleuMarine"
+          },
+          {
+            "id": "TR001-BP",
+            "slug": "bordeaux-profond",
+            "nom": "Bordeaux profond",
+            "codeCouleur": "#5C2331",
+            "stock": 18,
+            "dossier": "bordeauxProfond"
+          },
+          {
+            "id": "TR001-KO",
+            "slug": "kaki-olive",
+            "nom": "Kaki Olive",
+            "codeCouleur": "#6E7148",
+            "stock": 18,
+            "dossier": "kakiOlive"
+          }
+        ],
+        "completeLook": [
+          "chemise-premium",
+          "pantalon-chino"
+        ],
+        "produitsSimilaires": [
+          "trench-classique",
+          "trench-camel"
+        ]
+      },
+      {
+        "id": "CH001",
+        "slug": "chemise-premium",
+        "categorie": "chemise",
+        "nom": "Chemise Premium",
+        "imageBase": "images/chemise",
+        "marque": "Libasse",
+        "reference": "CH-001",
+        "description": {
+          "courte": "Chemise premium confectionnée en popeline italienne, élégante et confortable.",
+          "longue": "Cette chemise Libasse est réalisée dans une popeline italienne haut de gamme. Sa coupe moderne, son col structuré et ses finitions soignées en font une pièce idéale aussi bien pour une tenue habillée que casual chic."
+        },
+        "prix": {
+          "actuel": 349,
+          "ancien": 429,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.8,
+          "nombre": 96
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "guideTailles": {
+          "S": {
+            "poitrine": 92,
+            "tourCou": 38
+          },
+          "M": {
+            "poitrine": 98,
+            "tourCou": 40
+          },
+          "L": {
+            "poitrine": 104,
+            "tourCou": 42
+          },
+          "XL": {
+            "poitrine": 110,
+            "tourCou": 44
+          }
+        },
+        "caracteristiques": [
+          "Popeline italienne premium",
+          "Col classique",
+          "Poignets boutonnés",
+          "Coupe moderne",
+          "Tissu respirant",
+          "Finitions haut de gamme"
+        ],
+        "variantes": [
+          {
+            "id": "CH001-BS",
+            "slug": "beige-sable",
+            "nom": "Beige sable",
+            "codeCouleur": "#D8C3A5",
+            "stock": 20,
+            "dossier": "beigeSable"
+          },
+          {
+            "id": "CH001-BL",
+            "slug": "blanche",
+            "nom": "Blanche",
+            "codeCouleur": "#F5F5F0",
+            "stock": 20,
+            "dossier": "blanche"
+          },
+          {
+            "id": "CH001-BM",
+            "slug": "bleu-marine",
+            "nom": "Bleu marine",
+            "codeCouleur": "#243B6B",
+            "stock": 20,
+            "dossier": "bleuMarine"
+          },
+          {
+            "id": "CH001-GP",
+            "slug": "gris-perle",
+            "nom": "Gris Perle",
+            "codeCouleur": "#D9D9D4",
+            "stock": 25,
+            "dossier": "grisPerle"
+          },
+          {
+            "id": "CH001-KO",
+            "slug": "kaki-olive",
+            "nom": "Kaki Olive",
+            "codeCouleur": "#6E7148",
+            "stock": 20,
+            "dossier": "kakiOlive"
+          }
+        ],
+        "completeLook": [
+          "trench-premium"
+        ],
+        "produitsSimilaires": [
+          "trench-premium"
+        ]
+      },
+      {
+        "id": "CH002",
+        "slug": "chemise-demi-manche",
+        "categorie": "chemise",
+        "nom": "Chemise demi-manche Premium",
+        "imageBase": "images/chemise/demiManche",
+        "marque": "Libasse",
+        "reference": "CH-002",
+        "description": {
+          "courte": "Chemise demi-manche premium confectionnée dans une popeline italienne légère, idéale pour la saison estivale.",
+          "longue": "La chemise demi-manche Premium Libasse est confectionnée dans une popeline italienne haut de gamme offrant douceur, respirabilité et élégance. Sa coupe moderne et son col structuré en font une pièce idéale pour un style chic décontracté durant les journées chaudes."
+        },
+        "prix": {
+          "actuel": 329,
+          "ancien": 399,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.8,
+          "nombre": 74
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "guideTailles": {
+          "S": {
+            "poitrine": 92,
+            "tourCou": 38
+          },
+          "M": {
+            "poitrine": 98,
+            "tourCou": 40
+          },
+          "L": {
+            "poitrine": 104,
+            "tourCou": 42
+          },
+          "XL": {
+            "poitrine": 110,
+            "tourCou": 44
+          }
+        },
+        "caracteristiques": [
+          "Popeline italienne premium",
+          "Coupe moderne",
+          "Col structuré",
+          "Manches courtes",
+          "Tissu respirant",
+          "Finitions haut de gamme"
+        ],
+        "variantes": [
+          {
+            "id": "CH002-BS",
+            "slug": "beige-sable",
+            "nom": "Beige sable",
+            "codeCouleur": "#D8C3A5",
+            "stock": 20,
+            "dossier": "beigeSable"
+          },
+          {
+            "id": "CH002-BP",
+            "slug": "bleu-petrole",
+            "nom": "Bleu pétrole",
+            "codeCouleur": "#2F5D62",
+            "stock": 20,
+            "dossier": "bleuPertrole"
+          },
+          {
+            "id": "CH002-BD",
+            "slug": "bordeaux",
+            "nom": "Bordeaux",
+            "codeCouleur": "#5C2331",
+            "stock": 20,
+            "dossier": "bordeaux"
+          },
+          {
+            "id": "CH002-GP",
+            "slug": "gris-perle",
+            "nom": "Gris Perle",
+            "codeCouleur": "#D9D9D4",
+            "stock": 20,
+            "dossier": "grisPerle"
+          },
+          {
+            "id": "CH002-KO",
+            "slug": "kaki-olive",
+            "nom": "Kaki Olive",
+            "codeCouleur": "#6E7148",
+            "stock": 20,
+            "dossier": "kakiOlive"
+          }
+        ],
+        "completeLook": [
+          "trench-premium"
+        ],
+        "produitsSimilaires": [
+          "chemise-premium"
+        ]
+      },
+      {
+        "id": "RB001",
+        "slug": "robe-premium",
+        "categorie": "robe",
+        "nom": "Robe longue Premium",
+        "imageBase": "images/femme/robe",
+        "marque": "Libasse",
+        "reference": "RB-001",
+        "description": {
+          "courte": "Robe longue fluide en crêpe premium, manches bouffantes et taille cintrée.",
+          "longue": "La robe longue Premium Libasse est confectionnée dans un crêpe fluide haut de gamme. Sa coupe évasée, ses manches longues bouffantes et sa ceinture assortie soulignent la taille pour une silhouette élégante, du bureau aux soirées habillées."
+        },
+        "prix": {
+          "actuel": 899,
+          "ancien": 1049,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.9,
+          "nombre": 61
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "guideTailles": {
+          "S": {
+            "poitrine": 88,
+            "taille": 70,
+            "longueur": 142
+          },
+          "M": {
+            "poitrine": 94,
+            "taille": 76,
+            "longueur": 144
+          },
+          "L": {
+            "poitrine": 100,
+            "taille": 82,
+            "longueur": 146
+          },
+          "XL": {
+            "poitrine": 106,
+            "taille": 88,
+            "longueur": 148
+          }
+        },
+        "caracteristiques": [
+          "Crêpe premium fluide",
+          "Manches longues bouffantes",
+          "Ceinture assortie",
+          "Fermeture boutonnée au dos",
+          "Coupe évasée",
+          "Doublure intérieure",
+          "Finitions haut de gamme"
+        ],
+        "variantes": [
+          {
+            "id": "RB001-BO",
+            "slug": "bordeaux",
+            "nom": "Bordeaux",
+            "codeCouleur": "#7A1F2B",
+            "stock": 20,
+            "dossier": "bordeaux"
+          },
+          {
+            "id": "RB001-CA",
+            "slug": "camel-ambre",
+            "nom": "Camel Ambré",
+            "codeCouleur": "#C08A4E",
+            "stock": 22,
+            "dossier": "camelAmbre"
+          },
+          {
+            "id": "RB001-CR",
+            "slug": "creme",
+            "nom": "Crème",
+            "codeCouleur": "#F3EAD9",
+            "stock": 24,
+            "dossier": "creme"
+          }
+        ],
+        "completeLook": [
+          "trench-premium"
+        ],
+        "produitsSimilaires": [
+          "jupe-genou",
+          "jupe-longue"
+        ]
+      },
+      {
+        "id": "JP001",
+        "slug": "jupe-longue",
+        "categorie": "jupe",
+        "nom": "Jupe longue évasée",
+        "imageBase": "images/femme/jupe",
+        "marque": "Libasse",
+        "reference": "JP-001",
+        "description": {
+          "courte": "Jupe longue évasée en crêpe fluide, taille haute et tombé aérien.",
+          "longue": "Cette jupe longue Libasse adopte une coupe évasée qui virevolte à chaque pas. Confectionnée dans un crêpe fluide, sa taille haute structurée affine la silhouette tandis que sa fermeture éclair invisible au dos assure un tombé impeccable."
+        },
+        "prix": {
+          "actuel": 449,
+          "ancien": 549,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.7,
+          "nombre": 38
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "guideTailles": {
+          "S": {
+            "taille": 66,
+            "hanches": 92,
+            "longueur": 98
+          },
+          "M": {
+            "taille": 72,
+            "hanches": 98,
+            "longueur": 99
+          },
+          "L": {
+            "taille": 78,
+            "hanches": 104,
+            "longueur": 100
+          },
+          "XL": {
+            "taille": 84,
+            "hanches": 110,
+            "longueur": 101
+          }
+        },
+        "caracteristiques": [
+          "Crêpe fluide premium",
+          "Taille haute structurée",
+          "Coupe évasée (trapèze)",
+          "Fermeture éclair invisible au dos",
+          "Doublure intérieure",
+          "Longueur maxi"
+        ],
+        "variantes": [
+          {
+            "id": "JP001-CA",
+            "slug": "canelle",
+            "nom": "Cannelle",
+            "codeCouleur": "#B5652D",
+            "stock": 20,
+            "dossier": "canelle"
+          },
+          {
+            "id": "JP001-CO",
+            "slug": "corail-poudre",
+            "nom": "Corail Poudré",
+            "codeCouleur": "#E3A8A0",
+            "stock": 22,
+            "dossier": "corailPoudre"
+          },
+          {
+            "id": "JP001-GR",
+            "slug": "gris-antracite",
+            "nom": "Gris Anthracite",
+            "codeCouleur": "#3B3B3D",
+            "stock": 24,
+            "dossier": "grisAntracite"
+          },
+          {
+            "id": "JP001-PR",
+            "slug": "prune",
+            "nom": "Prune",
+            "codeCouleur": "#6F4A5E",
+            "stock": 26,
+            "dossier": "prune"
+          },
+          {
+            "id": "JP001-VE",
+            "slug": "vert-sauge",
+            "nom": "Vert Sauge",
+            "codeCouleur": "#9CAF88",
+            "stock": 28,
+            "dossier": "vertSauge"
+          }
+        ],
+        "completeLook": [
+          "chemise-premium"
+        ],
+        "produitsSimilaires": [
+          "jupe-genou",
+          "robe-premium"
+        ]
+      },
+      {
+        "id": "JP002",
+        "slug": "jupe-genou",
+        "categorie": "jupe",
+        "nom": "Jupe crayon longueur genou",
+        "imageBase": "images/femme/jupe/genou",
+        "marque": "Libasse",
+        "reference": "JP-002",
+        "description": {
+          "courte": "Jupe crayon ajustée longueur genou, idéale pour le bureau.",
+          "longue": "La jupe crayon Libasse épouse la silhouette grâce à sa coupe ajustée et sa taille haute. Sa fente arrière facilite le mouvement tandis que son tissu structuré légèrement stretch en fait une pièce de bureau incontournable, à associer avec une chemise pour un look chic et professionnel."
+        },
+        "prix": {
+          "actuel": 399,
+          "ancien": 469,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.8,
+          "nombre": 45
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "guideTailles": {
+          "S": {
+            "taille": 66,
+            "hanches": 92,
+            "longueur": 56
+          },
+          "M": {
+            "taille": 72,
+            "hanches": 98,
+            "longueur": 57
+          },
+          "L": {
+            "taille": 78,
+            "hanches": 104,
+            "longueur": 58
+          },
+          "XL": {
+            "taille": 84,
+            "hanches": 110,
+            "longueur": 59
+          }
+        },
+        "caracteristiques": [
+          "Tissu structuré léger stretch",
+          "Coupe crayon ajustée",
+          "Taille haute",
+          "Fente arrière",
+          "Longueur genou",
+          "Idéale pour le bureau"
+        ],
+        "variantes": [
+          {
+            "id": "JP002-CA",
+            "slug": "canelle",
+            "nom": "Cannelle",
+            "codeCouleur": "#B5652D",
+            "stock": 20,
+            "dossier": "canelle"
+          },
+          {
+            "id": "JP002-CO",
+            "slug": "corail-poudre",
+            "nom": "Corail Poudré",
+            "codeCouleur": "#E3A8A0",
+            "stock": 22,
+            "dossier": "corailPoudre"
+          },
+          {
+            "id": "JP002-GR",
+            "slug": "gris-antracite",
+            "nom": "Gris Anthracite",
+            "codeCouleur": "#3B3B3D",
+            "stock": 24,
+            "dossier": "grisAntracite"
+          },
+          {
+            "id": "JP002-PR",
+            "slug": "prune",
+            "nom": "Prune",
+            "codeCouleur": "#6F4A5E",
+            "stock": 26,
+            "dossier": "prune"
+          },
+          {
+            "id": "JP002-VE",
+            "slug": "vert-sauge",
+            "nom": "Vert Sauge",
+            "codeCouleur": "#9CAF88",
+            "stock": 28,
+            "dossier": "vertSauge"
+          }
+        ],
+        "completeLook": [
+          "chemise-premium"
+        ],
+        "produitsSimilaires": [
+          "jupe-longue",
+          "chemise-premium"
+        ]
+      },
+      {
+        "id": "PT001",
+        "slug": "pantalon-chino",
+        "categorie": "pantalon",
+        "nom": "Pantalon chino coupe droite",
+        "imageBase": "images/pantalon",
+        "marque": "Libasse",
+        "reference": "PT-001",
+        "description": {
+          "courte": "Pantalon chino en coton stretch premium, coupe droite ajustée.",
+          "longue": "Ce pantalon chino Libasse est confectionné dans un coton stretch premium offrant confort et liberté de mouvement toute la journée. Sa coupe droite ajustée et son pli marqué en font une pièce polyvalente, du bureau aux sorties décontractées."
+        },
+        "prix": {
+          "actuel": 379,
+          "ancien": 449,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.7,
+          "nombre": 52
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "guideTailles": {
+          "S": {
+            "taille": 76,
+            "hanches": 96,
+            "longueur": 100
+          },
+          "M": {
+            "taille": 82,
+            "hanches": 102,
+            "longueur": 101
+          },
+          "L": {
+            "taille": 88,
+            "hanches": 108,
+            "longueur": 102
+          },
+          "XL": {
+            "taille": 94,
+            "hanches": 114,
+            "longueur": 103
+          }
+        },
+        "caracteristiques": [
+          "Coton stretch premium",
+          "Coupe droite ajustée",
+          "Pli marqué",
+          "Poches italiennes",
+          "Passants de ceinture",
+          "Finitions soignées"
+        ],
+        "variantes": [
+          {
+            "id": "PT001-BE",
+            "slug": "beige-sable",
+            "nom": "Beige sable",
+            "codeCouleur": "#D8C3A5",
+            "stock": 20,
+            "dossier": "beigeSable"
+          },
+          {
+            "id": "PT001-BL",
+            "slug": "bleu-marine",
+            "nom": "Bleu marine",
+            "codeCouleur": "#243B6B",
+            "stock": 22,
+            "dossier": "bleuMarine"
+          },
+          {
+            "id": "PT001-BL",
+            "slug": "bleu-petrole",
+            "nom": "Bleu pétrole",
+            "codeCouleur": "#2F5D62",
+            "stock": 24,
+            "dossier": "bleuPetrole"
+          },
+          {
+            "id": "PT001-GR",
+            "slug": "gris-anthracite",
+            "nom": "Gris Anthracite",
+            "codeCouleur": "#3B3B3D",
+            "stock": 26,
+            "dossier": "grisAnthracite"
+          },
+          {
+            "id": "PT001-KA",
+            "slug": "kaki-olive",
+            "nom": "Kaki Olive",
+            "codeCouleur": "#6E7148",
+            "stock": 28,
+            "dossier": "kakiOlive"
+          }
+        ],
+        "completeLook": [
+          "chemise-premium",
+          "teeshirt-essentiel"
+        ],
+        "produitsSimilaires": [
+          "chemise-premium",
+          "teeshirt-essentiel"
+        ]
+      },
+      {
+        "id": "TS001",
+        "slug": "teeshirt-essentiel",
+        "categorie": "teeshirt",
+        "nom": "T-shirt col rond essentiel",
+        "imageBase": "images/teeshirt",
+        "marque": "Libasse",
+        "reference": "TS-001",
+        "description": {
+          "courte": "T-shirt essentiel en coton peigné premium, coupe régulière.",
+          "longue": "Le t-shirt essentiel Libasse est confectionné en coton peigné premium pour un confort optimal au quotidien. Son col rond renforcé et sa coupe régulière en font une base intemporelle, facile à associer à toute votre garde-robe."
+        },
+        "prix": {
+          "actuel": 179,
+          "ancien": 219,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.6,
+          "nombre": 83
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "guideTailles": {
+          "S": {
+            "poitrine": 90,
+            "longueur": 68
+          },
+          "M": {
+            "poitrine": 96,
+            "longueur": 70
+          },
+          "L": {
+            "poitrine": 102,
+            "longueur": 72
+          },
+          "XL": {
+            "poitrine": 108,
+            "longueur": 74
+          }
+        },
+        "caracteristiques": [
+          "Coton peigné premium",
+          "Coupe régulière",
+          "Col rond renforcé",
+          "Coutures ras du cou",
+          "Matière respirante",
+          "Basique intemporel"
+        ],
+        "variantes": [
+          {
+            "id": "TS001-BE",
+            "slug": "beige-sable",
+            "nom": "Beige sable",
+            "codeCouleur": "#D8C3A5",
+            "stock": 20,
+            "dossier": "beigeSable"
+          },
+          {
+            "id": "TS001-BL",
+            "slug": "bleu-marine",
+            "nom": "Bleu marine",
+            "codeCouleur": "#243B6B",
+            "stock": 22,
+            "dossier": "bleuMarine"
+          },
+          {
+            "id": "TS001-BO",
+            "slug": "bordeaux",
+            "nom": "Bordeaux",
+            "codeCouleur": "#5C2331",
+            "stock": 24,
+            "dossier": "bordeaux"
+          }
+        ],
+        "completeLook": [
+          "pantalon-chino"
+        ],
+        "produitsSimilaires": [
+          "pantalon-chino",
+          "chemise-premium"
+        ]
+      }
+    ]
+  }
+}
