@@ -113,7 +113,6 @@ class Product {
             breadcrumbCategory.textContent = categoryLabelFor(this.data.categorie);
         }
 
-
         const price = `${this.data.prix.actuel} ${this.data.prix.devise}`;
         setText("productPrice", price);
         setText("purchasePrice", price);
