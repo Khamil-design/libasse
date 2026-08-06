@@ -3,6 +3,8 @@
    PAGE PANIER
 ========================================================== */
 
+const WHATSAPP_NUMBER = "212676247857";
+
 function formatPrice(amount, devise) {
     return `${amount} ${devise}`;
 }
@@ -62,6 +64,30 @@ function buildCartItemRow(item) {
 
 }
 
+function buildWhatsAppMessage(cart, subtotal, devise) {
+
+    const lignes = cart.map(item => {
+        const details = [];
+        if (item.couleur) details.push(item.couleur);
+        if (item.taille) details.push(`taille ${item.taille}`);
+        const suffix = details.length ? ` (${details.join(", ")})` : "";
+        return `• ${item.nom}${suffix} — Qté ${item.quantite} — ${formatPrice(item.prixUnitaire * item.quantite, item.devise)}`;
+    });
+
+    const message = [
+        "Bonjour Libasse, je souhaite passer la commande suivante :",
+        "",
+        ...lignes,
+        "",
+        `Total : ${formatPrice(subtotal, devise)}`,
+        "",
+        "Merci de me confirmer la disponibilité et les modalités de livraison."
+    ].join("\n");
+
+    return message;
+
+}
+
 function renderSummary(cart) {
 
     const subtotal = cartSubtotal(cart);
@@ -69,6 +95,9 @@ function renderSummary(cart) {
 
     const summary = document.createElement("div");
     summary.className = "cart-summary";
+
+    const message = buildWhatsAppMessage(cart, subtotal, devise);
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
     summary.innerHTML = `
         <h2>Récapitulatif</h2>
@@ -84,17 +113,18 @@ function renderSummary(cart) {
             <span>Total</span>
             <span>${formatPrice(subtotal, devise)}</span>
         </div>
-        <button type="button" id="checkoutButton" class="btn btn-primary">
-            Passer la commande
-        </button>
+        <a href="${whatsappUrl}" target="_blank" rel="noopener" class="btn btn-primary cart-whatsapp-btn">
+            <i class="bi bi-whatsapp"></i> Commander via WhatsApp
+        </a>
         <p class="cart-summary-note">
-            Cette boutique de démonstration n'a pas encore de tunnel de paiement.
+            Vous serez redirigé vers WhatsApp avec le détail de votre commande pré-rempli.
         </p>
     `;
 
     return summary;
 
 }
+
 
 function renderCart() {
 
@@ -129,13 +159,6 @@ function renderCart() {
     container.appendChild(layout);
 
     updateCartBadge();
-
-    const checkoutButton = document.getElementById("checkoutButton");
-    if (checkoutButton) {
-        checkoutButton.addEventListener("click", () => {
-            alert("Cette boutique de démonstration n'a pas encore de tunnel de paiement. Votre panier reste enregistré pour plus tard.");
-        });
-    }
 
 }
 
