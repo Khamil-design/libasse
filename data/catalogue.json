@@ -847,6 +847,126 @@
           "pantalon-chino",
           "chemise-premium"
         ]
+      },
+      {
+        "id": "BL001",
+        "slug": "blazer-long",
+        "categorie": "blazer",
+        "nom": "Blazer long cintré",
+        "imageBase": "images/femme/blazer",
+        "marque": "Libasse",
+        "reference": "BL-001",
+        "description": {
+          "courte": "Blazer long cintré en tissu structuré, col cranté et fermeture boutonnée.",
+          "longue": "Ce blazer long Libasse allie rigueur et élégance grâce à sa coupe cintrée et son tissu structuré premium. Son col cranté, ses poches à rabat et sa longueur mi-cuisse en font une pièce de transition idéale, à porter ouverte sur une blouse ou fermée pour un look tailleur."
+        },
+        "prix": {
+          "actuel": 699,
+          "ancien": 799,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.8,
+          "nombre": 34
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "guideTailles": {
+          "S": {
+            "poitrine": 88,
+            "taille": 70,
+            "longueur": 76
+          },
+          "M": {
+            "poitrine": 94,
+            "taille": 76,
+            "longueur": 78
+          },
+          "L": {
+            "poitrine": 100,
+            "taille": 82,
+            "longueur": 80
+          },
+          "XL": {
+            "poitrine": 106,
+            "taille": 88,
+            "longueur": 82
+          }
+        },
+        "caracteristiques": [
+          "Tissu structuré premium",
+          "Coupe cintrée longue",
+          "Col cranté tailleur",
+          "Poches à rabat",
+          "Fermeture boutonnée",
+          "Doublure intérieure"
+        ],
+        "variantes": [
+          {
+            "id": "BL001-BO",
+            "slug": "bordeaux",
+            "nom": "Bordeaux",
+            "codeCouleur": "#7A1F2B",
+            "stock": 18,
+            "dossier": "bordeaux"
+          },
+          {
+            "id": "BL001-CA",
+            "slug": "camel",
+            "nom": "Camel",
+            "codeCouleur": "#C08A4E",
+            "stock": 21,
+            "dossier": "camel"
+          },
+          {
+            "id": "BL001-EC",
+            "slug": "ecru",
+            "nom": "Écru",
+            "codeCouleur": "#EDE6D6",
+            "stock": 24,
+            "dossier": "ecru"
+          },
+          {
+            "id": "BL001-GR",
+            "slug": "gris-clair",
+            "nom": "Gris Clair",
+            "codeCouleur": "#C9C9C4",
+            "stock": 27,
+            "dossier": "grisClair"
+          },
+          {
+            "id": "BL001-TA",
+            "slug": "taupe",
+            "nom": "Taupe",
+            "codeCouleur": "#8C7B6B",
+            "stock": 18,
+            "dossier": "taupe"
+          },
+          {
+            "id": "BL001-VE",
+            "slug": "vert-olive",
+            "nom": "Vert Olive",
+            "codeCouleur": "#6B6F47",
+            "stock": 21,
+            "dossier": "vertOlive"
+          }
+        ],
+        "completeLook": [
+          "pantalon-chino",
+          "jupe-genou"
+        ],
+        "produitsSimilaires": [
+          "trench-premium",
+          "chemise-premium"
+        ]
       }
     ]
   }
