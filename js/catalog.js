@@ -10,7 +10,8 @@ const CATEGORY_LABELS = {
     jupe: "Jupes",
     manteau: "Manteaux",
     pantalon: "Pantalons",
-    teeshirt: "Tee-shirts"
+    teeshirt: "Tee-shirts",
+    blazer: "Blazers"
 };
 
 /*
@@ -25,7 +26,8 @@ const CATEGORY_GROUPS = {
     jupe: ["jupe"],
     manteau: ["manteau", "trench"],
     pantalon: ["pantalon"],
-    teeshirt: ["teeshirt"]
+    teeshirt: ["teeshirt"],
+    blazer: ["blazer"]
 };
 
 /* ======================================================
