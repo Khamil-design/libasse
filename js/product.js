@@ -3,8 +3,6 @@
    PRODUCT ENGINE V3
 ========================================================== */
 
-const CART_STORAGE_KEY = "libasse-cart";
-
 class Product {
 
     constructor(productId) {
@@ -60,7 +58,7 @@ class Product {
             this.installPurchaseEvents();
             this.installZoom();
 
-            this.updateCartBadge();
+            updateCartBadge();
 
         }
 
@@ -553,28 +551,8 @@ class Product {
     }
 
     /* ======================================================
-       Panier (stockage local simple, sans backend)
+       Panier (localStorage, logique partagée dans catalog.js)
     ====================================================== */
-
-    getCart() {
-        try {
-            return JSON.parse(localStorage.getItem(CART_STORAGE_KEY)) || [];
-        } catch {
-            return [];
-        }
-    }
-
-    saveCart(cart) {
-        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
-    }
-
-    updateCartBadge() {
-        const badge = document.getElementById("cartCount");
-        if (!badge) return;
-        const cart = this.getCart();
-        const total = cart.reduce((sum, item) => sum + item.quantite, 0);
-        badge.textContent = total;
-    }
 
     addToCart() {
 
@@ -586,7 +564,7 @@ class Product {
             return false;
         }
 
-        const cart = this.getCart();
+        const cart = getCart();
 
         const item = {
             produitId: this.data.slug,
@@ -595,7 +573,8 @@ class Product {
             taille: this.currentSize,
             quantite,
             prixUnitaire: this.data.prix.actuel,
-            devise: this.data.prix.devise
+            devise: this.data.prix.devise,
+            image: this.buildImages()[0] || ""
         };
 
         const existing = cart.find(i =>
@@ -610,8 +589,8 @@ class Product {
             cart.push(item);
         }
 
-        this.saveCart(cart);
-        this.updateCartBadge();
+        saveCart(cart);
+        updateCartBadge();
 
         return true;
 

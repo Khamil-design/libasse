@@ -3,24 +3,9 @@
    PAGE D'ACCUEIL
 ========================================================== */
 
-function updateCartBadgeFromStorage() {
-
-    const badge = document.getElementById("cartCount");
-    if (!badge) return;
-
-    try {
-        const cart = JSON.parse(localStorage.getItem("libasse-cart")) || [];
-        const total = cart.reduce((sum, item) => sum + item.quantite, 0);
-        badge.textContent = total;
-    } catch {
-        badge.textContent = "0";
-    }
-
-}
-
 async function initHomePage() {
 
-    updateCartBadgeFromStorage();
+    updateCartBadge();
 
     const container = document.getElementById("newArrivalsGrid");
     if (!container) return;

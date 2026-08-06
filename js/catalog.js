@@ -123,3 +123,46 @@ function buildProductCard(produit) {
     return link;
 
 }
+
+/* ======================================================
+   Panier (localStorage, partagé par toutes les pages)
+====================================================== */
+
+const CART_STORAGE_KEY = "libasse-cart";
+
+function getCart() {
+
+    try {
+        return JSON.parse(localStorage.getItem(CART_STORAGE_KEY)) || [];
+    } catch {
+        return [];
+    }
+
+}
+
+function saveCart(cart) {
+
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+
+}
+
+function cartItemCount(cart) {
+
+    return cart.reduce((sum, item) => sum + item.quantite, 0);
+
+}
+
+function cartSubtotal(cart) {
+
+    return cart.reduce((sum, item) => sum + (item.prixUnitaire * item.quantite), 0);
+
+}
+
+function updateCartBadge() {
+
+    const badge = document.getElementById("cartCount");
+    if (!badge) return;
+
+    badge.textContent = cartItemCount(getCart());
+
+}

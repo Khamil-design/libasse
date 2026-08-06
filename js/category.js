@@ -3,21 +3,6 @@
    PAGE CATÉGORIE
 ========================================================== */
 
-function updateCartBadgeFromStorage() {
-
-    const badge = document.getElementById("cartCount");
-    if (!badge) return;
-
-    try {
-        const cart = JSON.parse(localStorage.getItem("libasse-cart")) || [];
-        const total = cart.reduce((sum, item) => sum + item.quantite, 0);
-        badge.textContent = total;
-    } catch {
-        badge.textContent = "0";
-    }
-
-}
-
 function sortProducts(produits, mode) {
 
     const sorted = [...produits];
@@ -67,7 +52,7 @@ function renderGrid(container, produits) {
 
 async function initCategoryPage() {
 
-    updateCartBadgeFromStorage();
+    updateCartBadge();
 
     const params = new URLSearchParams(window.location.search);
     const cat = params.get("cat");
