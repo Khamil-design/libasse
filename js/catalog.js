@@ -84,6 +84,22 @@ function categoryLabelFor(categorie) {
 
 }
 
+const GENRE_LABELS = {
+    homme: "Hommes",
+    femme: "Femmes",
+    enfant: "Enfants"
+};
+
+function productsInGenre(produits, genre) {
+
+    const mixteApplicable = genre === "homme" || genre === "femme";
+
+    return produits.filter(p =>
+        p.genre === genre || (mixteApplicable && p.genre === "mixte")
+    );
+
+}
+
 function productsInCategory(produits, slug) {
 
     if (slug === "nouveautes") {

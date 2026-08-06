@@ -29,7 +29,7 @@ function sortProducts(produits, mode) {
 
 }
 
-function renderGrid(container, produits) {
+function renderGrid(container, produits, emptyMessage) {
 
     container.innerHTML = "";
 
@@ -37,8 +37,8 @@ function renderGrid(container, produits) {
         container.innerHTML = `
             <div class="empty-state">
                 <i class="bi bi-bag"></i>
-                <h3>Aucun produit dans cette catégorie</h3>
-                <span>Cette catégorie n'a pas encore de pièces en ligne. Revenez bientôt !</span>
+                <h3>Aucun produit ici pour le moment</h3>
+                <span>${emptyMessage}</span>
             </div>
         `;
         return;
@@ -56,6 +56,7 @@ async function initCategoryPage() {
 
     const params = new URLSearchParams(window.location.search);
     const cat = params.get("cat");
+    const genre = params.get("genre");
 
     const titleEl = document.getElementById("categoryTitle");
     const breadcrumbEl = document.getElementById("breadcrumbCategory");
@@ -63,14 +64,20 @@ async function initCategoryPage() {
     const grid = document.getElementById("categoryGrid");
     const sortSelect = document.getElementById("sortSelect");
 
-    if (!cat) {
+    if (!cat && !genre) {
         if (titleEl) titleEl.textContent = "Catégorie introuvable";
         if (countEl) countEl.textContent = "Choisissez une catégorie depuis le menu ci-dessus.";
         if (grid) grid.innerHTML = "";
         return;
     }
 
-    const label = cat === "nouveautes" ? "Nouveautés" : (CATEGORY_LABELS[cat] || cat);
+    const label = genre
+        ? (GENRE_LABELS[genre] || genre)
+        : (cat === "nouveautes" ? "Nouveautés" : (CATEGORY_LABELS[cat] || cat));
+
+    const emptyMessage = genre
+        ? "Cet univers n'a pas encore de pièces en ligne. Revenez bientôt !"
+        : "Cette catégorie n'a pas encore de pièces en ligne. Revenez bientôt !";
 
     if (titleEl) titleEl.textContent = label;
     if (breadcrumbEl) breadcrumbEl.textContent = label;
@@ -79,11 +86,13 @@ async function initCategoryPage() {
     try {
 
         const produits = await loadCatalogue();
-        const filtered = productsInCategory(produits, cat);
+        const filtered = genre
+            ? productsInGenre(produits, genre)
+            : productsInCategory(produits, cat);
 
         const renderSorted = () => {
             const mode = sortSelect ? sortSelect.value : "pertinence";
-            renderGrid(grid, sortProducts(filtered, mode));
+            renderGrid(grid, sortProducts(filtered, mode), emptyMessage);
         };
 
         if (countEl) {
