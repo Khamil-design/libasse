@@ -4534,3 +4534,29 @@ a{
     }
 
 }
+
+/* ==========================================================
+   28 - BOUTON WHATSAPP (panier)
+========================================================== */
+
+.cart-whatsapp-btn{
+
+    background:#25D366;
+
+    color:#0B3D22;
+
+    text-decoration:none;
+
+}
+
+.cart-whatsapp-btn:hover{
+
+    background:#1FB855;
+
+}
+
+.cart-whatsapp-btn i{
+
+    font-size:1.1rem;
+
+}
