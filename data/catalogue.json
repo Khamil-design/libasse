@@ -113,7 +113,8 @@
         "produitsSimilaires": [
           "trench-classique",
           "trench-camel"
-        ]
+        ],
+        "genre": "femme"
       },
       {
         "id": "CH001",
@@ -219,7 +220,8 @@
         ],
         "produitsSimilaires": [
           "trench-premium"
-        ]
+        ],
+        "genre": "homme"
       },
       {
         "id": "CH002",
@@ -325,7 +327,8 @@
         ],
         "produitsSimilaires": [
           "chemise-premium"
-        ]
+        ],
+        "genre": "homme"
       },
       {
         "id": "RB001",
@@ -421,7 +424,8 @@
         "produitsSimilaires": [
           "jupe-genou",
           "jupe-longue"
-        ]
+        ],
+        "genre": "femme"
       },
       {
         "id": "JP001",
@@ -532,7 +536,8 @@
         "produitsSimilaires": [
           "jupe-genou",
           "robe-premium"
-        ]
+        ],
+        "genre": "femme"
       },
       {
         "id": "JP002",
@@ -643,7 +648,8 @@
         "produitsSimilaires": [
           "jupe-longue",
           "chemise-premium"
-        ]
+        ],
+        "genre": "femme"
       },
       {
         "id": "PT001",
@@ -755,7 +761,8 @@
         "produitsSimilaires": [
           "chemise-premium",
           "teeshirt-essentiel"
-        ]
+        ],
+        "genre": "homme"
       },
       {
         "id": "TS001",
@@ -846,7 +853,8 @@
         "produitsSimilaires": [
           "pantalon-chino",
           "chemise-premium"
-        ]
+        ],
+        "genre": "mixte"
       },
       {
         "id": "BL001",
@@ -966,7 +974,8 @@
         "produitsSimilaires": [
           "trench-premium",
           "chemise-premium"
-        ]
+        ],
+        "genre": "femme"
       }
     ]
   }
