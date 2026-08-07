@@ -1088,6 +1088,216 @@
           "blazer-long",
           "jupe-longue"
         ]
+      },
+      {
+        "id": "BEF001",
+        "slug": "blazer-fille",
+        "categorie": "blazer-enfant",
+        "genre": "enfant",
+        "nom": "Blazer fille coupe école",
+        "imageBase": "images/enfants/filles/blazer",
+        "marque": "Libasse",
+        "reference": "BEF-001",
+        "description": {
+          "courte": "Blazer fille structuré, col cranté, parfait pour la rentrée.",
+          "longue": "Ce blazer fille Libasse adopte une coupe structurée et confortable, idéale pour l'école comme pour les occasions habillées. Son col cranté, ses poches à rabat et ses finitions soignées en font une pièce élégante à porter sur une chemise ou un chemisier."
+        },
+        "prix": {
+          "actuel": 349,
+          "ancien": 399,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.8,
+          "nombre": 17
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "6-7 ans",
+          "8-9 ans",
+          "10-11 ans",
+          "12-13 ans"
+        ],
+        "guideTailles": {
+          "6-7 ans": {
+            "poitrine": 64,
+            "taille": 58,
+            "longueur": 46
+          },
+          "8-9 ans": {
+            "poitrine": 68,
+            "taille": 60,
+            "longueur": 50
+          },
+          "10-11 ans": {
+            "poitrine": 72,
+            "taille": 62,
+            "longueur": 54
+          },
+          "12-13 ans": {
+            "poitrine": 78,
+            "taille": 65,
+            "longueur": 58
+          }
+        },
+        "caracteristiques": [
+          "Tissu structuré confortable",
+          "Coupe école ajustée",
+          "Col cranté",
+          "Poches à rabat",
+          "Fermeture boutonnée",
+          "Entretien facile"
+        ],
+        "variantes": [
+          {
+            "id": "BEF001-BL",
+            "slug": "bleu-acier",
+            "nom": "Bleu Acier",
+            "codeCouleur": "#5C7A99",
+            "stock": 15,
+            "dossier": "bleuAcier"
+          },
+          {
+            "id": "BEF001-RO",
+            "slug": "rose",
+            "nom": "Rose",
+            "codeCouleur": "#C98A96",
+            "stock": 18,
+            "dossier": "rose"
+          },
+          {
+            "id": "BEF001-TA",
+            "slug": "taupe",
+            "nom": "Taupe",
+            "codeCouleur": "#8C7B6B",
+            "stock": 21,
+            "dossier": "taupe"
+          },
+          {
+            "id": "BEF001-VE",
+            "slug": "vert-olive",
+            "nom": "Vert Olive",
+            "codeCouleur": "#6B6F47",
+            "stock": 24,
+            "dossier": "vertOlive"
+          }
+        ],
+        "completeLook": [
+          "robe-chemise-fille"
+        ],
+        "produitsSimilaires": [
+          "robe-chemise-fille"
+        ]
+      },
+      {
+        "id": "RCF001",
+        "slug": "robe-chemise-fille",
+        "categorie": "robe-chemise-enfant",
+        "genre": "enfant",
+        "nom": "Robe chemise fille ceinturée",
+        "imageBase": "images/enfants/filles/robeChemise",
+        "marque": "Libasse",
+        "reference": "RCF-001",
+        "description": {
+          "courte": "Robe chemise fille boutonnée, ceinture nouée et poche poitrine.",
+          "longue": "Cette robe chemise Libasse pour fille reprend les codes de la chemise classique : col, boutonnage complet et poche poitrine, dans une version robe pratique et féminine. Sa ceinture à nouer souligne la taille, pour un look soigné du quotidien à l'école."
+        },
+        "prix": {
+          "actuel": 279,
+          "ancien": 329,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.7,
+          "nombre": 23
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "6-7 ans",
+          "8-9 ans",
+          "10-11 ans",
+          "12-13 ans"
+        ],
+        "guideTailles": {
+          "6-7 ans": {
+            "poitrine": 62,
+            "longueur": 58
+          },
+          "8-9 ans": {
+            "poitrine": 66,
+            "longueur": 63
+          },
+          "10-11 ans": {
+            "poitrine": 70,
+            "longueur": 68
+          },
+          "12-13 ans": {
+            "poitrine": 75,
+            "longueur": 73
+          }
+        },
+        "caracteristiques": [
+          "Tissu doux et respirant",
+          "Boutonnage complet",
+          "Poche poitrine",
+          "Ceinture à nouer",
+          "Coupe évasée confortable",
+          "Entretien facile"
+        ],
+        "variantes": [
+          {
+            "id": "RCF001-BL",
+            "slug": "bleu-marine",
+            "nom": "Bleu Marine",
+            "codeCouleur": "#243B6B",
+            "stock": 15,
+            "dossier": "bleuMarine"
+          },
+          {
+            "id": "RCF001-CR",
+            "slug": "creme",
+            "nom": "Crème",
+            "codeCouleur": "#F3EAD9",
+            "stock": 18,
+            "dossier": "creme"
+          },
+          {
+            "id": "RCF001-OC",
+            "slug": "ocre-dore",
+            "nom": "Ocre Doré",
+            "codeCouleur": "#C68A3D",
+            "stock": 21,
+            "dossier": "ocreDore"
+          },
+          {
+            "id": "RCF001-TA",
+            "slug": "taupe",
+            "nom": "Taupe",
+            "codeCouleur": "#8C7B6B",
+            "stock": 24,
+            "dossier": "taupe"
+          },
+          {
+            "id": "RCF001-VE",
+            "slug": "vert-sauge",
+            "nom": "Vert Sauge",
+            "codeCouleur": "#9CAF88",
+            "stock": 15,
+            "dossier": "vertSauge"
+          }
+        ],
+        "completeLook": [
+          "blazer-fille"
+        ],
+        "produitsSimilaires": [
+          "blazer-fille"
+        ]
       }
     ]
   }
