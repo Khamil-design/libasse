@@ -7,6 +7,7 @@
 const CATEGORY_LABELS = {
     robe: "Robes",
     chemise: "Chemises",
+    chemisier: "Chemisiers",
     jupe: "Jupes",
     manteau: "Manteaux",
     pantalon: "Pantalons",
@@ -23,6 +24,7 @@ const CATEGORY_LABELS = {
 const CATEGORY_GROUPS = {
     robe: ["robe"],
     chemise: ["chemise"],
+    chemisier: ["chemisier"],
     jupe: ["jupe"],
     manteau: ["manteau", "trench"],
     pantalon: ["pantalon"],
