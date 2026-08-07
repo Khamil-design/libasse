@@ -12,7 +12,9 @@ const CATEGORY_LABELS = {
     manteau: "Manteaux",
     pantalon: "Pantalons",
     teeshirt: "Tee-shirts",
-    blazer: "Blazers"
+    blazer: "Blazers",
+    "blazer-enfant": "Blazers",
+    "robe-chemise-enfant": "Robes-chemises"
 };
 
 /*
@@ -29,7 +31,9 @@ const CATEGORY_GROUPS = {
     manteau: ["manteau", "trench"],
     pantalon: ["pantalon"],
     teeshirt: ["teeshirt"],
-    blazer: ["blazer"]
+    blazer: ["blazer"],
+    "blazer-enfant": ["blazer-enfant"],
+    "robe-chemise-enfant": ["robe-chemise-enfant"]
 };
 
 /* ======================================================
