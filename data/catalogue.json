@@ -854,7 +854,7 @@
           "pantalon-chino",
           "chemise-premium"
         ],
-        "genre": "mixte"
+        "genre": "homme"
       },
       {
         "id": "BL001",
@@ -976,6 +976,118 @@
           "chemise-premium"
         ],
         "genre": "femme"
+      },
+      {
+        "id": "CM001",
+        "slug": "chemisier-fluide",
+        "categorie": "chemisier",
+        "genre": "femme",
+        "nom": "Chemisier fluide en satin",
+        "imageBase": "images/femme/chemisier",
+        "marque": "Libasse",
+        "reference": "CM-001",
+        "description": {
+          "courte": "Chemisier fluide en satin, manches longues bouffantes et col pointu.",
+          "longue": "Ce chemisier Libasse est confectionné dans un satin fluide et léger, pour une tombée soyeuse tout en douceur. Ses manches longues légèrement bouffantes, ses poignets froncés et son col pointu lui donnent une allure raffinée, aussi bien pour le bureau que pour une sortie habillée."
+        },
+        "prix": {
+          "actuel": 399,
+          "ancien": 469,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.8,
+          "nombre": 29
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "guideTailles": {
+          "S": {
+            "poitrine": 86,
+            "taille": 68,
+            "longueur": 62
+          },
+          "M": {
+            "poitrine": 92,
+            "taille": 74,
+            "longueur": 63
+          },
+          "L": {
+            "poitrine": 98,
+            "taille": 80,
+            "longueur": 64
+          },
+          "XL": {
+            "poitrine": 104,
+            "taille": 86,
+            "longueur": 65
+          }
+        },
+        "caracteristiques": [
+          "Satin fluide léger",
+          "Manches longues bouffantes",
+          "Poignets froncés",
+          "Col pointu",
+          "Fermeture boutonnée",
+          "Coupe cintrée"
+        ],
+        "variantes": [
+          {
+            "id": "CM001-BL",
+            "slug": "bleu-ciel",
+            "nom": "Bleu Ciel",
+            "codeCouleur": "#A9C9E0",
+            "stock": 18,
+            "dossier": "bleuCiel"
+          },
+          {
+            "id": "CM001-CR",
+            "slug": "creme",
+            "nom": "Crème",
+            "codeCouleur": "#F3EAD9",
+            "stock": 21,
+            "dossier": "creme"
+          },
+          {
+            "id": "CM001-OC",
+            "slug": "ocre-dore",
+            "nom": "Ocre Doré",
+            "codeCouleur": "#C68A3D",
+            "stock": 24,
+            "dossier": "ocreDore"
+          },
+          {
+            "id": "CM001-RO",
+            "slug": "rose-poudre",
+            "nom": "Rose Poudré",
+            "codeCouleur": "#E3B8B0",
+            "stock": 27,
+            "dossier": "rosePoudre"
+          },
+          {
+            "id": "CM001-VE",
+            "slug": "vert-sauge",
+            "nom": "Vert Sauge",
+            "codeCouleur": "#9CAF88",
+            "stock": 18,
+            "dossier": "vertSauge"
+          }
+        ],
+        "completeLook": [
+          "jupe-genou"
+        ],
+        "produitsSimilaires": [
+          "blazer-long",
+          "jupe-longue"
+        ]
       }
     ]
   }
