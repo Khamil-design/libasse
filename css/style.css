@@ -4689,3 +4689,41 @@ a{
 
     }
 }
+
+/* ==========================================================
+   30 - BANDEAU DU TITRE "UNIVERS" (fond sombre, texte blanc)
+========================================================== */
+
+.universe-heading{
+
+    padding:2rem 2.5rem;
+
+    background:var(--color-primary);
+
+    border-radius:var(--radius-lg);
+
+    margin-bottom:2rem;
+
+}
+
+.universe-heading h2{
+
+    color:var(--color-white);
+
+}
+
+.universe-heading p{
+
+    color:rgba(255,255,255,.8);
+
+}
+
+@media (max-width:576px){
+
+    .universe-heading{
+
+        padding:1.5rem;
+
+    }
+
+}
