@@ -1298,6 +1298,212 @@
         "produitsSimilaires": [
           "blazer-fille"
         ]
+      },
+      {
+        "id": "CEG001",
+        "slug": "costume-garcon",
+        "categorie": "costume-enfant",
+        "genre": "enfant",
+        "nom": "Costume garçon coupe cérémonie",
+        "imageBase": "images/enfants/garçons/costume",
+        "marque": "Libasse",
+        "reference": "CEG-001",
+        "description": {
+          "courte": "Costume garçon deux pièces, veste structurée et pantalon assorti.",
+          "longue": "Ce costume Libasse pour garçon associe une veste structurée à col cranté et un pantalon assorti, pour un look soigné lors des cérémonies comme des grandes occasions. Coupe confortable et finitions soignées pour un rendu élégant du premier au dernier bouton."
+        },
+        "prix": {
+          "actuel": 599,
+          "ancien": 699,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.8,
+          "nombre": 12
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "6-7 ans",
+          "8-9 ans",
+          "10-11 ans",
+          "12-13 ans"
+        ],
+        "guideTailles": {
+          "6-7 ans": {
+            "poitrine": 64,
+            "taille": 58,
+            "longueur": 46
+          },
+          "8-9 ans": {
+            "poitrine": 68,
+            "taille": 60,
+            "longueur": 50
+          },
+          "10-11 ans": {
+            "poitrine": 72,
+            "taille": 62,
+            "longueur": 54
+          },
+          "12-13 ans": {
+            "poitrine": 78,
+            "taille": 65,
+            "longueur": 58
+          }
+        },
+        "caracteristiques": [
+          "Ensemble veste + pantalon assorti",
+          "Col cranté structuré",
+          "Fermeture boutonnée",
+          "Poches à rabat",
+          "Tissu confortable",
+          "Entretien facile"
+        ],
+        "variantes": [
+          {
+            "id": "CEG001-BM",
+            "slug": "bleu-marine",
+            "nom": "Bleu Marine",
+            "codeCouleur": "#243B6B",
+            "stock": 15,
+            "dossier": "bleuMarine"
+          },
+          {
+            "id": "CEG001-GA",
+            "slug": "gris-anthracite",
+            "nom": "Gris Anthracite",
+            "codeCouleur": "#3B3B3D",
+            "stock": 18,
+            "dossier": "grisAnthracite"
+          },
+          {
+            "id": "CEG001-NO",
+            "slug": "noir",
+            "nom": "Noir",
+            "codeCouleur": "#1A1A1A",
+            "stock": 15,
+            "dossier": "noir"
+          }
+        ],
+        "completeLook": [
+          "pantalon-garcon"
+        ],
+        "produitsSimilaires": [
+          "pantalon-garcon"
+        ]
+      },
+      {
+        "id": "PEG001",
+        "slug": "pantalon-garcon",
+        "categorie": "pantalon-enfant",
+        "genre": "enfant",
+        "nom": "Pantalon garçon coupe droite",
+        "imageBase": "images/enfants/garçons/pantalon",
+        "marque": "Libasse",
+        "reference": "PEG-001",
+        "description": {
+          "courte": "Pantalon garçon coupe droite, confortable pour l'école comme les occasions habillées.",
+          "longue": "Ce pantalon Libasse pour garçon adopte une coupe droite confortable, pensée pour accompagner l'enfant du quotidien à l'école jusqu'aux occasions plus habillées. Sa ceinture ajustable et son tissu résistant en font une pièce pratique et durable."
+        },
+        "prix": {
+          "actuel": 249,
+          "ancien": 289,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.7,
+          "nombre": 19
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "6-7 ans",
+          "8-9 ans",
+          "10-11 ans",
+          "12-13 ans"
+        ],
+        "guideTailles": {
+          "6-7 ans": {
+            "taille": 56,
+            "hanches": 62,
+            "longueur": 58
+          },
+          "8-9 ans": {
+            "taille": 58,
+            "hanches": 66,
+            "longueur": 63
+          },
+          "10-11 ans": {
+            "taille": 60,
+            "hanches": 70,
+            "longueur": 68
+          },
+          "12-13 ans": {
+            "taille": 63,
+            "hanches": 75,
+            "longueur": 73
+          }
+        },
+        "caracteristiques": [
+          "Coupe droite confortable",
+          "Ceinture ajustable",
+          "Poches italiennes",
+          "Tissu résistant",
+          "Passants de ceinture",
+          "Entretien facile"
+        ],
+        "variantes": [
+          {
+            "id": "PEG001-BM",
+            "slug": "bleu-marine",
+            "nom": "Bleu Marine",
+            "codeCouleur": "#243B6B",
+            "stock": 18,
+            "dossier": "bleuMarine"
+          },
+          {
+            "id": "PEG001-CA",
+            "slug": "camel",
+            "nom": "Camel",
+            "codeCouleur": "#C08A4E",
+            "stock": 18,
+            "dossier": "camel"
+          },
+          {
+            "id": "PEG001-TA",
+            "slug": "taupe",
+            "nom": "Taupe",
+            "codeCouleur": "#8C7B6B",
+            "stock": 18,
+            "dossier": "taupe"
+          },
+          {
+            "id": "PEG001-GA",
+            "slug": "gris-anthracite",
+            "nom": "Gris Anthracite",
+            "codeCouleur": "#3B3B3D",
+            "stock": 18,
+            "dossier": "grisAnthracite"
+          },
+          {
+            "id": "PEG001-VS",
+            "slug": "vert-sauge",
+            "nom": "Vert Sauge",
+            "codeCouleur": "#9CAF88",
+            "stock": 15,
+            "dossier": "vertSauge"
+          }
+        ],
+        "completeLook": [
+          "costume-garcon"
+        ],
+        "produitsSimilaires": [
+          "costume-garcon"
+        ]
       }
     ]
   }
