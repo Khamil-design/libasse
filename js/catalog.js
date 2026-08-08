@@ -14,7 +14,9 @@ const CATEGORY_LABELS = {
     teeshirt: "Tee-shirts",
     blazer: "Blazers",
     "blazer-enfant": "Blazers",
-    "robe-chemise-enfant": "Robes-chemises"
+    "robe-chemise-enfant": "Robes-chemises",
+    "costume-enfant": "Costumes",
+    "pantalon-enfant": "Pantalons"
 };
 
 /*
@@ -33,7 +35,9 @@ const CATEGORY_GROUPS = {
     teeshirt: ["teeshirt"],
     blazer: ["blazer"],
     "blazer-enfant": ["blazer-enfant"],
-    "robe-chemise-enfant": ["robe-chemise-enfant"]
+    "robe-chemise-enfant": ["robe-chemise-enfant"],
+    "costume-enfant": ["costume-enfant"],
+    "pantalon-enfant": ["pantalon-enfant"]
 };
 
 /* ======================================================
