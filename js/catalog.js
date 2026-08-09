@@ -16,7 +16,8 @@ const CATEGORY_LABELS = {
     "blazer-enfant": "Blazers",
     "robe-chemise-enfant": "Robes-chemises",
     "costume-enfant": "Costumes",
-    "pantalon-enfant": "Pantalons"
+    "pantalon-enfant": "Pantalons",
+    "gilet-enfant": "Gilets"
 };
 
 /*
@@ -37,7 +38,8 @@ const CATEGORY_GROUPS = {
     "blazer-enfant": ["blazer-enfant"],
     "robe-chemise-enfant": ["robe-chemise-enfant"],
     "costume-enfant": ["costume-enfant"],
-    "pantalon-enfant": ["pantalon-enfant"]
+    "pantalon-enfant": ["pantalon-enfant"],
+    "gilet-enfant": ["gilet-enfant"]
 };
 
 /* ======================================================
