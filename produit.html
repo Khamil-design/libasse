@@ -827,13 +827,17 @@
 
         </p>
 
-        <form class="newsletter-form">
+        <form class="newsletter-form" id="newsletterForm" data-formspree="https://formspree.io/f/xljrjrao">
 
             <input
 
                 type="email"
 
-                placeholder="Votre adresse e-mail">
+                name="email"
+
+                placeholder="Votre adresse e-mail"
+
+                required>
 
             <button type="submit">
 
@@ -842,6 +846,8 @@
             </button>
 
         </form>
+
+        <p class="newsletter-message" id="newsletterMessage"></p>
 
     </div>
 

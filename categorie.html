@@ -142,10 +142,11 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.m
     <div class="container">
         <h2>Rejoignez l'univers Libasse</h2>
         <p>Recevez nos nouveautés et nos offres en avant-première.</p>
-        <form class="newsletter-form">
-            <input type="email" placeholder="Votre adresse e-mail">
+        <form class="newsletter-form" id="newsletterForm" data-formspree="https://formspree.io/f/xljrjrao">
+            <input type="email" name="email" placeholder="Votre adresse e-mail" required>
             <button type="submit">S'inscrire</button>
         </form>
+        <p class="newsletter-message" id="newsletterMessage"></p>
     </div>
 </section>
 

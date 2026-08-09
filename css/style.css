@@ -3009,6 +3009,40 @@ main{
 
 }
 
+.newsletter-form button:disabled{
+
+    opacity:.7;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+.newsletter-message{
+
+    margin-top:1rem;
+
+    min-height:1.2em;
+
+    font-size:var(--font-size-sm);
+
+    font-weight:500;
+
+}
+
+.newsletter-message.success{
+
+    color:#8FD19E;
+
+}
+
+.newsletter-message.error{
+
+    color:#F1A9A0;
+
+}
+
 
 /* ==========================================================
    16 - FOOTER

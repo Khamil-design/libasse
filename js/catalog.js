@@ -327,7 +327,88 @@ function initSearchBar() {
 
 }
 
+/* ======================================================
+   Newsletter (Formspree)
+====================================================== */
+
+function initNewsletterForm() {
+
+    const form = document.getElementById("newsletterForm");
+    const messageEl = document.getElementById("newsletterMessage");
+
+    if (!form) return;
+
+    const endpoint = form.dataset.formspree;
+    const button = form.querySelector("button[type='submit']");
+    const input = form.querySelector("input[type='email']");
+
+    form.addEventListener("submit", async event => {
+
+        event.preventDefault();
+
+        if (!endpoint || !input) return;
+
+        const originalLabel = button ? button.textContent : "";
+
+        if (button) {
+            button.disabled = true;
+            button.textContent = "Envoi...";
+        }
+
+        if (messageEl) {
+            messageEl.textContent = "";
+            messageEl.className = "newsletter-message";
+        }
+
+        try {
+
+            const response = await fetch(endpoint, {
+                method: "POST",
+                headers: { "Accept": "application/json" },
+                body: new FormData(form)
+            });
+
+            if (response.ok) {
+
+                if (messageEl) {
+                    messageEl.textContent = "Merci ! Votre inscription est confirmée.";
+                    messageEl.classList.add("success");
+                }
+
+                form.reset();
+
+            } else {
+                throw new Error("Erreur d'envoi");
+            }
+
+        }
+
+        catch (error) {
+
+            console.error(error);
+
+            if (messageEl) {
+                messageEl.textContent = "Une erreur est survenue. Merci de réessayer.";
+                messageEl.classList.add("error");
+            }
+
+        }
+
+        finally {
+
+            if (button) {
+                button.disabled = false;
+                button.textContent = originalLabel;
+            }
+
+        }
+
+    });
+
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     updateFavoritesBadge();
     initSearchBar();
+    initNewsletterForm();
 });
