@@ -16,7 +16,8 @@ const CATEGORY_LABELS = {
     "blazer-enfant": "Blazers",
     "robe-chemise-enfant": "Robes-chemises",
     "costume-enfant": "Costumes",
-    "pantalon-enfant": "Pantalons"
+    "pantalon-enfant": "Pantalons",
+    "gilet-enfant": "Gilets"
 };
 
 /*
@@ -37,7 +38,8 @@ const CATEGORY_GROUPS = {
     "blazer-enfant": ["blazer-enfant"],
     "robe-chemise-enfant": ["robe-chemise-enfant"],
     "costume-enfant": ["costume-enfant"],
-    "pantalon-enfant": ["pantalon-enfant"]
+    "pantalon-enfant": ["pantalon-enfant"],
+    "gilet-enfant": ["gilet-enfant"]
 };
 
 /* ======================================================
@@ -138,12 +140,28 @@ function buildProductCard(produit) {
         ? '<span class="product-badge-new">Nouveau</span>'
         : "";
 
+    const favActive = isFavorite(produit.slug) ? "active" : "";
+
     article.innerHTML = `
         ${badge}
+        <button type="button" class="product-favorite-btn ${favActive}" aria-label="Ajouter aux favoris">
+            <i class="bi bi-heart-fill"></i>
+        </button>
         <img src="${productImage(produit)}" alt="${produit.nom}">
         <h3>${produit.nom}</h3>
         <p>${produit.prix.actuel} ${produit.prix.devise}</p>
     `;
+
+    const favBtn = article.querySelector(".product-favorite-btn");
+    favBtn.addEventListener("click", event => {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const nowActive = toggleFavorite(produit.slug);
+        favBtn.classList.toggle("active", nowActive);
+
+    });
 
     link.appendChild(article);
     return link;
@@ -192,3 +210,124 @@ function updateCartBadge() {
     badge.textContent = cartItemCount(getCart());
 
 }
+
+/* ======================================================
+   Favoris (localStorage, partagé par toutes les pages)
+====================================================== */
+
+const FAVORITES_STORAGE_KEY = "libasse-favorites";
+
+function getFavorites() {
+
+    try {
+        return JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY)) || [];
+    } catch {
+        return [];
+    }
+
+}
+
+function saveFavorites(favorites) {
+
+    localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favorites));
+
+}
+
+function isFavorite(slug) {
+
+    return getFavorites().includes(slug);
+
+}
+
+function toggleFavorite(slug) {
+
+    let favorites = getFavorites();
+
+    if (favorites.includes(slug)) {
+        favorites = favorites.filter(s => s !== slug);
+    } else {
+        favorites.push(slug);
+    }
+
+    saveFavorites(favorites);
+    updateFavoritesBadge();
+
+    return favorites.includes(slug);
+
+}
+
+function updateFavoritesBadge() {
+
+    const badge = document.getElementById("favoritesCount");
+    if (!badge) return;
+
+    badge.textContent = getFavorites().length;
+
+}
+
+/* ======================================================
+   Barre de recherche (partagée par toutes les pages)
+====================================================== */
+
+function normalizeSearchText(text) {
+
+    return (text || "")
+        .toString()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+
+}
+
+function searchProducts(produits, query) {
+
+    const term = normalizeSearchText(query).trim();
+    if (!term) return [];
+
+    return produits.filter(p => {
+        const haystack = normalizeSearchText(
+            `${p.nom} ${p.description?.courte || ""} ${p.categorie}`
+        );
+        return haystack.includes(term);
+    });
+
+}
+
+function initSearchBar() {
+
+    const toggle = document.getElementById("searchToggle");
+    const bar = document.getElementById("searchBar");
+    const form = document.getElementById("searchForm");
+    const input = document.getElementById("searchInput");
+
+    if (!toggle || !bar) return;
+
+    toggle.addEventListener("click", () => {
+
+        bar.classList.toggle("active");
+
+        if (bar.classList.contains("active") && input) {
+            input.focus();
+        }
+
+    });
+
+    if (form && input) {
+        form.addEventListener("submit", event => {
+
+            event.preventDefault();
+
+            const query = input.value.trim();
+            if (!query) return;
+
+            window.location.href = `categorie.html?q=${encodeURIComponent(query)}`;
+
+        });
+    }
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    updateFavoritesBadge();
+    initSearchBar();
+});

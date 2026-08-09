@@ -57,6 +57,8 @@ async function initCategoryPage() {
     const params = new URLSearchParams(window.location.search);
     const cat = params.get("cat");
     const genre = params.get("genre");
+    const query = params.get("q");
+    const favorisOnly = cat === "favoris";
 
     const titleEl = document.getElementById("categoryTitle");
     const breadcrumbEl = document.getElementById("breadcrumbCategory");
@@ -64,18 +66,26 @@ async function initCategoryPage() {
     const grid = document.getElementById("categoryGrid");
     const sortSelect = document.getElementById("sortSelect");
 
-    if (!cat && !genre) {
+    if (!cat && !genre && !query) {
         if (titleEl) titleEl.textContent = "Catégorie introuvable";
         if (countEl) countEl.textContent = "Choisissez une catégorie depuis le menu ci-dessus.";
         if (grid) grid.innerHTML = "";
         return;
     }
 
-    const label = genre
+    const label = query
+        ? `Résultats pour « ${query} »`
+        : favorisOnly
+        ? "Mes favoris"
+        : genre
         ? (GENRE_LABELS[genre] || genre)
         : (cat === "nouveautes" ? "Nouveautés" : (CATEGORY_LABELS[cat] || cat));
 
-    const emptyMessage = genre
+    const emptyMessage = query
+        ? "Aucun produit ne correspond à cette recherche. Essayez un autre mot-clé."
+        : favorisOnly
+        ? "Vous n'avez pas encore ajouté de favoris. Cliquez sur le cœur d'un produit pour l'enregistrer ici."
+        : genre
         ? "Cet univers n'a pas encore de pièces en ligne. Revenez bientôt !"
         : "Cette catégorie n'a pas encore de pièces en ligne. Revenez bientôt !";
 
@@ -86,7 +96,11 @@ async function initCategoryPage() {
     try {
 
         const produits = await loadCatalogue();
-        const filtered = genre
+        const filtered = query
+            ? searchProducts(produits, query)
+            : favorisOnly
+            ? produits.filter(p => isFavorite(p.slug))
+            : genre
             ? productsInGenre(produits, genre)
             : productsInCategory(produits, cat);
 

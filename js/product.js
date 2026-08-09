@@ -56,6 +56,7 @@ class Product {
             this.installSizeEvents();
             this.installQuantityEvents();
             this.installPurchaseEvents();
+            this.installFavoriteEvents();
             this.installZoom();
 
             updateCartBadge();
@@ -624,6 +625,38 @@ class Product {
                 alert("Cette boutique de démonstration n'a pas encore de tunnel de paiement — votre article a été ajouté au panier.");
             });
         }
+
+    }
+
+    /* ======================================================
+       Favoris (localStorage, logique partagée dans catalog.js)
+    ====================================================== */
+
+    installFavoriteEvents() {
+
+        const toggleBtn = document.getElementById("toggleFavorite");
+        if (!toggleBtn) return;
+
+        const icon = toggleBtn.querySelector("i");
+        const label = document.getElementById("favoriteToggleLabel");
+
+        const syncState = active => {
+            toggleBtn.classList.toggle("active", active);
+            if (icon) {
+                icon.classList.toggle("bi-heart", !active);
+                icon.classList.toggle("bi-heart-fill", active);
+            }
+            if (label) {
+                label.textContent = active ? "Retirer des favoris" : "Ajouter aux favoris";
+            }
+        };
+
+        syncState(isFavorite(this.data.slug));
+
+        toggleBtn.addEventListener("click", () => {
+            const active = toggleFavorite(this.data.slug);
+            syncState(active);
+        });
 
     }
 
