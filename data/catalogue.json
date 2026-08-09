@@ -1504,6 +1504,224 @@
         "produitsSimilaires": [
           "costume-garcon"
         ]
+      },
+      {
+        "id": "GEG001",
+        "slug": "gilet-garcon",
+        "categorie": "gilet-enfant",
+        "genre": "enfant",
+        "nom": "Gilet garçon coupe cérémonie",
+        "imageBase": "images/enfants/garçons/gilet",
+        "marque": "Libasse",
+        "reference": "GEG-001",
+        "description": {
+          "courte": "Gilet garçon ajusté, à porter seul ou sous une veste pour les grandes occasions.",
+          "longue": "Ce gilet Libasse pour garçon adopte une coupe ajustée et un col en V, pensé pour habiller une tenue de cérémonie ou de tous les jours. Facile à assortir à une chemise ou à un blazer, il apporte une touche élégante sans excès."
+        },
+        "prix": {
+          "actuel": 249,
+          "ancien": 289,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.7,
+          "nombre": 9
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "6-7 ans",
+          "8-9 ans",
+          "10-11 ans",
+          "12-13 ans"
+        ],
+        "guideTailles": {
+          "6-7 ans": {
+            "poitrine": 64,
+            "taille": 58,
+            "longueur": 34
+          },
+          "8-9 ans": {
+            "poitrine": 68,
+            "taille": 60,
+            "longueur": 37
+          },
+          "10-11 ans": {
+            "poitrine": 72,
+            "taille": 62,
+            "longueur": 40
+          },
+          "12-13 ans": {
+            "poitrine": 78,
+            "taille": 65,
+            "longueur": 43
+          }
+        },
+        "caracteristiques": [
+          "Coupe ajustée",
+          "Col en V",
+          "Fermeture boutonnée",
+          "Doublure intérieure douce",
+          "Tissu confortable",
+          "Entretien facile"
+        ],
+        "variantes": [
+          {
+            "id": "GEG001-TA",
+            "slug": "taupe",
+            "nom": "Taupe",
+            "codeCouleur": "#8C7B6B",
+            "stock": 15,
+            "dossier": "taupe"
+          },
+          {
+            "id": "GEG001-GC",
+            "slug": "gris-clair",
+            "nom": "Gris Clair",
+            "codeCouleur": "#C9C9C4",
+            "stock": 15,
+            "dossier": "grisClair"
+          },
+          {
+            "id": "GEG001-NO",
+            "slug": "noir",
+            "nom": "Noir",
+            "codeCouleur": "#1A1A1A",
+            "stock": 18,
+            "dossier": "noir"
+          },
+          {
+            "id": "GEG001-BM",
+            "slug": "bleu-marine",
+            "nom": "Bleu Marine",
+            "codeCouleur": "#243B6B",
+            "stock": 15,
+            "dossier": "bleuMarine"
+          },
+          {
+            "id": "GEG001-GA",
+            "slug": "gris-anthracite",
+            "nom": "Gris Anthracite",
+            "codeCouleur": "#3B3B3D",
+            "stock": 15,
+            "dossier": "grisAnthracite"
+          }
+        ],
+        "completeLook": [
+          "costume-garcon",
+          "pantalon-garcon"
+        ],
+        "produitsSimilaires": [
+          "costume-garcon",
+          "blazer-garcon"
+        ]
+      },
+      {
+        "id": "BEG001",
+        "slug": "blazer-garcon",
+        "categorie": "blazer-enfant",
+        "genre": "enfant",
+        "nom": "Blazer garçon coupe cérémonie",
+        "imageBase": "images/enfants/garçons/blazer",
+        "marque": "Libasse",
+        "reference": "BEG-001",
+        "description": {
+          "courte": "Blazer garçon structuré, idéal pour les cérémonies et occasions habillées.",
+          "longue": "Ce blazer Libasse pour garçon associe une coupe structurée à un col cranté pour un look soigné. Facile à assortir à un pantalon ou un gilet assorti, il habille l'enfant du quotidien aux grandes occasions."
+        },
+        "prix": {
+          "actuel": 349,
+          "ancien": 399,
+          "devise": "DH"
+        },
+        "avis": {
+          "note": 4.8,
+          "nombre": 11
+        },
+        "etat": {
+          "nouveau": true,
+          "promotion": false
+        },
+        "tailles": [
+          "6-7 ans",
+          "8-9 ans",
+          "10-11 ans",
+          "12-13 ans"
+        ],
+        "guideTailles": {
+          "6-7 ans": {
+            "poitrine": 64,
+            "taille": 58,
+            "longueur": 46
+          },
+          "8-9 ans": {
+            "poitrine": 68,
+            "taille": 60,
+            "longueur": 50
+          },
+          "10-11 ans": {
+            "poitrine": 72,
+            "taille": 62,
+            "longueur": 54
+          },
+          "12-13 ans": {
+            "poitrine": 78,
+            "taille": 65,
+            "longueur": 58
+          }
+        },
+        "caracteristiques": [
+          "Col cranté structuré",
+          "Fermeture boutonnée",
+          "Poches à rabat",
+          "Doublure intérieure",
+          "Tissu confortable",
+          "Entretien facile"
+        ],
+        "variantes": [
+          {
+            "id": "BEG001-TA",
+            "slug": "taupe",
+            "nom": "Taupe",
+            "codeCouleur": "#8C7B6B",
+            "stock": 15,
+            "dossier": "taupe"
+          },
+          {
+            "id": "BEG001-GC",
+            "slug": "gris-clair",
+            "nom": "Gris Clair",
+            "codeCouleur": "#C9C9C4",
+            "stock": 15,
+            "dossier": "grisClair"
+          },
+          {
+            "id": "BEG001-NO",
+            "slug": "noir",
+            "nom": "Noir",
+            "codeCouleur": "#1A1A1A",
+            "stock": 18,
+            "dossier": "noir"
+          },
+          {
+            "id": "BEG001-BM",
+            "slug": "bleu-marine",
+            "nom": "Bleu Marine",
+            "codeCouleur": "#243B6B",
+            "stock": 15,
+            "dossier": "bleuMarine"
+          }
+        ],
+        "completeLook": [
+          "pantalon-garcon",
+          "gilet-garcon"
+        ],
+        "produitsSimilaires": [
+          "costume-garcon",
+          "gilet-garcon"
+        ]
       }
     ]
   }
